@@ -282,6 +282,7 @@ function createDoor(radius, tube, vertical, horizontal, p, q, heightScale) {
     DOOR = door;
 
 }
+
 function generateSprite() {
 
     var canvas = document.createElement('canvas');
@@ -303,6 +304,7 @@ function generateSprite() {
     return texture;
 
 }
+
 function createPointCloud(geom) {
     var material = new THREE.PointCloudMaterial({
         color: 0xffffff,

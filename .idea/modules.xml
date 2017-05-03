@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/my-first-express-project.iml" filepath="$PROJECT_DIR$/.idea/my-first-express-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/my-first-express-project.iml" filepath="$PROJECT_DIR$/my-first-express-project.iml" />
     </modules>
   </component>
 </project>

@@ -9,8 +9,8 @@ $(document).ready(function () {
     //load models
     LoadModels();
     setTimeout(function() {
-        let testManager = new GameManager(1);
-    }, 10000);
+        let gameManager = new GameManager(1);
+    }, 30000);
 
 
     function LoadModels() {
