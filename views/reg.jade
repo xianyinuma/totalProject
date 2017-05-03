@@ -1,0 +1,20 @@
+extends welcome
+
+block register
+    div(id= 'register')
+        form(method='post')
+            button(type="button" class="close" aria-label="Close" onclick="document.getElementById('register').style.display='none'")
+                span(aria-hidden="true") &times
+            div(class="form-group")
+                label(for='username') 用户名：
+                input(type='text' name='username' class="form-control" id="username" placeholder="用户名" required)
+            div(class='form-group')
+                label(for ="password") 密码：
+                input(type='password' name='password' id='password' class="form-control" placeholder="密码" required)
+            div(class="form-group")
+                label(for='username-repeat') 确认密码：
+                input(type='Password' name='username-repeat' class="form-control" id="username-repeat" placeholder="确认密码" required)
+            div(class='form-group')
+                label(for='email') 邮箱：
+                input(type='email' name='email' class='form-control' id='email' placeholder='邮箱' required)
+            <input type="submit" class="btn btn-primary login-button" value="注册" style="width:70px;height:40px;" />

@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title BattleShip
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/welcome.css')
+    link(rel='stylesheet', href='/stylesheets/register.css')
+    link(rel='stylesheet', href='/stylesheets/login.css')
+    script(type='text/javascript', src='bootstrap/js/bootstrap.js')
+    style.
+      
+
+  body
+    div(id='welcome' class="row")
+      div(class="col-md-12")
+        h1= title
+        p Welcome to #{username}
+    h2 战舰世界
+    div(id="form" class="row")
+      a(title="login" href="/log" class="btn btn-primary btn-lg" role="button" class="col-md-5") Login 
+      a(title="register" href="/reg" class="btn btn-primary btn-lg" role="button" class="col-md-5") Register
+    block register
+    block login

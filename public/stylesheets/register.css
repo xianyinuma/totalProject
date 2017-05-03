@@ -1,0 +1,12 @@
+#register{
+    width: 30%;
+    position: absolute;
+    top: 5%;
+    left: 35%;
+    padding: 30px 40px;
+    background-color: white;
+}
+#register button{
+    margin-top: -25px;
+    margin-right: -20px;
+}
