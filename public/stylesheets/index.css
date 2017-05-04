@@ -1,0 +1,27 @@
+#map-output {
+   float: left;
+}
+
+#status-list {
+    float: left;
+    width: 300px;
+    padding: 10px;
+}
+#status-list-title {
+    font-size: 1.5em;
+}
+
+#ranking-list {
+    float: left;
+    width: 300px;
+    padding: 10px;
+    margin-top: 30px;
+}
+#ranking-list-title {
+    font-size: 1.5em;
+}
+
+#chatroom-container {
+    float: left;
+    width: 300px;
+}

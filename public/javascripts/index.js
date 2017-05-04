@@ -8,9 +8,13 @@ $(document).ready(function () {
 
     //load models
     LoadModels();
+    var playerID = 1;
     setTimeout(function() {
-        let gameManager = new GameManager(1);
-    }, 30000);
+        let gameManager = new GameManager(playerID);
+        //start chatroom
+        startChatRoom(playerID);
+
+    }, 1000);
 
 
     function LoadModels() {

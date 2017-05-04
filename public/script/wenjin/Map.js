@@ -2,10 +2,10 @@
  * Created by wenjin on 2017/4/29.
  */
 class Map {
-    constructor(output, length, width, renderer, camera) {
+    constructor(output, renderer, camera) {
         this.output = output;
-        this.length = length;
-        this.width = width;
+        this.mapWidth = null;
+        this.mapHeight = null;
 
         this.renderer = renderer;
         this.camera = camera;
@@ -18,7 +18,9 @@ class Map {
         this.AddSkyBox();
     }
 
-    UpdateStatus(boatArray, bulletArray) {
+    UpdateStatus(boatArray, bulletArray, mapWidth, mapHeight) {
+        this.mapWidth = mapWidth;
+        this.mapHeight = mapHeight;
         for (let i = 0; i < boatArray.size(); i++) {
             boatArray.get(i).Move();
         }
@@ -41,7 +43,7 @@ class Map {
 
         this.water.material.uniforms.time.value += 1.0 / 60.0;
         this.water.render();
-        this.renderer.setSize(this.length, this.width);
+        this.renderer.setSize(this.mapWidth, this.mapHeight);
         this.output.html(this.renderer.domElement);
         this.renderer.render(this.scene, this.camera);
 

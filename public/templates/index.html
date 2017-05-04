@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <title>Title</title>
 
-    <link type="text/css" href="../stylesheets/reset.css">
+    <link rel="stylesheet" href="stylesheets/reset.css">
+    <link rel="stylesheet" href="stylesheets/index.css">
+    <link rel="stylesheet" href="stylesheets/chatroom.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 
     <script type="text/javascript" src="../script/util/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="../script/util/ArrayList.js"></script>
@@ -17,6 +20,10 @@
 
     <script type="text/javascript" src="../script/util/CreateModel.js"></script>
 
+
+    <script type="text/javascript"  src="../script/util/socket.io.js"></script>
+    <script type="text/javascript"  src="../script/wenjin/chatroom.js"></script>
+
     <script type="text/javascript" src="../script/wenjin/MovableObject.js"></script>
     <script type="text/javascript" src="../script/wenjin/StaticObject.js"></script>
     <script type="text/javascript" src="../script/wenjin/Box.js"></script>
@@ -28,10 +35,65 @@
     <script type="text/javascript" src="../script/wenjin/GameManager.js"></script>
     <script type="text/javascript" src="../javascripts/index.js"></script>
     <!--<script type="text/javascript" src="../wenjin/Map.js"></script>-->
+
 </head>
 <body>
+
 <div id="map-output"></div>
-<div id="ranking-list"></div>
+
+<div id="status-list">
+    <ul class="list-group">
+        <li class="list-group-item" id="status-list-title">
+            <span class="glyphicon glyphicon-stats"></span>
+            Status List:
+        </li>
+
+        <li class="list-group-item">
+            <span class="glyphicon glyphicon-user"></span>
+            Username:
+            <span id="status-playerID"></span>
+        </li>
+
+        <li class="list-group-item">
+            <span class="glyphicon glyphicon-heart-empty"></span>
+            Health:
+            <span id="status-health"></span>
+        </li>
+
+        <li class="list-group-item">
+            <span class="glyphicon glyphicon-star"></span>
+            Level:
+            <span id="status-level"></span>
+        </li>
+    </ul>
+</div>
+
+<div id="ranking-list">
+    <ul class="list-group">
+        <li class="list-group-item" id="ranking-list-title">
+            <span class="glyphicon glyphicon-sort-by-order-alt"></span>
+            Ranking List:
+        </li>
+
+        <span id="ordered-user-list">
+        </span>
+    </ul>
+
+</div>
+
+<div id="chatroom-container">
+
+    <ul class="pages">
+        <li class="chat page">
+            <div class="chatArea">
+                <ul class="messages"></ul>
+            </div>
+            <input class="inputMessage" placeholder="Type here..."/>
+        </li>
+    </ul>
+</div>
+
+
 <div id="debug"></div>
 </body>
 </html>

@@ -16,14 +16,22 @@ class GameManager {
         var staticArray = null;
 
         boatArray = new ArrayList();
+        bulletArray = new ArrayList();
+        staticArray = new ArrayList();
+
+        var assistBoat = new Boat(2);
+        boatArray.add(assistBoat);
+        setInterval(function () {
+            let bullet = assistBoat.Fire();
+            bulletArray.add(bullet);
+        }, 2000);
         boatArray.add(currentBoat);
 
-        bulletArray = new ArrayList();
-        let bullet = new Bullet(1,1,0);
-        bullet.mesh.position.y = 40;
-        bulletArray.add(bullet);
 
-        staticArray = new ArrayList();
+        // let bullet = new Bullet(1,1,0);
+        // bullet.mesh.position.y = 40;
+        // bulletArray.add(bullet);
+
         
         // let box = new Box(1, 0);
         // box.mesh.position.set(100, 0, 100);
@@ -31,9 +39,10 @@ class GameManager {
         // staticArray.add(new Portal(300, 1200, 900));
 
         //dynamic construct the camera
-        var length = 1200;
-        var width = 700;
-        
+        var mapWidth;
+        var mapHeight;
+        adjustWindowSize();
+
         var camera, controls;
         var renderer = new THREE.WebGLRenderer();
 
@@ -42,11 +51,22 @@ class GameManager {
         camera.position.set(0, 20, 100);
         controls = new THREE.OrbitControls(camera, renderer.domElement);
 
-        var map = new Map(output, length, width, renderer, camera);
+        var statusPlayerID = $("#status-playerID");
+        var statusHealth = $("#status-health");
+        var statusLevel = $("#status-level");
+        var orderedUserList = $("#ordered-user-list");
 
-        UpdateOutput(currentBoat, boatArray, bulletArray, staticArray);//todo
+
+        statusPlayerID.html(currentBoat.playerID);
+        statusHealth.html(currentBoat.health);
+        statusLevel.html(currentBoat.level);
+
+        var map = new Map(output, renderer, camera);
 
         function UpdateOutput(currentBoat, boatArray, bulletArray, staticArray) {
+
+            adjustWindowSize();
+            UpdateStatusPanel();
             sinkBullet(bulletArray);
             let feedback = currentBoat.BoatCheck(bulletArray, staticArray);
             if (feedback.static != null) {
@@ -67,36 +87,57 @@ class GameManager {
                 }
                 bulletArray.removeValue(feedback.bullet);
             }
-            
-            map.UpdateStatus(boatArray, bulletArray);
+            map.UpdateStatus(boatArray, bulletArray, mapWidth, mapHeight);
             map.UpdateOutput(currentBoat, boatArray, bulletArray, staticArray);
-            
-            document.getElementById("debug").innerHTML = "bullet size:\n" + bulletArray.size() +
-                "\nboat size:\n" + boatArray.size() + "\nboat health:\n" + boatArray.get(0).health;
+            // document.getElementById("debug").innerHTML = "bullet size:\n" + bulletArray.size() +
+            //     "\nboat size:\n" + boatArray.size() + "\nboat health:\n" + boatArray.get(0).health;
         }
 
 
-
-        function sinkBullet(bulletArray) {
-            for (let i = 0; i < bulletArray.size(); i++) {
-                let temp_bullet = bulletArray.get(i);
-                if(temp_bullet.mesh.position.y <= 0) {
-                    bulletArray.removeValue(temp_bullet)
-                }
-            }
-        }
 
         self.setInterval(function () {
-            UpdateOutput(currentBoat, boatArray, bulletArray, staticArray, camera);
-            //camera更新
-            //CameraUpdate();
+            UpdateOutput(currentBoat, boatArray, bulletArray, staticArray);
         }, 50);
+
         // self.setInterval(function () {
         //     CameraUpdate()
         // }, 5);
 
         document.addEventListener('keydown', onKeyDown, false);
         document.addEventListener('keyup', onKeyUp, false);
+
+        function UpdateStatusPanel() {
+            statusHealth.html(currentBoat.health);
+            statusLevel.html(currentBoat.level);
+            orderedUserList.html("");
+            let orderedBoatArray = sortBoatArray();
+            for (let i = 0; i < orderedBoatArray.size(); i++) {
+                orderedUserList.append(`
+            <li class="list-group-item">
+            <span class="glyphicon glyphicon-user"></span>
+            Username:` + orderedBoatArray.get(i).playerID + `
+            <span class="glyphicon glyphicon-heart-empty"></span>
+            Health:` + orderedBoatArray.get(i).health + `
+            </li>`);
+            }
+        }
+
+        function sortBoatArray() {
+            var bubbleSort=function(arr){
+                for(var i=0;i<arr.length-1;i++){
+                    for(var j=i+1;j<arr.length;j++){
+                        if(arr[i]>arr[j]){//如果前面的数据比后面的大就交换
+                            var temp=arr[i];
+                            arr[i]=arr[j];
+                            arr[j]=temp;
+                        }
+                        console.log("第"+(++times)+"次排序后："+arr);
+                    }
+                }
+                return arr;
+            }
+            return bubbleSort(boatArray);
+        }
 
         function onKeyUp(event) {
             var value = String.fromCharCode(event.keyCode).toLowerCase();
@@ -125,6 +166,26 @@ class GameManager {
             }
         }
 
+        function sinkBullet(bulletArray) {
+            for (let i = 0; i < bulletArray.size(); i++) {
+                let temp_bullet = bulletArray.get(i);
+                if(temp_bullet.mesh.position.y <= 0) {
+                    bulletArray.removeValue(temp_bullet)
+                }
+            }
+        }
+
+        function adjustWindowSize() {
+            if (window.innerWidth < 1000) {
+                //small width, status display under the map
+                mapWidth = 1000;
+                mapHeight = 600;
+            }
+            else {
+                mapWidth = window.innerWidth - 300;
+                mapHeight = window.innerHeight;
+            }
+        }
 
         function CameraUpdate() {
             var cameraY = camera.position.y;
