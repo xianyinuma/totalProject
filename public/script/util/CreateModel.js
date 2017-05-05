@@ -261,7 +261,7 @@ function createBulletSphere() {
     var geometry = new THREE.SphereGeometry(3, 50, 50);
 
     var material = new THREE.MeshPhongMaterial({
-        color: 0x000000,
+        color: 0x330033,
         specular: 0xffffff,
         shininess: 30
     });

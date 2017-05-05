@@ -24,12 +24,22 @@ router.get('/reg', function (req, res) {
     
 });
 router.get('/log', function (req, res) {
-    res.render('log', { 
-      title: '登录',
-      user:req.session.user,
-      error: req.flash('error').toString(),
-      success: req.flash('success').toString(),
+    res.render('log', {
+        title: '登录',
+        user:req.session.user,
+        error: req.flash('error').toString(),
+        success: req.flash('success').toString(),
     });
+    // res.redirect(path.join(__dirname, '../public/templates', 'index.html'))
+});
+router.post('/log', function (req, res) {
+    // res.render('log', {
+    //     title: '登录',
+    //     user:req.session.user,
+    //     error: req.flash('error').toString(),
+    //     success: req.flash('success').toString(),
+    // });
+    res.redirect(path.join(__dirname, '../public/templates', 'index.html'))
 });
 router.get('/webGL', function(req, res, next){
   // res.sendFile('three.html');
@@ -44,8 +54,8 @@ router.get('/process_get',function(req,res){
     }
     req.session.username=req.query.username;
     //res.send(JSON.stringify(response));
-    //return res.redirect('/webGL?username='+req.query.username);
-    res.send(req.session);
+    return res.redirect('/index?username='+req.query.username);
+    // res.send(req.session);
 })
 
 module.exports = router;
