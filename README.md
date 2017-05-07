@@ -1,6 +1,6 @@
 # Unchated Waters: A web Virtual Reality environment
 
-Uncharted Waters is a multiplayer VR network game using Express, MongoDB, Vue and three.js.
+Uncharted Waters is a multiplayer VR network game using Express(todo), MongoDB(todo), Vue and three.js.
 
 ## Communications
 
@@ -22,4 +22,35 @@ Players can also chat with other players in the chat room embedded in the scene,
 <img src="https://github.com/xianyinuma/totalProject/blob/master/photo/demo1.jpeg">
 
 ## Programe Architecture
+
+Front end : ./public/
+
+We use vue.js and three.js to write the front end of the project. While vue.js is used to write the login and register pages and the main scene of the game is built with the help of three.js.
+
+With socket.io, an online chat room is embedded in the game.
+
+In ./public/js/sea-battle/ , all the JavaScript files of the objects can be found, and in ./public/assets/ their models can be found.
+
+
+## What we have done?
+
+1. The front end.
+    1. Model building of ships, scene, skybox, bonus boxes, portals.
+    2. The movement of ships, and the fire function.
+    3. The status of players, including the health, current level, current score, etc.
+    4. The function of bonus boxes and portals.
+    5. The login and register page.
+2. Chat Room
+3. Definiton of APIs, regulating the interaction between front and back end.
+
+## todo
+We are going to complete the development of back end soon. After adding various users into our scene, we will adjust the movement and fire of the ship; also, we will apply a better way of view scope moving including its restriction and a better shadowing system.
+
+We are going to build a user database with MongoDB.
+
+We are going to apply docker. 
+
+If possible, the UI design will be optimized.
+
+If possible, we will apply natural language processing technology to add some NPCs into the scene to interact with the player (including the accompolishment system or other EXCITING interaction).
 
