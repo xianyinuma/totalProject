@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a451ab46-4ffb-4561-a2aa-f21063f55dd3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/sea-battle/loading.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/sea-battle/loading/Bird.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/sea-battle/loading/Boid.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/sea-battle/loading/CanvasRenderer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/sea-battle/loading/Projector.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/sea-battle/loading/stats.min.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/temp/Bird.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/temp/Boid.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/temp/CanvasRenderer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/temp/Projector.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/temp/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/temp/stats.min.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/lib/js/ArrayList.js" afterPath="$PROJECT_DIR$/public/assets/lib/js/ArrayList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/chatroom.css" afterPath="$PROJECT_DIR$/public/css/chatroom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/index.css" afterPath="$PROJECT_DIR$/public/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/sea-battle.js" afterPath="$PROJECT_DIR$/public/js/sea-battle.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/sea-battle/GameManager.js" afterPath="$PROJECT_DIR$/public/js/sea-battle/GameManager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/templates/index.html" afterPath="$PROJECT_DIR$/public/templates/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="node_modules/after/.npmignore" />
@@ -393,36 +388,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="485">
-              <caret line="32" column="14" lean-forward="true" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chatroom.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/css/chatroom.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="112" column="14" lean-forward="true" selection-start-line="112" selection-start-column="14" selection-end-line="112" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="68" column="18" lean-forward="true" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="sea-battle.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/sea-battle.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -435,30 +400,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameManager.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GameManager.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/sea-battle/GameManager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="220" column="44" lean-forward="false" selection-start-line="220" selection-start-column="44" selection-end-line="220" selection-end-column="44" />
+            <state relative-caret-position="-281">
+              <caret line="155" column="49" lean-forward="false" selection-start-line="155" selection-start-column="49" selection-end-line="155" selection-end-column="49" />
               <folding>
                 <element signature="n#!!block;n#UpdateOutput#0;n#!!block;n#constructor#0;n#GameManager#0" expanded="false" />
                 <element signature="e#4509#4596#0" expanded="false" />
-                <element signature="n#!!block;n#UpdateStatusPanel#0;n#!!block;n#constructor#0;n#GameManager#0" expanded="false" />
-                <element signature="n#!!block;n#sortBoatArray#0;n#!!block;n#constructor#0;n#GameManager#0" expanded="false" />
                 <element signature="n#!!block;n#onKeyUp#0;n#!!block;n#constructor#0;n#GameManager#0" expanded="false" />
                 <element signature="n#!!block;n#onKeyDown#0;n#!!block;n#constructor#0;n#GameManager#0" expanded="false" />
                 <element signature="n#!!block;n#sinkBullet#0;n#!!block;n#constructor#0;n#GameManager#0" expanded="false" />
+                <element signature="n#!!block;n#adjustWindowSize#0;n#!!block;n#constructor#0;n#GameManager#0" expanded="false" />
                 <element signature="n#!!block;n#CameraUpdate#0;n#!!block;n#constructor#0;n#GameManager#0" expanded="false" />
-                <marker date="1494152846958" expanded="true" signature="1622:2323" ph="..." />
-                <marker date="1494152846958" expanded="true" signature="1622:2332" ph="..." />
-                <marker date="1494152846958" expanded="true" signature="1682:1781" ph="..." />
-                <marker date="1494152846958" expanded="true" signature="1819:1961" ph="..." />
-                <marker date="1494152846958" expanded="true" signature="1999:2144" ph="..." />
-                <marker date="1494152846958" expanded="true" signature="2182:2318" ph="..." />
-                <marker date="1494152846958" expanded="true" signature="2436:2674" ph="..." />
-                <marker date="1494152846958" expanded="true" signature="2497:2609" ph="..." />
-                <marker date="1494152846958" expanded="true" signature="2648:2664" ph="..." />
-                <marker date="1494152846958" expanded="true" signature="5193:5456" ph="..." />
+                <marker date="1494154052799" expanded="true" signature="1622:2323" ph="..." />
+                <marker date="1494154052799" expanded="true" signature="1622:2332" ph="..." />
+                <marker date="1494154052799" expanded="true" signature="1682:1781" ph="..." />
+                <marker date="1494154052799" expanded="true" signature="1819:1961" ph="..." />
+                <marker date="1494154052799" expanded="true" signature="1999:2144" ph="..." />
+                <marker date="1494154052799" expanded="true" signature="2182:2318" ph="..." />
+                <marker date="1494154052799" expanded="true" signature="2436:2674" ph="..." />
+                <marker date="1494154052799" expanded="true" signature="2497:2609" ph="..." />
+                <marker date="1494154052799" expanded="true" signature="2648:2664" ph="..." />
+                <marker date="1494154052799" expanded="true" signature="5193:5448" ph="..." />
               </folding>
             </state>
           </provider>
@@ -532,9 +496,9 @@
         <option value="$PROJECT_DIR$/public/templates/index.html" />
         <option value="$PROJECT_DIR$/public/js/sea-battle/loading.js" />
         <option value="$PROJECT_DIR$/public/assets/lib/js/ArrayList.js" />
-        <option value="$PROJECT_DIR$/public/js/sea-battle/GameManager.js" />
         <option value="$PROJECT_DIR$/public/css/index.css" />
         <option value="$PROJECT_DIR$/public/css/chatroom.css" />
+        <option value="$PROJECT_DIR$/public/js/sea-battle/GameManager.js" />
       </list>
     </option>
   </component>
@@ -570,7 +534,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -597,10 +560,6 @@
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -613,6 +572,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -654,6 +617,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -1245,7 +1209,8 @@
       <workItem from="1493959931132" duration="329000" />
       <workItem from="1494140820605" duration="6347000" />
       <workItem from="1494148135147" duration="260000" />
-      <workItem from="1494148873848" duration="4808000" />
+      <workItem from="1494148873848" duration="4872000" />
+      <workItem from="1494153914050" duration="210000" />
     </task>
     <task id="LOCAL-00001" summary="adjust the load time, solve the jquery and favicon path problem">
       <created>1493807957518</created>
@@ -1275,11 +1240,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494141019082</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="wait focus adjust, then we over">
+      <created>1494153726902</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1494153726902</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38904000" />
+    <option name="totallyTimeSpent" value="39178000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1292,7 +1264,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1302,21 +1273,21 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.50213677" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15671642" sideWeight="0.28077456" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15831557" sideWeight="0.28907332" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22424893" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22424893" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15671642" sideWeight="0.71922547" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15831557" sideWeight="0.7109267" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1367,7 +1338,8 @@
     <MESSAGE value="set the routing and synchronize the link" />
     <MESSAGE value="optimum" />
     <MESSAGE value="optimum the file structure, then we need to optimum the frontend" />
-    <option name="LAST_COMMIT_MESSAGE" value="optimum the file structure, then we need to optimum the frontend" />
+    <MESSAGE value="wait focus adjust, then we over" />
+    <option name="LAST_COMMIT_MESSAGE" value="wait focus adjust, then we over" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1384,7 +1356,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="58" lean-forward="false" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1398,7 +1369,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1406,7 +1376,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1419,7 +1388,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1427,7 +1395,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1446,7 +1413,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1454,7 +1420,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="7" column="39" lean-forward="false" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1462,7 +1427,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1470,7 +1434,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1478,7 +1441,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1486,7 +1448,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1494,7 +1455,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="5" column="2" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1502,7 +1462,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1510,7 +1469,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1518,7 +1476,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1526,7 +1483,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1536,7 +1492,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="40" column="40" lean-forward="false" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1552,7 +1507,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1560,7 +1514,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1568,23 +1521,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/sea-battle/CanvasRenderer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/sea-battle/CanvasRenderer.js" />
     <entry file="file://$PROJECT_DIR$/public/js/sea-battle/loading/CanvasRenderer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1592,7 +1536,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="36" column="23" lean-forward="false" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1600,7 +1543,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1350">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1608,9 +1550,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1618,7 +1557,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="55" column="6" lean-forward="true" selection-start-line="55" selection-start-column="6" selection-end-line="59" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1626,37 +1564,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
           <caret line="127" column="19" lean-forward="true" selection-start-line="127" selection-start-column="19" selection-end-line="127" selection-end-column="19" />
-          <folding>
-            <element signature="n#!!block;n#addParticipantsMessage#0;n#!!block;n#startChatRoom#0" expanded="false" />
-            <element signature="n#!!block;n#setUsername#0;n#!!block;n#startChatRoom#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/sea-battle/GameManager.js">
+    <entry file="file://$PROJECT_DIR$/public/css/chatroom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="220" column="44" lean-forward="false" selection-start-line="220" selection-start-column="44" selection-end-line="220" selection-end-column="44" />
-          <folding>
-            <element signature="n#!!block;n#UpdateOutput#0;n#!!block;n#constructor#0;n#GameManager#0" expanded="false" />
-            <element signature="e#4509#4596#0" expanded="false" />
-            <element signature="n#!!block;n#UpdateStatusPanel#0;n#!!block;n#constructor#0;n#GameManager#0" expanded="false" />
-            <element signature="n#!!block;n#sortBoatArray#0;n#!!block;n#constructor#0;n#GameManager#0" expanded="false" />
-            <element signature="n#!!block;n#onKeyUp#0;n#!!block;n#constructor#0;n#GameManager#0" expanded="false" />
-            <element signature="n#!!block;n#onKeyDown#0;n#!!block;n#constructor#0;n#GameManager#0" expanded="false" />
-            <element signature="n#!!block;n#sinkBullet#0;n#!!block;n#constructor#0;n#GameManager#0" expanded="false" />
-            <element signature="n#!!block;n#CameraUpdate#0;n#!!block;n#constructor#0;n#GameManager#0" expanded="false" />
-            <marker date="1494152846958" expanded="true" signature="1622:2323" ph="..." />
-            <marker date="1494152846958" expanded="true" signature="1622:2332" ph="..." />
-            <marker date="1494152846958" expanded="true" signature="1682:1781" ph="..." />
-            <marker date="1494152846958" expanded="true" signature="1819:1961" ph="..." />
-            <marker date="1494152846958" expanded="true" signature="1999:2144" ph="..." />
-            <marker date="1494152846958" expanded="true" signature="2182:2318" ph="..." />
-            <marker date="1494152846958" expanded="true" signature="2436:2674" ph="..." />
-            <marker date="1494152846958" expanded="true" signature="2497:2609" ph="..." />
-            <marker date="1494152846958" expanded="true" signature="2648:2664" ph="..." />
-            <marker date="1494152846958" expanded="true" signature="5193:5456" ph="..." />
-          </folding>
+        <state relative-caret-position="25">
+          <caret line="112" column="14" lean-forward="false" selection-start-line="112" selection-start-column="14" selection-end-line="112" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="32" column="14" lean-forward="false" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="68" column="18" lean-forward="false" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1670,27 +1601,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/public/js/sea-battle/GameManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="68" column="18" lean-forward="true" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="32" column="14" lean-forward="true" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/chatroom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="112" column="14" lean-forward="true" selection-start-line="112" selection-start-column="14" selection-end-line="112" selection-end-column="14" />
-          <folding />
+        <state relative-caret-position="-281">
+          <caret line="155" column="49" lean-forward="false" selection-start-line="155" selection-start-column="49" selection-end-line="155" selection-end-column="49" />
+          <folding>
+            <element signature="n#!!block;n#UpdateOutput#0;n#!!block;n#constructor#0;n#GameManager#0" expanded="false" />
+            <element signature="e#4509#4596#0" expanded="false" />
+            <element signature="n#!!block;n#onKeyUp#0;n#!!block;n#constructor#0;n#GameManager#0" expanded="false" />
+            <element signature="n#!!block;n#onKeyDown#0;n#!!block;n#constructor#0;n#GameManager#0" expanded="false" />
+            <element signature="n#!!block;n#sinkBullet#0;n#!!block;n#constructor#0;n#GameManager#0" expanded="false" />
+            <element signature="n#!!block;n#adjustWindowSize#0;n#!!block;n#constructor#0;n#GameManager#0" expanded="false" />
+            <element signature="n#!!block;n#CameraUpdate#0;n#!!block;n#constructor#0;n#GameManager#0" expanded="false" />
+            <marker date="1494154052799" expanded="true" signature="1622:2323" ph="..." />
+            <marker date="1494154052799" expanded="true" signature="1622:2332" ph="..." />
+            <marker date="1494154052799" expanded="true" signature="1682:1781" ph="..." />
+            <marker date="1494154052799" expanded="true" signature="1819:1961" ph="..." />
+            <marker date="1494154052799" expanded="true" signature="1999:2144" ph="..." />
+            <marker date="1494154052799" expanded="true" signature="2182:2318" ph="..." />
+            <marker date="1494154052799" expanded="true" signature="2436:2674" ph="..." />
+            <marker date="1494154052799" expanded="true" signature="2497:2609" ph="..." />
+            <marker date="1494154052799" expanded="true" signature="2648:2664" ph="..." />
+            <marker date="1494154052799" expanded="true" signature="5193:5448" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

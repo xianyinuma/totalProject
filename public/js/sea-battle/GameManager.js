@@ -153,12 +153,11 @@ class GameManager {
             <li class="list-group-item">
             <span class="glyphicon glyphicon-user"></span>
             Username:` + orderedBoatArray.get(i).playerID + `
-            <span class="glyphicon glyphicon-heart-empty"></span>
-            Health:` + orderedBoatArray.get(i).health + `
+            <span class="glyphicon glyphicon-star"></span>
+            Level:` + orderedBoatArray.get(i).health + `
             </li>`);
             }
         }
-
 
         function sortBoatArray() {
             var tempBoat;
