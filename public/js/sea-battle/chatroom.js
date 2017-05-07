@@ -192,30 +192,42 @@ function startChatRoom(currentPlayerName) {
   }
 
   // Keyboard events
-
-  $window.keydown(function (event) {
-    // // Auto-focus the current input when a key is typed
-    // if (!(event.ctrlKey || event.metaKey || event.altKey)) {
-    //   $currentInput.focus();
-    // }
-    // // When the client hits ENTER on their keyboard
-    // if (event.which === 13) {
-    //   if (username) {
-    //     sendMessage();
-    //     //socket.emit('stop typing');
-    //     typing = false;
-    //   } else {
-    //     setUsername();
-    //   }
-    // }
-      if (event.which === 13 && $currentInput.is(":focus")) {
-        if (username) {
-          sendMessage();
-          socket.emit('stop typing');
-          typing = false;
+  //
+  // $window.keydown(function (event) {
+  //   // // Auto-focus the current input when a key is typed
+  //   // if (!(event.ctrlKey || event.metaKey || event.altKey)) {
+  //   //   $currentInput.focus();
+  //   // }
+  //   // // When the client hits ENTER on their keyboard
+  //   // if (event.which === 13) {
+  //   //   if (username) {
+  //   //     sendMessage();
+  //   //     //socket.emit('stop typing');
+  //   //     typing = false;
+  //   //   } else {
+  //   //     setUsername();
+  //   //   }
+  //   // }
+  //     if (event.which === 13 && $currentInput.is(":focus")) {
+  //       if (username) {
+  //         sendMessage();
+  //         socket.emit('stop typing');
+  //         typing = false;
+  //       }
+  //     }
+  // });
+    $window.keydown(function (event) {
+        if (event.which === 13) {
+            if($currentInput.is(":focus")){
+                sendMessage();
+                socket.emit('stop typing');
+                typing = false;
+                $currentInput.blur();
+            }else{
+                $currentInput.focus();
+            }
         }
-      }
-  });
+    });
 
   $inputMessage.on('input', function() {
     updateTyping();
