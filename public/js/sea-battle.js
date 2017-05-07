@@ -21,7 +21,7 @@ $(document).ready(function () {
         //start chatroom
         startChatRoom(playerID);
 
-    }, 1000);
+    }, 30000);
 
 
     function LoadModels() {

@@ -3,7 +3,9 @@
 }
 
 #status-list {
-    float: left;
+    position: fixed;
+    left: 0;
+    top: 0;
     width: 300px;
     padding: 10px;
 }
@@ -12,16 +14,21 @@
 }
 
 #ranking-list {
-    float: left;
+    position: fixed;
+    right: 0;
+    top: 0;
     width: 300px;
     padding: 10px;
-    margin-top: 30px;
 }
 #ranking-list-title {
     font-size: 1.5em;
 }
 
 #chatroom-container {
-    float: left;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: white;
     width: 300px;
+    height: 400px;
 }

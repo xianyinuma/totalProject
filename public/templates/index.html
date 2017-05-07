@@ -13,6 +13,15 @@
     <script type="text/javascript" src="../assets/lib/js/ArrayList.js"></script>
     <script type="text/javascript" src="../assets/lib/js/three.js"></script>
 
+    <script type="text/javascript" src="../js/sea-battle/loading/Bird.js"></script>
+    <script type="text/javascript" src="../js/sea-battle/loading/Boid.js"></script>
+    <script type="text/javascript" src="../js/sea-battle/loading/CanvasRenderer.js"></script>
+    <script type="text/javascript" src="../js/sea-battle/loading/Projector.js"></script>
+    <script type="text/javascript" src="../js/sea-battle/loading/stats.min.js"></script>
+
+
+
+    <script type="text/javascript" src="../js/sea-battle/loading.js"></script>
 
     <script type="text/javascript" src="../js/model/WaterShader.js"></script>
     <script type="text/javascript" src="../js/model/OBJLoader.js"></script>
@@ -37,50 +46,22 @@
 </head>
 <body>
 
+<div id= "loading">
+    <div id="container"></div>
+    <p>Loading ...</p>
+</div>
+
 <div id="map-output"></div>
 
 <div id="status-list">
-    <ul class="list-group">
-        <li class="list-group-item" id="status-list-title">
-            <span class="glyphicon glyphicon-stats"></span>
-            Status List:
-        </li>
 
-        <li class="list-group-item">
-            <span class="glyphicon glyphicon-user"></span>
-            Username:
-            <span id="status-playerID"></span>
-        </li>
-
-        <li class="list-group-item">
-            <span class="glyphicon glyphicon-heart-empty"></span>
-            Health:
-            <span id="status-health"></span>
-        </li>
-
-        <li class="list-group-item">
-            <span class="glyphicon glyphicon-star"></span>
-            Level:
-            <span id="status-level"></span>
-        </li>
-    </ul>
 </div>
 
 <div id="ranking-list">
-    <ul class="list-group">
-        <li class="list-group-item" id="ranking-list-title">
-            <span class="glyphicon glyphicon-sort-by-order-alt"></span>
-            Ranking List:
-        </li>
-
-        <span id="ordered-user-list">
-        </span>
-    </ul>
 
 </div>
 
 <div id="chatroom-container">
-
     <ul class="pages">
         <li class="chat page">
             <div class="chatArea">

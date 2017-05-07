@@ -34,7 +34,11 @@
 
         return -1;
     };
-
+    proto.switchElement = function(i, j){
+        var temp = this.datas[i];
+        this.datas[i] = this.datas[j];
+        this.datas[j] = temp;
+    }
     proto.lastIndexOf = function(value) {
         for ( var index = this.size(); index >= 0; index--) {
             if (this.datas[index] === value) {

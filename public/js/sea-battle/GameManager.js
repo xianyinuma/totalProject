@@ -32,7 +32,7 @@ class GameManager {
         // bullet.mesh.position.y = 40;
         // bulletArray.add(bullet);
 
-        
+
         // let box = new Box(1, 0);
         // box.mesh.position.set(100, 0, 100);
         // staticArray.add(box);
@@ -51,15 +51,53 @@ class GameManager {
         camera.position.set(0, 20, 100);
         controls = new THREE.OrbitControls(camera, renderer.domElement);
 
+        let statusList = $("#status-list");
+        statusList.html(`<ul class="list-group">
+        <li class="list-group-item" id="status-list-title">
+            <span class="glyphicon glyphicon-stats"></span>
+            Status List:
+        </li>
+
+        <li class="list-group-item">
+            <span class="glyphicon glyphicon-user"></span>
+            Username:
+            <span id="status-playerID"></span>
+        </li>
+
+        <li class="list-group-item">
+            <span class="glyphicon glyphicon-heart-empty"></span>
+            Health:
+            <span id="status-health"></span>
+        </li>
+
+        <li class="list-group-item">
+            <span class="glyphicon glyphicon-star"></span>
+            Level:
+            <span id="status-level"></span>
+        </li>
+        </ul>`);
+        let rankingList = $("#ranking-list");
+        rankingList.html(`
+    <ul class="list-group">
+        <li class="list-group-item" id="ranking-list-title">
+            <span class="glyphicon glyphicon-sort-by-order-alt"></span>
+            Ranking List:
+        </li>
+
+        <span id="ordered-user-list">
+        </span>
+    </ul>`);
+
+
         var statusPlayerID = $("#status-playerID");
         var statusHealth = $("#status-health");
         var statusLevel = $("#status-level");
         var orderedUserList = $("#ordered-user-list");
 
-
-        statusPlayerID.html(currentBoat.playerID);
-        statusHealth.html(currentBoat.health);
-        statusLevel.html(currentBoat.level);
+        //
+        // statusPlayerID.html(currentBoat.playerID);
+        // statusHealth.html(currentBoat.health);
+        // statusLevel.html(currentBoat.level);
 
         var map = new Map(output, renderer, camera);
 
@@ -94,7 +132,6 @@ class GameManager {
         }
 
 
-
         self.setInterval(function () {
             UpdateOutput(currentBoat, boatArray, bulletArray, staticArray);
         }, 50);
@@ -122,16 +159,15 @@ class GameManager {
             }
         }
 
+
         function sortBoatArray() {
-            var bubbleSort=function(arr){
-                for(var i=0;i<arr.length-1;i++){
-                    for(var j=i+1;j<arr.length;j++){
-                        if(arr[i]>arr[j]){//如果前面的数据比后面的大就交换
-                            var temp=arr[i];
-                            arr[i]=arr[j];
-                            arr[j]=temp;
+            var tempBoat;
+            let bubbleSort = function (arr) {
+                for (let i = 0; i < arr.size() - 1; i++) {
+                    for (let j = i + 1; j < arr.size(); j++) {
+                        if (arr.get(i).level < arr.get(j).level) {//如果前面的数据比后面的大就交换
+                           arr.switchElement(i, j);
                         }
-                        console.log("第"+(++times)+"次排序后："+arr);
                     }
                 }
                 return arr;
@@ -143,23 +179,23 @@ class GameManager {
             var value = String.fromCharCode(event.keyCode).toLowerCase();
 
             //currentBoat.control(value, 'keyup');
-            if (value == "w" || value == "s" || value == "a" || value=="d") {
+            if (value == "w" || value == "s" || value == "a" || value == "d") {
                 currentBoat.control(value, 'keyup');
             }
         }
 
         function onKeyDown(event) {
-            if(event.keyCode == 32) {
+            if (event.keyCode == 32) {
                 //space bar, sync the camera by the space bar
                 CameraUpdate();
             }
             else {
                 var value = String.fromCharCode(event.keyCode).toLowerCase();
-                if(value == "f"){
+                if (value == "f") {
                     let bullet = currentBoat.Fire();
                     bulletArray.add(bullet);
                 }
-                else if (value == "w" || value == "s" || value == "a" || value=="d") {
+                else if (value == "w" || value == "s" || value == "a" || value == "d") {
                     currentBoat.control(value, 'keydown');
                 }
 
@@ -169,7 +205,7 @@ class GameManager {
         function sinkBullet(bulletArray) {
             for (let i = 0; i < bulletArray.size(); i++) {
                 let temp_bullet = bulletArray.get(i);
-                if(temp_bullet.mesh.position.y <= 0) {
+                if (temp_bullet.mesh.position.y <= 0) {
                     bulletArray.removeValue(temp_bullet)
                 }
             }
@@ -182,7 +218,7 @@ class GameManager {
                 mapHeight = 600;
             }
             else {
-                mapWidth = window.innerWidth - 300;
+                mapWidth = window.innerWidth;
                 mapHeight = window.innerHeight;
             }
         }
@@ -203,6 +239,7 @@ class GameManager {
             controls.target.set(currentBoat.mesh.position.x, currentBoat.mesh.position.y, currentBoat.mesh.position.z);
             controls.update();
         }
+
         //镜头跟踪，用户按下space bar空格键同步，模拟LOL视角控制
     }
 }
