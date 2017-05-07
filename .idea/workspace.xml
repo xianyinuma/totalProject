@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a451ab46-4ffb-4561-a2aa-f21063f55dd3" name="Default" comment="adjust readme and note">
+    <list default="true" id="a451ab46-4ffb-4561-a2aa-f21063f55dd3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/sea-battle/Boat.js" afterPath="$PROJECT_DIR$/public/js/sea-battle/Boat.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/templates/index.html" afterPath="$PROJECT_DIR$/public/templates/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/sea-battle/loading.js" afterPath="$PROJECT_DIR$/public/js/loading.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="node_modules/after/.npmignore" />
@@ -1222,7 +1218,7 @@
       <workItem from="1494148135147" duration="260000" />
       <workItem from="1494148873848" duration="4872000" />
       <workItem from="1494153914050" duration="302000" />
-      <workItem from="1494154876711" duration="308000" />
+      <workItem from="1494154876711" duration="366000" />
     </task>
     <task id="LOCAL-00001" summary="adjust the load time, solve the jquery and favicon path problem">
       <created>1493807957518</created>
@@ -1266,11 +1262,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494154150618</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="adjust readme and note">
+      <created>1494155204093</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1494155204093</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39578000" />
+    <option name="totallyTimeSpent" value="39636000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
