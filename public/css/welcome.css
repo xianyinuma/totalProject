@@ -1,0 +1,35 @@
+body{
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    margin: 0px;
+    
+}
+a{
+    margin: 10px;
+}
+#welcome{
+    background-image: url(../assets/images/test.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    max-width: 80%;
+    margin-left: 10%;
+    text-align: center;
+}
+#welcome h1,p{
+    color: white;
+    margin-top: 10%;;
+}
+#welcome h1{
+    font-size: 30px;
+}
+#welcome p{
+    font-size: 25px;
+}
+h2{
+    text-align: center;
+}
+#form{
+    margin-top: 50px;
+    margin-left: 36%;
+    width: 30%;
+}
