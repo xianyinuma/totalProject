@@ -33,15 +33,24 @@ class GameManager {
         // bulletArray.add(bullet);
 
 
-        // let box = new Box(1, 0);
-        // box.mesh.position.set(100, 0, 100);
-        // staticArray.add(box);
-        // staticArray.add(new Portal(300, 1200, 900));
 
         //dynamic construct the camera
         var mapWidth;
         var mapHeight;
         adjustWindowSize();
+        for (let i = 0; i < 10; i++) {
+            let box = new Box(10, 0);
+            box.mesh.position.set(mapWidth * Math.random(), 0, mapHeight * Math.random());
+            staticArray.add(box);
+        }
+        for (let i = 0; i < 10; i++) {
+            let box = new Box(0, 10);
+            box.mesh.position.set(mapWidth * Math.random(), 0, mapHeight * Math.random());
+            staticArray.add(box);
+        }
+        for (let i = 0; i < 10; i++) {
+            staticArray.add(new Portal(300, 1200, 900));
+        }
 
         var camera, controls;
         var renderer = new THREE.WebGLRenderer();
@@ -154,7 +163,7 @@ class GameManager {
             <span class="glyphicon glyphicon-user"></span>
             Username:` + orderedBoatArray.get(i).playerID + `
             <span class="glyphicon glyphicon-star"></span>
-            Level:` + orderedBoatArray.get(i).health + `
+            Level:` + orderedBoatArray.get(i).level + `
             </li>`);
             }
         }

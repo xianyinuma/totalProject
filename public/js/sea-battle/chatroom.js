@@ -51,6 +51,7 @@ function startChatRoom(currentPlayerName) {
 
       // Tell the server your username
       socket.emit('add user', username);
+      $currentInput.blur();
     }
   }
 

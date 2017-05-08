@@ -8,7 +8,7 @@ class Boat extends MovableObject {
 
         this.level = 1;
         this.damage = Math.pow(2, this.level - 1);
-        this.horizontalSpeed = 10000 / this.level;
+        this.horizontalSpeed = 100000 / this.level;
         this.exp = 0;
         this.maxExp = 10 * Math.pow(2, this.level - 1);
         this.giveExp = this.maxExp / 2;
