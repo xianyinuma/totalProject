@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a451ab46-4ffb-4561-a2aa-f21063f55dd3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/sea-battle/Boat.js" afterPath="$PROJECT_DIR$/public/js/sea-battle/Boat.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/sea-battle/GameManager.js" afterPath="$PROJECT_DIR$/public/js/sea-battle/GameManager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/sea-battle/Portal.js" afterPath="$PROJECT_DIR$/public/js/sea-battle/Portal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/sea-battle/chatroom.js" afterPath="$PROJECT_DIR$/public/js/sea-battle/chatroom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="node_modules/after/.npmignore" />
@@ -460,6 +457,7 @@
         <option value="$PROJECT_DIR$/public/js/sea-battle/Boat.js" />
         <option value="$PROJECT_DIR$/public/js/sea-battle/GameManager.js" />
         <option value="$PROJECT_DIR$/public/js/sea-battle/chatroom.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -1139,7 +1137,7 @@
       <workItem from="1494154876711" duration="366000" />
       <workItem from="1494159442064" duration="853000" />
       <workItem from="1494216922464" duration="757000" />
-      <workItem from="1494227151193" duration="1132000" />
+      <workItem from="1494227151193" duration="1555000" />
     </task>
     <task id="LOCAL-00001" summary="adjust the load time, solve the jquery and favicon path problem">
       <created>1493807957518</created>
@@ -1197,11 +1195,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494159696943</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="adjust chatroom focus, add box and portal">
+      <created>1494228304732</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1494228304732</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42378000" />
+    <option name="totallyTimeSpent" value="42801000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1227,10 +1232,10 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16132478" sideWeight="0.31560284" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09227468" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09227468" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16132478" sideWeight="0.68439716" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16132478" sideWeight="0.68439716" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1292,7 +1297,8 @@
     <MESSAGE value="order by level" />
     <MESSAGE value="adjust readme and note" />
     <MESSAGE value="adjust chatroom focus" />
-    <option name="LAST_COMMIT_MESSAGE" value="adjust chatroom focus" />
+    <MESSAGE value="adjust chatroom focus, add box and portal" />
+    <option name="LAST_COMMIT_MESSAGE" value="adjust chatroom focus, add box and portal" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1303,8 +1309,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/script/literally/css/literally.css" />
-    <entry file="file://$PROJECT_DIR$/public/script/literally/underscore-1.4.2.js" />
     <entry file="file://$PROJECT_DIR$/public/script/literally/js/literallycanvas.js" />
     <entry file="file://$PROJECT_DIR$/public/js/model/WaterShader.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1573,6 +1577,22 @@
         <state relative-caret-position="200">
           <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/photo/demo1.jpeg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="225">
+            <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

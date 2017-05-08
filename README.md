@@ -2,6 +2,8 @@
 
 Uncharted Waters is a multiplayer VR network game using Express(todo), MongoDB(todo), Vue and three.js.
 
+Demo: <a>webpj.ruchenshanghai.cn</a>
+
 ## Communications
 
 - 胡弋舟 15302010002@fudan.edu.cn
