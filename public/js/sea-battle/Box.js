@@ -3,8 +3,8 @@
  */
 class Box extends StaticObject {
     //initial the int: health and int: exp
-    constructor(health, exp) {
-        super();
+    constructor(id, health, exp, x, z) {
+        super(id);
         this.health = health;
         this.exp = exp;
 
@@ -15,11 +15,13 @@ class Box extends StaticObject {
         // this.mesh.position.x = 5;
         // this.mesh.position.y = 0;
         this.mesh = RECRUIT.clone();
+        this.mesh.position.set(x, 0, z);
+
         this.radius = 10;
 
     }
 
-    Operate(boat){
+    Operate(boat) {
         boat.ChangeExp(this.exp);
         boat.ChangeHealth(this.health);
     }

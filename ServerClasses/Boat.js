@@ -1,7 +1,7 @@
 /**
  * Created by Victor on 2017/4/27.
  */
-
+var MovableObject = require('./MovableObject');
 class Boat extends MovableObject {
     constructor(objectID) {
         super(objectID);
@@ -28,7 +28,8 @@ class Boat extends MovableObject {
         this.time1;
 
 
-        this.mesh = BOAT.clone();
+        this.mesh = { position: { x: 0, y: 0, z: 0 }, quaternion: { x: 0, y: 0, z: 0, w: 1 } };
+        // this.mesh = BOAT.clone(); TODO
         this.radius = 20;
     }
 
@@ -443,8 +444,8 @@ class Boat extends MovableObject {
     //
     //     };
 
-
-    //for net update @author mjt
+    //第一步：实现船同步
+    //for net update
     getData() {
         return {
             playerID: this.playerID,
@@ -464,13 +465,14 @@ class Boat extends MovableObject {
         };
     }
     update(data) {
+        //问题很大
         this.mesh.position.x = data.mesh.position.x;
         this.mesh.position.y = data.mesh.position.y;
         this.mesh.position.z = data.mesh.position.z;
-        this.mesh.quaternion.x = data.mesh.quaternion.x;
-        this.mesh.quaternion.y = data.mesh.quaternion.y;
-        this.mesh.quaternion.z = data.mesh.quaternion.z;
-        this.mesh.quaternion.w = data.mesh.quaternion.w;
+        this.mesh.quaternion.x = data.mesh.quaternion._x;
+        this.mesh.quaternion.y = data.mesh.quaternion._y;
+        this.mesh.quaternion.z = data.mesh.quaternion._z;
+        this.mesh.quaternion.w = data.mesh.quaternion._w;
         this.level = data.level;
         this.damage = data.damage;
         this.exp = data.exp;
@@ -483,3 +485,5 @@ class Boat extends MovableObject {
     }
 
 }
+
+module.exports = Boat;

@@ -2,10 +2,9 @@
  * Created by wenjin on 2017/4/28.
  */
 class Portal extends StaticObject {
-    constructor(lifeSpan, length, width) {
-        super();
+    constructor(id, length, width, x, z) {
+        super(id);
         this.radius = 20;
-        this.lifeSpan = lifeSpan;
 
         this.mapLength = length;
         this.mapWidth = width;
@@ -17,7 +16,7 @@ class Portal extends StaticObject {
         // this.mesh.position.x = 5;
         // this.mesh.position.y = 0;
         this.mesh = DOOR.clone();
-        this.mesh.position.set(length * Math.random(), 0, width * Math.random());
+        this.mesh.position.set(x, 0, z);
     }
 
     Operate(boat) {
