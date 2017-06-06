@@ -42,7 +42,7 @@ app.use(session({
         db: settings.db,
         host: settings.host,
         port: settings.port,
-        url: 'mongodb://localhost/blog' //要加一个url,
+        url: 'mongodb://localhost/player' //要加一个url,
     })
 }));
 

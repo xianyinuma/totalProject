@@ -1,8 +1,8 @@
 extends welcome
 
 block login
-    div(id= 'login')
-        form(method='get' action="process_get")
+    div(id='login')
+        form(method='post')
             button(type="button" class="close" aria-label="Close" onclick="document.getElementById('login').style.display='none'")
                 span(aria-hidden="true") &times
             div(class="form-group")
@@ -11,4 +11,7 @@ block login
             div(class='form-group')
                 label(for ="password") 密码：
                 input(type='password' name='password' id='password' class="form-control" placeholder="密码" required)
+            a(class="forget" href="") Forget Password?
+            br
+            br
             <input type="submit" class="btn btn-primary login-button" value="登录" style="width:70px;height:40px;" />

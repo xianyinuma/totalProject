@@ -1,0 +1,42 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+body{
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    margin: 0px;
+    background-color: black;
+}
+a{
+    margin: 10px;
+}
+#fform{
+    opacity: 0.8;
+}
+#welcome{
+    background-image: url(/assets/images/test.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    max-width: 90%;
+    margin-left: 5%;
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+}
+#welcome p{
+    color: white;
+    margin-top: 10%;
+    font-size: 25px;
+}
+
+#game{
+    color: white;
+    margin-top: 2%;
+    font-family: Montserrat, sans-serif;
+}
+h2{
+    text-align: center;
+}
+#form{
+    margin-top: 45%;
+    margin-left: 36%;
+    width: 30%;
+    opacity: 0.6;
+}

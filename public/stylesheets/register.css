@@ -1,0 +1,13 @@
+#register{
+    width: 30%;
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    padding: 30px 40px;
+    background-color: white;
+    animation-duration: 2s;
+}
+#register button{
+    margin-top: -25px;
+    margin-right: -20px;
+}

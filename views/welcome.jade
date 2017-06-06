@@ -1,24 +1,71 @@
 doctype html
 html
   head
-    title BattleShip
-    link(rel='stylesheet', href='../assets/lib/bootstrap/css/bootstrap.min.css')
-    link(rel='stylesheet', href='../css/welcome.css')
-    link(rel='stylesheet', href='../css/register.css')
-    link(rel='stylesheet', href='../css/login.css')
-    script(type='text/javascript', src='../assets/lib/js/jquery-3.2.1.js')
-    script(type='text/javascript', src='../assets/lib/bootstrap/js/bootstrap.js')
+    title Curious
+    link(rel='stylesheet', href='/assets/lib/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/welcome.css')
+    link(rel='stylesheet', href='/stylesheets/register.css')
+    link(rel='stylesheet', href='/stylesheets/login.css')
+    link(rel='stylesheet', href='/stylesheets/foundation.css')
+    link(rel='stylesheet', href='/stylesheets/app.css')
+    link(rel='stylesheet', href='/stylesheets/header.css')
+    script(type='text/javascript', src='/assets/lib/bootstrap/js/bootstrap.js')
     style.
       
-
   body
+    div(id='cssmenu')
+      ul(style="display: block;/* width: 50%; */float: right;")
+        if (user)
+          li
+            p Welcome Mr. #{user.name}
+        else
+          li
+            p Please Log in
+        li
+          a(href='/') Home
+        if (user)
+          li
+            a(href='/info') Info
+          li
+            a(href='/ship') Ship
+          li
+            a(href='/logout') Log out
+        else
+          li
+            a(href='/log') Log In
+          li
+            a(href='/reg') Sign Up
+        li(class='active')
+          a(href='#') Find US
+          ul
+            li
+              a(href='#') Team FDU
+            li
+              a(href='https://github.com/nswbmw/N-blog') Github
     div(id='welcome' class="row")
       div(class="col-md-12")
-        h1= title
-        p Welcome to #{username}
-    h2 战舰世界
-    div(id="form" class="row")
-      a(title="login" href="/log" class="btn btn-primary btn-lg" role="button" class="col-md-5") Login 
-      a(title="register" href="/reg" class="btn btn-primary btn-lg" role="button" class="col-md-5") Register
-    block register
-    block login
+        h2(id='game')  Uncharted Water
+        if(user)
+          p Welcome  #{user.name}
+      div(id="form" class="row")
+        div(class="panel panel-default")
+          div(class="panel-body")
+            if (user)
+              a(title="info" href="/info" class="btn btn-primary btn-lg" role="button" class="col-md-5") Info
+              a(title="logout" href="/logout" class="btn btn-primary btn-lg" role="button" class="col-md-5") Logout
+            else
+              a(title="login" href="/log" class="btn btn-primary btn-lg" role="button" class="col-md-5") Login 
+              a(title="register" href="/reg" class="btn btn-primary btn-lg" role="button" class="col-md-5") Register
+    div(id='cssmenu')
+      ul(style="display: block;/* width: 50%; */float: right;")
+        li
+          a(href='#') © 2017 GitHub, Inc.
+        li
+          a(href='#') Made by Curious
+        li
+          a(href='#') Donate to US
+    div(id='fform')
+      block register
+      block login
+    p= error
+    p= success

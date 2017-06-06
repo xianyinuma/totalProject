@@ -1,11 +1,34 @@
-extends index
+extends layout
 
 block info
-    span
-        ul
-            p Name: #{user.name}
-        ul
-            p Email: #{user.email}
+	if (user)
+		div(id='info')
+			div(class="form-group")
+				label(for='username') 用户名：
+				p  #{user.name}
+			div(class="form-group")
+				label(for='nickname') 昵称：
+				p  #{user.nickname}
+			div(class='form-group')
+				label(for ="password") 邮箱：
+				p  #{user.email}
+			form(method='post' action="updateMail")
+				div(class="form-group")
+					label(for='email') 更改邮箱：
+					input(type='email' name='newemail' class='form-control' id='newemail' placeholder='Email' required)
+				input(type="submit" class="btn btn-primary btn-sm" role="button" value="更改")
+			form(method='post' action="updateNick")
+				div(class="form-group")
+					label(for='nickname') 更改昵称：
+					input(type='text' name='nickname' class='form-control' id='nickname' placeholder='Nickname' required)
+				input(type="submit" class="btn btn-primary btn-sm" role="button" value="更改")
+				
+	else
+		p Please FIRST Log in!
+	a(id="back" href="/" class="btn btn-primary btn-sm" role="button" ) Back
+	
+	
+            
     
 
 

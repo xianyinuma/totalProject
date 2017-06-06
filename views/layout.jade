@@ -1,18 +1,71 @@
 doctype html
 html
   head
-    title Blog
-    link(rel='stylesheet', href='/css/style.css')
-    link(rel='stylesheet', href='../assets/lib/bootstrap/css/bootstrap.min.css')
-    script(type='text/javascript', src='../assets/lib/bootstrap/js/bootstrap.js')
+    title Curious
+    link(rel='stylesheet', href='/assets/lib/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/welcome.css')
+    link(rel='stylesheet', href='/stylesheets/register.css')
+    link(rel='stylesheet', href='/stylesheets/login.css')
+    link(rel='stylesheet', href='/stylesheets/foundation.css')
+    link(rel='stylesheet', href='/stylesheets/app.css')
+    link(rel='stylesheet', href='/stylesheets/header.css')
+    link(rel='stylesheet', href='/stylesheets/layout.css')
+    link(rel='stylesheet', href='/stylesheets/ship.css')
+    script(type='text/javascript', src='/assets/lib/bootstrap/js/bootstrap.js')
+    link(rel='stylesheet', href='/stylesheets/info.css')
+    style.
+
   script.  
   
   body
-    block content
-    div
-      p= error
-      p= success
-      block reg
-      block login
-      block info
+    div(id='cssmenu')
+      ul(style="display: block;/* width: 50%; */float: right;")
+        if (user)
+          li
+            p Welcome Mr. #{user.name}
+        else
+          li
+            p Please Log in
+        li
+          a(href='/') Home
+        if (user)
+          li
+            a(href='/info') Info
+          li
+            a(href='/ship') Ship
+          li
+            a(href='/logout') Log out
+        else
+          li
+            a(href='/log') Log In
+          li
+            a(href='/reg') Sign Up
+        li(class='active')
+          a(href='#') Find US
+          ul
+            li
+              a(href='#') Team FDU
+            li
+              a(href='https://github.com/nswbmw/N-blog') Github
+    
+    div(id="total")
+      div(class="row")
+        div(class="col-md-4")
+          p(id= "title") #{title}
+          img(src="assets/images/info.jpg" class="img-thumbnail")
+        div(class="col-md-8")
+          block info
+          block ship
+      
+    div(id='cssmenu')
+      ul(style="display: block;/* width: 50%; */float: right;")
+        li
+          a(href='#') © 2017 GitHub, Inc.
+        li
+          a(href='#') Made by Curious
+        li
+          a(href='#') Donate to US
+    
+    
+
 
