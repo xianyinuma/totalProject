@@ -4,7 +4,7 @@
  * for example: var something = SHIP.clone();
  *              something.position.set(x,y,z);
  */
-var BULLET, RECRUIT, DOOR, BOAT, BULLETSPHERE;
+var BULLET, RECRUIT, DOOR, BOAT, BULLETSPHERE, GBOAT;
 
 //German Ship
 function createGermanShip() {
@@ -54,7 +54,7 @@ function createGermanShip() {
         object.scale.set(3, 3, 3);
         object.position.set(10, 0, 0);
 
-        BOAT = object;
+        GBOAT = object;
     }, onProgress, onError);
 }
 //Very big ship

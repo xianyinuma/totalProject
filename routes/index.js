@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var crypto = require('crypto'),
 User = require('../models/user.js');
+var path = require('path');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -9,6 +10,11 @@ router.get('/', function(req, res, next) {
     title:'Created by Curious',
     user: req.session.user
   });
+});
+
+router.get('/index',function(req,res,next){
+  res.sendFile(path.join(__dirname, '../public/templates', 'index.html'));
+  // res.redirect('/');
 });
 
 router.get('/reg', function (req, res) {
@@ -20,7 +26,6 @@ router.get('/reg', function (req, res) {
     })
     
 });
-
 
 router.post('/reg', function (req, res) {
   var name = req.body.username,
@@ -137,6 +142,12 @@ router.post('/updateNick',function(req,res){
     // console.log("get");
     // return res.redirect('/');
 });
+
+router.get('/index',function(req,res,next){
+  res.sendFile(path.join(__dirname, '../public/templates', 'index.html'));
+  // res.redirect('/');
+});
+
 router.get('/logout', function (req, res) {
   req.session.user = null;
   req.flash('success', '登出成功!');

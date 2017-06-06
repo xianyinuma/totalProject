@@ -1,15 +1,86 @@
-extends layout.jade
-script(type='text/javascript', src='bootstrap/js/bootstrap.js')
-block ship
-    div(id='ship')
-        div(class="row")
-            div(class="col-md-4")
-                h5 Ship 1
-                div(id='ship1' class='ships')
-            div(class="col-md-4")
-                h5 Ship 2
-                div(id='ship2' class='ships')
-            div(class="col-md-4")
-                h5 Ship 3
-                div(id='ship3' class='ships')
+doctype html
+html
+  head
+    title Curious
+    
+    link(rel='stylesheet', href='/assets/lib/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/welcome.css')
+    link(rel='stylesheet', href='/stylesheets/register.css')
+    link(rel='stylesheet', href='/stylesheets/login.css')
+    link(rel='stylesheet', href='/stylesheets/foundation.css')
+    link(rel='stylesheet', href='/stylesheets/app.css')
+    link(rel='stylesheet', href='/stylesheets/header.css')
+    link(rel='stylesheet', href='/stylesheets/layout.css')
+    link(rel='stylesheet', href='/stylesheets/ship.css')
+    script(type="text/javascript", src="/assets/lib/js/jquery-3.2.1.js")
+    script(type='text/javascript', src='/assets/lib/bootstrap/js/bootstrap.js')
+    
+    script(type="text/javascript" src="/assets/lib/js/three.js")
+    script(type="text/javascript" src="/js/model/CreateModel.js")
+    script(type='text/javascript', src='/js/chooseShip.js')
+    script(type='text/javascript' src='/js/model/OBJLoader.js')
+    script(type='text/javascript' src='/js/model/OrbitControls.js')
+    link(rel='stylesheet', href='/stylesheets/info.css')
+    style.
+
+  script.  
+  
+  body
+    div(id='cssmenu')
+      ul(style="display: block;/* width: 50%; */float: right;")
+        if (user)
+          li
+            p Welcome Mr. #{user.name}
+        else
+          li
+            p Please Log in
+        li
+          a(href='/') Home
+        if (user)
+          li
+            a(href='/info') Info
+          li
+            a(href='/ship') Ship
+          li
+            a(href='/logout') Log out
+        else
+          li
+            a(href='/log') Log In
+          li
+            a(href='/reg') Sign Up
+        li(class='active')
+          a(href='#') Find US
+          ul
+            li
+              a(href='#') Team FDU
+            li
+              a(href='https://github.com/nswbmw/N-blog') Github
+    
+    div(id="total")
+      div(class="row")
+        div(class="col-md-4")
+          p(id= "title") #{title}
+          img(src="assets/images/info.jpg" class="img-thumbnail")
+        div(class="col-md-8")
+          div(id='ship')
+            div(class="row")
+                div(class="col-md-4")
+                    h5 Ship 1
+                    canvas(id='ship1' class='ships' width="200px" height="400px")
+                div(class="col-md-4")
+                    h5 Ship 2
+                    div(id='ship2' class='ships')
+                div(class="col-md-4")
+                    h5 Ship 3
+                    div(id='ship3' class='ships')
+      a(href="/index?usrname=23", title="title") Start
+    div(id='cssmenu')
+      ul(style="display: block;/* width: 50%; */float: right;")
+        li
+          a(href='#') © 2017 GitHub, Inc.
+        li
+          a(href='#') Made by Curious
+        li
+          a(href='#') Donate to US
+    
 
