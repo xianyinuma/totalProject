@@ -8,7 +8,7 @@ var THREE = require('three');
 
 // var index = require('./routes/index');
 var users = require('./routes/users');
-var routes = require('./routes/main.js');
+var routes = require('./routes/index.js');
 
 var settings = require('./settings');
 
