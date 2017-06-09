@@ -16,23 +16,23 @@ $(document).ready(function() {
         }
     })(jQuery);
     var playerID = $.getUrlParam('username');
+    var boatType = $.getUrlParam('shipNo');
+    console.log(boatType); //
     LoadModels();
     setTimeout(function() {
-        let gameManager = new GameManager(playerID);
+        let gameManager = new GameManager(playerID, boatType);
         //start chatroom
         startChatRoom(playerID);
 
-    }, 3000);
-
-    //when quit @author mjt
-    window.onbeforeunload = function() {
-        var socket = io();
-        socket.emit('quit', playerID);
-    };
-
+    }, 5000);
 
     function LoadModels() {
-        createWoodenShip();
+        createShip("kawayi2");
+        createShip("kawayi");
+        createShip("german");
+        createShip("NPC");
+        createShip("unNPC");
+
         createRecruit();
         createBulletSphere();
         createDoor(13, 1.7, 121, 12, 4, 4, 3.5);

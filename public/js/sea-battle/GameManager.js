@@ -2,12 +2,13 @@
  * Created by wenjin on 2017/4/29.
  */
 class GameManager {
-    constructor(playerID) {
+    constructor(playerID, boatType) {
         var socket = io();
 
         var playerID = playerID;
-        var currentPlayer = new Player(playerID); //todo
+        var currentPlayer = new Player(playerID);
         var currentBoat = currentPlayer.InitialBoat();
+
 
         //adjust size by window
         var output = $("#map-output");
@@ -19,17 +20,38 @@ class GameManager {
         boatArray = new ArrayList();
         bulletArray = new ArrayList();
         staticArray = new ArrayList();
+        //组队
+        var team = new Team(playerID);
 
-        currentBoat = new Boat(playerID);
-        // boatArray.add(currentBoat);
+        currentBoat = new Boat(playerID, boatType);
+
+        //
+        let tower = null;
+        // let tower = new UnmovableNPC("NPC1");
+        // tower.mesh.position.x = 700;
+        // tower.mesh.position.y = 0;
+        // tower.mesh.position.z = 700;
+
+        staticArray.set(0, tower);
+
+        // let npcBoat = new NPC("NPCMMMMM");
+        // npcBoat.mesh.position.x = 0;
+        // npcBoat.mesh.position.y = 0;
+        // npcBoat.mesh.position.z = 0;
+        // //
+
+        // boatArray.add(npcBoat);
 
         //get the boat
-        socket.emit('start', playerID);
+        socket.emit('start', {
+            playerID: playerID,
+            boatType: boatType
+        });
         socket.on('get boat', function(boatData) {
             if (playerID == boatData.playerID) {
                 currentBoat.update(boatData);
             } else {
-                var boat = new Boat(boatData.playerID);
+                var boat = new Boat(boatData.playerID, boatData.boatType);
                 boat.update(boatData);
                 // boatArray.add(boat);
                 console.log(boatData.playerID + " start");
@@ -42,12 +64,16 @@ class GameManager {
         adjustWindowSize();
 
         var camera, controls;
+        var cameraTarget = new THREE.Vector3();
         var renderer = new THREE.WebGLRenderer();
 
         //camera初始化
         camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 3000000);
-        camera.position.set(0, 20, 100);
+        camera.position.set(50, 40, -50);
         controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.maxPolarAngle = 1.3; //限制视角海平面以上
+        controls.maxDistance = 300;
+        controls.minDistance = 30;
 
         let statusList = $("#status-list");
         statusList.html(`<ul class="list-group">
@@ -99,33 +125,70 @@ class GameManager {
             adjustWindowSize();
             UpdateStatusPanel();
             sinkBullet(bulletArray);
-            let feedback = currentBoat.BoatCheck(bulletArray, staticArray);
-            if (feedback.static != null) {
+            let feedback = currentBoat.BoatCheck(bulletArray, staticArray, boatArray);
+            if (feedback.static !== null) {
                 //collision with static object
                 feedback.static.Operate(currentBoat);
-                // staticArray.removeValue(feedback.static); //@author mjt
-                socket.emit("delete static", feedback.static.id);
-            }
-            if (feedback.bullet != null) {
-                currentBoat.ChangeHealth(-feedback.bullet.damage);
-                if (currentBoat.health == 0) {
-                    //died
-                    boatArray.removeValue(currentBoat);
-                    //send back the giveExp to do
-
+                if (feedback.static instanceof Portal) {
+                    portalAnimate();
                 }
-                bulletArray.removeValue(feedback.bullet);
+                // staticArray.removeValue(feedback.static); //@author mjt
+                if (!(feedback.static instanceof UnmovableNPC))
+                    socket.emit("delete static", feedback.static.id);
+            }
+            if (feedback.bullet !== null) {
+                //非队友子弹才造成伤害
+                if (!team.isTeammate(feedback.bullet.playerID)) {
+                    currentBoat.ChangeHealth(-feedback.bullet.damage);
+                    if (currentBoat.health === 0) {
+                        //died
+
+                        let killerId = feedback.bullet.playerID;
+                        deadAnimate(killerId);
+                        //send back the giveExp to do
+                        if (!isNPC(killerId))
+                            socket.emit('killed', {
+                                giveExp: currentBoat.giveExp,
+                                killerID: killerId
+                            });
+                    }
+                    bulletArray.removeValue(feedback.bullet);
+                }
+            }
+            if (feedback.boat !== null) {
+                //船与船碰撞
+                // currentBoat.ChangeHealth(-1);
+                // currentBoat.curSpeed = currentBoat.curSpeed === 0 ? -10 : -currentBoat.curSpeed;
             }
             map.UpdateStatus(boatArray, bulletArray, mapWidth, mapHeight);
             map.UpdateOutput(currentBoat, boatArray, bulletArray, staticArray);
         }
 
 
-        self.setInterval(function() {
-            UpdateOutput(currentBoat, boatArray, bulletArray, staticArray);
-        }, 50);
+        // self.setInterval(function() {
+        //     UpdateOutput(currentBoat, boatArray, bulletArray, staticArray);
+        // }, 50);
 
-        // console.log(currentBoat.mesh.position);
+        var clock = new THREE.Clock();
+
+        function animate() {
+            var delta = clock.getDelta();
+            requestAnimationFrame(animate);
+            UpdateOutput(currentBoat, boatArray, bulletArray, staticArray);
+            currentBoat.updateBoatModel(delta);
+
+            // if (npcBoat && npcBoat.detect(currentBoat, delta)) {
+            //     NPCFire(npcBoat);
+            // }
+
+            if (tower && tower.detect(currentBoat)) {
+                unmovableNPCFire(tower);
+            }
+
+            CameraUpdate();
+        }
+
+
 
         //boat info update
         self.setInterval(function() {
@@ -133,7 +196,7 @@ class GameManager {
             if (currentBoat !== undefined) {
                 socket.emit('update', currentBoat.getData());
             }
-        }, 50);
+        }, 30);
         socket.on('load', function(data) {
             var boatMap = data.boatMap;
             // update the boats info
@@ -141,13 +204,13 @@ class GameManager {
 
             for (var id in boatMap) {
                 if (boatMap.hasOwnProperty(id)) {
-                    if (playerID != id) {
-                        if (!boatArray.contains(i)) {
-                            boatArray.set(i, new Boat(id));
-                        }
-                        boatArray.get(i).update(boatMap[id]);
-                    } else
+                    if (playerID == id) {
                         boatArray.set(i, currentBoat);
+                    } else {
+                        if (boatArray.get(i) === null || boatArray.get(i).playerID != id)
+                            boatArray.set(i, new Boat(id, boatMap[id].boatType));
+                        boatArray.get(i).update(boatMap[id]);
+                    }
                 }
                 i++;
             }
@@ -161,16 +224,24 @@ class GameManager {
             console.log(bulletData.playerID + ' fire');
         });
 
-        socket.on('static update', function(staticMap) {
-            var i, j;
-            var len = (Object.getOwnPropertyNames(staticMap).length) / 13;
-            for (i = 0; i < len * 5; i++) {
+        socket.on('static update', (staticMap) => {
+            var i = 0,
+                j;
+            var len = ((Object.getOwnPropertyNames(staticMap).length) - 1) / 13;
+            tower = new UnmovableNPC("NPC1");
+            // let tower = new UnmovableNPC("NPC1");
+
+            tower.mesh.position.x = staticMap[i].x;
+            tower.mesh.position.y = -10;
+            tower.mesh.position.z = staticMap[i].z;
+            staticArray.set(0, tower);
+            for (i = 1; i < len * 5 + 1; i++) {
                 staticArray.set(i, new Box(i, 1, 0, staticMap[i].x, staticMap[i].z));
             }
-            for (j = i; i < len * 10; i++) {
+            for (; i < len * 10 + 1; i++) {
                 staticArray.set(i, new Box(i, 0, 1, staticMap[i].x, staticMap[i].z));
             }
-            for (j = i; i < len * 13; i++) {
+            for (; i < len * 13 + 1; i++) {
                 staticArray.set(i, new Portal(i, 1000, 1000, staticMap[i].x, staticMap[i].z));
             }
 
@@ -195,6 +266,41 @@ class GameManager {
                 }
             }
         });
+        socket.on('get exp', function(data) {
+            console.log('get exp: ' + data.giveExp);
+            if (playerID == data.killerID)
+                currentBoat.ChangeExp(data.giveExp);
+        });
+
+        // 发送队伍请求
+        // socket.emit('request team', playerID, '你要发送的对象', team.teammates);
+        // 发送离队请求
+        // socket.emit('leave team', playerID, team.teammates);
+
+        //申请组队
+        socket.on('request team', function(from, teammates) {
+            //todo 弹窗 若答应
+            // socket.emit('team ok', teammates, team.teammates);
+            //若不答应
+            // socket.emit('team no', playerID, from);
+        });
+        //加入队伍
+        socket.on('team ok', function(teammates) {
+            team.addTeammates(teammates);
+            console.log(team.teammates);
+        });
+        //申请被拒绝
+        socket.on('team no', function(from) {
+            //todo 展示from拒绝了你
+        });
+        //接收离队请求
+        socket.on('leave team', function(from) {
+            team.deleteTeammate(from);
+            console.log(team.teammates);
+            //todo 展示from已离队
+        });
+
+
 
         document.addEventListener('keydown', onKeyDown, false);
         document.addEventListener('keyup', onKeyUp, false);
@@ -216,45 +322,154 @@ class GameManager {
         }
 
         function sortBoatArray() {
-            var tempBoat;
             let bubbleSort = function(arr) {
+                let ret;
                 for (let i = 0; i < arr.size() - 1; i++) {
                     for (let j = i + 1; j < arr.size(); j++) {
                         if (arr.get(i).level < arr.get(j).level) { //如果前面的数据比后面的大就交换
                             arr.switchElement(i, j);
-                        }
+                        } else if (arr.get(i).level == arr.get(j).level && arr.get(i).playerID > arr.get(j).playerID)
+                            arr.switchElement(i, j);
                     }
                 }
-                return arr;
+                ret = arr;
+                return ret;
             };
-            return bubbleSort(boatArray);
+
+            let ret = new ArrayList();
+
+            let sortedArray = bubbleSort(boatArray);
+            for (let i = 0; i < sortedArray.size(); i++) {
+                if (ret.size() >= 5) return ret;
+                let temp = sortedArray.get(i);
+                if (!isNPC(temp.playerID)) {
+                    ret.add(temp);
+                }
+                // ret.add(temp);
+            }
+
+            // console.log(ret);
+
+            return ret;
         }
 
         function onKeyUp(event) {
-            var value = String.fromCharCode(event.keyCode).toLowerCase();
-
-            //currentBoat.control(value, 'keyup');
-            if (value == "w" || value == "s" || value == "a" || value == "d") {
-                currentBoat.control(value, 'keyup');
+            var keyValue = String.fromCharCode(event.keyCode).toLowerCase();
+            switch (keyValue) {
+                case 'w':
+                    currentBoat.controlBoat.moveForward = false;
+                    break;
+                case 'a':
+                    currentBoat.controlBoat.moveLeft = false;
+                    break;
+                case 's':
+                    currentBoat.controlBoat.moveBackward = false;
+                    break;
+                case 'd':
+                    currentBoat.controlBoat.moveRight = false;
+                    break;
             }
         }
 
         function onKeyDown(event) {
-            if (event.keyCode == 32) {
-                //space bar, sync the camera by the space bar
-                CameraUpdate();
-            } else {
-                var value = String.fromCharCode(event.keyCode).toLowerCase();
-                if (value == "f") {
-                    let bullet = currentBoat.Fire();
-                    socket.emit('fire', bullet.getData());
-                    // bulletArray.add(bullet);
-                } else if (value == "w" || value == "s" || value == "a" || value == "d") {
-                    currentBoat.control(value, 'keydown');
-                }
-
+            var keyValue = String.fromCharCode(event.keyCode).toLowerCase();
+            switch (keyValue) {
+                case 'w':
+                    currentBoat.controlBoat.moveForward = true;
+                    break;
+                case 'a':
+                    currentBoat.controlBoat.moveLeft = true;
+                    break;
+                case 's':
+                    currentBoat.controlBoat.moveBackward = true;
+                    break;
+                case 'd':
+                    currentBoat.controlBoat.moveRight = true;
+                    break;
+                case 'f':
+                    curBoatFire();
+                    break;
             }
         }
+
+        function portalAnimate() {
+            let tpDiv = $("#tp-info");
+            tpDiv.css("z-index", "10");
+            tpDiv.css("opacity", "1");
+            setTimeout(function() {
+                tpDiv.css("opacity", "0");
+                setTimeout(function() {
+                    tpDiv.css("z-index", "-10");
+                }, 1500);
+            }, 2000);
+        }
+
+        function deadAnimate(killerId) {
+
+            let message;
+
+            if (!isNPC(killerId)) {
+                message = "你被" + killerId + "杀死了!" +
+                    "<br> 正在重生.....";
+            } else {
+                message = "你被NPC杀死了！" +
+                    "<br> 正在重生.....";
+            }
+
+            let messageDiv = $("#display-info");
+            messageDiv.html(message);
+            messageDiv.css("opacity", "1");
+            messageDiv.css("z-index", "11");
+
+            deathTransport(currentBoat);
+
+            setTimeout(function() {
+                messageDiv.css("opacity", "0");
+                setTimeout(function() {
+                    messageDiv.html("");
+                    messageDiv.css("z-index", "-11");
+                }, 5000);
+            }, 5000);
+        }
+
+        function isNPC(id) {
+            id = id.substr(0, 3);
+            return (id === "NPC");
+        }
+
+        function deathTransport(boat) {
+            let newX = Math.random() * 2000;
+            let newZ = Math.random() * 2000;
+
+            boat.mesh.position.x = newX;
+            boat.mesh.position.z = newZ;
+
+            boat.level = 1;
+            boat.RefreshInfo();
+        }
+
+        //冷却射弹
+        function curBoatFire() {
+            let date = new Date();
+            let t = date.getTime();
+            if (t - currentBoat.fireTime > 1000) {
+                socket.emit('fire', currentBoat.Fire().getData());
+                currentBoat.fireTime = t;
+            }
+        }
+
+        function unmovableNPCFire(b) {
+            let date = new Date();
+            let t = date.getTime();
+            if (t - b.fireTime > 5000) {
+                let bullets = b.Fire();
+                for (let i in bullets) {
+                    socket.emit('fire', bullets[i].getData());
+                }
+                b.fireTime = t;
+            }
+        }
+
 
         function sinkBullet(bulletArray) {
             for (let i = 0; i < bulletArray.size(); i++) {
@@ -277,21 +492,12 @@ class GameManager {
         }
 
         function CameraUpdate() {
-            var cameraY = camera.position.y;
-            var rad = Math.PI / 180;
-
-            camera.position.x += currentBoat.curSpeed * Math.sin(rad * currentBoat.theta);
-            camera.position.z += currentBoat.curSpeed * Math.cos(rad * currentBoat.theta);
-            camera.position.y = cameraY;
-            camera.lookAt({
-                x: currentBoat.mesh.position.x,
-                y: currentBoat.mesh.position.y,
-                z: currentBoat.mesh.position.z
-            });
 
             controls.target.set(currentBoat.mesh.position.x, currentBoat.mesh.position.y, currentBoat.mesh.position.z);
             controls.update();
         }
+
+        animate();
 
         //镜头跟踪，用户按下space bar空格键同步，模拟LOL视角控制
     }

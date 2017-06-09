@@ -11,11 +11,9 @@ router.get('/',function(req, res, next){
     username: req.session.username
   })
 });
-
 router.get('/index',function(req,res,next){
   res.sendFile(path.join(__dirname, '../public/templates', 'index.html'));
 });
-
 router.get('/reg', function (req, res) {
     res.render('reg',{
         title:'注册',
@@ -23,6 +21,7 @@ router.get('/reg', function (req, res) {
         error: req.flash('error').toString(),
         success: req.flash('success').toString(),
     })
+    
 });
 router.get('/log', function (req, res) {
     res.render('log', {

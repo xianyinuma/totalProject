@@ -9,17 +9,19 @@ class Portal extends StaticObject {
         this.mapLength = length;
         this.mapWidth = width;
 
-        // var geometry = new THREE.SphereGeometry(0.5);
-        // geometry.computeBoundingSphere();
-        // var material = new THREE.MeshBasicMaterial({color: 0x0000ff});
-        // this.mesh = new THREE.Mesh(geometry, material);
-        // this.mesh.position.x = 5;
-        // this.mesh.position.y = 0;
+
         this.mesh = DOOR.clone();
         this.mesh.position.set(x, 0, z);
     }
 
     Operate(boat) {
-        boat.mesh.position.set(this.mapLength * Math.random(), 0, this.mapLength * Math.random()); // to change
+        let y = boat.mesh.position.y;
+        let l = this.mapLength;
+        let w = this.mapWidth;
+        boat.curSpeed = 0;
+        setTimeout(() => {
+            boat.mesh.position.set(l * Math.random(), y, w * Math.random());
+            boat.curSpeed = 0;
+        }, 2000);
     }
 }

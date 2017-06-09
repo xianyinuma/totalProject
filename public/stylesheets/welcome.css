@@ -14,7 +14,7 @@ a{
     background-image: url(/assets/images/test.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 600px;
+    height: 90%;
     max-width: 90%;
     margin-left: 5%;
     text-align: center;
@@ -35,8 +35,13 @@ h2{
     text-align: center;
 }
 #form{
-    margin-top: 45%;
-    margin-left: 2%;
+    margin-top: 40%;
+    margin-left: 35%;
     width: 30%;
-    opacity: 0.6;
+    opacity: 0.8;
+}
+#start{
+    width: 20%;
+    opacity: 0.8;
+    margin-left: 40%; 
 }

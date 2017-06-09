@@ -1,147 +1,243 @@
 /* Fix user-agent */
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  font-weight: 300;
-  -webkit-font-smoothing: antialiased;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
 }
 
-html, input {
-  font-family:
-    "HelveticaNeue-Light",
-    "Helvetica Neue Light",
-    "Helvetica Neue",
-    Helvetica,
-    Arial,
-    "Lucida Grande",
-    sans-serif;
+html,
+input {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
-html, body {
-  height: 50%;
-  margin: 0;
-  padding: 0;
+html,
+body {
+    height: 50%;
+    margin: 0;
+    padding: 0;
 }
 
 ul {
-  list-style: none;
-  word-wrap: break-word;
+    list-style: none;
+    word-wrap: break-word;
 }
+
 
 /* Pages */
 
 .pages {
-  height: 50%;
-  margin: 0;
-  padding: 0;
-  width: 300px;
+    height: 50%;
+    margin: 0;
+    padding: 0;
+    width: 300px;
 }
 
 .page {
-  height: 50%;
-  position: absolute;
-  width: 300px;
+    height: 70%;
+    position: absolute;
+    width: 300px;
 }
+
 
 /* Login Page */
 
-.login.page {
-  display: none;/*mjt added*/
-  background-color: #000;
-}
 
-.login.page .form {
-  height: 100px;
-  margin-top: -100px;
-  position: absolute;
+/*.login.page {*/
 
-  text-align: center;
-  top: 50%;
-  width: 100%;
-}
 
-.login.page .form .usernameInput {
-  background-color: transparent;
-  border: none;
-  border-bottom: 2px solid #fff;
-  outline: none;
-  padding-bottom: 15px;
-  text-align: center;
-  width: 400px;
-}
+/*display: none;!*mjt added*!*/
 
-.login.page .title {
-  font-size: 200%;
-}
 
-.login.page .usernameInput {
-  font-size: 200%;
-  letter-spacing: 3px;
-}
+/*background-color: #000;*/
 
-.login.page .title, .login.page .usernameInput {
-  color: #fff;
-  font-weight: 100;
-}
+
+/*}*/
+
+
+/*.login.page .form {*/
+
+
+/*height: 100px;*/
+
+
+/*margin-top: -100px;*/
+
+
+/*position: absolute;*/
+
+
+/*text-align: center;*/
+
+
+/*top: 50%;*/
+
+
+/*width: 100%;*/
+
+
+/*}*/
+
+
+/*.login.page .form .usernameInput {*/
+
+
+/*background-color: transparent;*/
+
+
+/*border: none;*/
+
+
+/*border-bottom: 2px solid #fff;*/
+
+
+/*outline: none;*/
+
+
+/*padding-bottom: 15px;*/
+
+
+/*text-align: center;*/
+
+
+/*width: 400px;*/
+
+
+/*}*/
+
+
+/*.login.page .title {*/
+
+
+/*font-size: 200%;*/
+
+
+/*}*/
+
+
+/*.login.page .usernameInput {*/
+
+
+/*font-size: 200%;*/
+
+
+/*letter-spacing: 3px;*/
+
+
+/*}*/
+
+
+/*.login.page .title, .login.page .usernameInput {*/
+
+
+/*color: #fff;*/
+
+
+/*font-weight: 100;*/
+
+
+/*}*/
+
 
 /* Chat page */
 
 .chat.page {
-  display: none;
+    display: none;
 }
+
 
 /* Font */
 
 .messages {
-  font-size: 120%;
-}
-
-.inputMessage {
-  font-size: 100%;
+    background-color: transparent;
+    font-size: 120%;
 }
 
 .log {
-  color: gray;
-  font-size: 70%;
-  margin: 5px;
-  text-align: center;
+    color: white;
+    font-size: 70%;
+    margin: 5px;
+    text-align: center;
 }
+
 
 /* Messages */
 
 .chatArea {
-  height: 250px;
+    background-color: transparent;
+    height: 250px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+
+/* 滚动槽 */
+
+::-webkit-scrollbar-track {
+    /*-webkit-box-shadow:inset006pxrgba(0,0,0,0.3);*/
+    border-radius: 10px;
+}
+
+
+/* 滚动条滑块 */
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    /*-webkit-box-shadow:inset006pxrgba(0,0,0,0.5);*/
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255, 0, 0, 0.4);
 }
 
 .messages {
-  height: 100%;
-  margin: 0;
-  overflow-y: scroll;
-  padding: 10px 20px 10px 20px;
+    background-color: transparent;
+    height: 100%;
+    margin: 0;
+    overflow-y: scroll;
+    padding: 10px 20px 10px 20px;
 }
 
 .message.typing .messageBody {
-  color: gray;
+    background-color: transparent;
+    color: white;
 }
 
 .username {
-  font-weight: 700;
-  overflow: hidden;
-  padding-right: 15px;
-  text-align: right;
+    font-weight: 700;
+    overflow: hidden;
+    padding-right: 15px;
+    text-align: right;
 }
+
 
 /* Input */
 
 .inputMessage {
-  /*border: 3px solid #000;*/
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  height: 40px;
-  width: 280px;
-  outline: none;
+    color: white;
+    background-color: transparent;
+    font-size: 100%;
+}
+
+.inputMessage {
+    /*border: 3px solid #000;*/
+    border: transparent;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    width: 280px;
+    outline: none;
+}
+
+.message {
+    font-color: white;
+    /* hyz added*/
+    color: white;
 }

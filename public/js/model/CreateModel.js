@@ -4,159 +4,181 @@
  * for example: var something = SHIP.clone();
  *              something.position.set(x,y,z);
  */
-var BULLET, RECRUIT, DOOR, BOAT, BULLETSPHERE, GBOAT;
+var BULLET, RECRUIT, DOOR, BOAT1, BOAT2, BOAT3, BOAT4, UNNPC, BULLETSPHERE;
 
-//German Ship
-function createGermanShip() {
-    var manager = new THREE.LoadingManager();
-    manager.onProgress = function (item, loaded, total) {
-
+function createOBJShip(param) {
+    let manager = new THREE.LoadingManager();
+    manager.onProgress = function(item, loaded, total) {
         console.log(item, loaded, total);
-
     };
 
-    var texture = new THREE.Texture();
+    let texture = new THREE.Texture();
 
-    var onProgress = function (xhr) {
+    let onProgress = function(xhr) {
         if (xhr.lengthComputable) {
-            var percentComplete = xhr.loaded / xhr.total * 100;
-            console.log(Math.round(percentComplete, 2) + '% downloaded');
+            let percentCompelete = xhr.loaded / xhr.total * 100;
+            console.log(Math.round(percentCompelete, 2) + '% downloaded');
         }
     };
 
-    var onError = function (xhr) {
+    let onError = function(xhr) {
+        console.log("Loading Error!!!");
     };
 
+    //Loading model With .OBJ File
+    THREE.Loader.Handlers.add(/\.dds$/i, new THREE.DDSLoader());
 
-    var loader = new THREE.ImageLoader(manager);
-    loader.load('../../assets/models/ship/german ship/TT1024X1024.jpg', function (image) {
+    let mtlLoader = new THREE.MTLLoader();
+    mtlLoader.setPath(param.path);
+    mtlLoader.load(param.mtlName, function(materials) {
 
-        texture.image = image;
-        texture.needsUpdate = true;
+        materials.preload();
+
+        let objLoader = new THREE.OBJLoader();
+        objLoader.setMaterials(materials);
+        objLoader.setPath(param.path);
+        objLoader.load(param.objName, function(object) {
+
+            object.traverse(function(child) {
+
+                if (child instanceof THREE.Mesh) {
+                    child.rotation.y = param.rotation;
+                }
+            });
+
+            object.scale.set(param.scalex, param.scaley, param.scalez);
+            object.position.set(param.initX, param.initY, param.initZ);
+
+            switch (param.boat) {
+                case 1:
+                    BOAT1 = object;
+                    break;
+                case 2:
+                    BOAT2 = object;
+                    break;
+                case 3:
+                    BOAT3 = object;
+                    break;
+                case 4:
+                    BOAT4 = object;
+                    break;
+                case 5:
+                    UNNPC = object;
+                    return;
+            }
+
+        }, onProgress, onError);
 
     });
-
-    // model
-
-    var loader = new THREE.OBJLoader(manager);
-
-    loader.load('../../assets/models/ship/german ship/ZHANJIAN.obj', function (object) {
-
-        object.traverse(function (child) {
-
-            if (child instanceof THREE.Mesh) {
-
-                child.material.map = texture;
-
-            }
-
-        });
-        object.scale.set(3, 3, 3);
-        object.position.set(10, 0, 0);
-
-        GBOAT = object;
-    }, onProgress, onError);
-}
-//Very big ship
-function createLargeShip() {
-    var manager = new THREE.LoadingManager();
-    manager.onProgress = function (item, loaded, total) {
-
-        console.log(item, loaded, total);
-
-    };
-
-    var texture = new THREE.Texture();
-
-    var onProgress = function (xhr) {
-        if (xhr.lengthComputable) {
-            var percentComplete = xhr.loaded / xhr.total * 100;
-            console.log(Math.round(percentComplete, 2) + '% downloaded');
-        }
-    };
-
-    var onError = function (xhr) {
-    };
-
-
-    var loader = new THREE.ImageLoader(manager);
-    loader.load('../../assets/models/ship/fan ship/ship_boat/Wood_Bamboo_Dark.jpg', function (image) {
-
-        texture.image = image;
-        texture.needsUpdate = true;
-
-    });
-
-    // model
-
-    var loader = new THREE.OBJLoader(manager);
-
-    loader.load('../../assets/models/ship/fan ship/ship_boat.obj', function (object) {
-        var material = new THREE.MeshLambertMaterial({color: 0x5C3A21});
-        object.traverse(function (child) {
-
-            if (child instanceof THREE.Mesh) {
-
-                child.material.map = texture;
-
-            }
-
-        });
-        object.scale.set(0.01, 0.01, 0.01);
-        object.position.set(0, 0, 0);
-
-        BOAT = object;
-    }, onProgress, onError);
 }
 
-//Small wooden ship
-function createWoodenShip() {
-    var manager = new THREE.LoadingManager();
-    manager.onProgress = function (item, loaded, total) {
+function createShip(shipType) {
 
-        console.log(item, loaded, total);
 
-    };
+    let param;
+    switch (shipType) {
+        case "unNPC":
+            param = {
+                boat: 5,
+                path: '../../assets/models/ship/UNNPC/',
+                mtlName: 'high.mtl',
+                objName: 'high.obj',
+                rotation: 0,
+                scalex: 100,
+                scaley: 100,
+                scalez: 100,
+                initX: 10,
+                initY: 0,
+                initZ: 0
+            };
+            break;
+        case "kawayi2":
+            param = {
+                boat: 3,
+                path: '../../assets/models/ship/kawayi2/',
+                mtlName: 'boat.mtl',
+                objName: 'boat.obj',
+                rotation: 0,
+                scalex: 0.75,
+                scaley: 0.75,
+                scalez: 0.75,
+                initX: 10,
+                initY: -10,
+                initZ: 0
+            };
+            break;
 
-    var onProgress = function (xhr) {
-        if (xhr.lengthComputable) {
-            var percentComplete = xhr.loaded / xhr.total * 100;
-            console.log(Math.round(percentComplete, 2) + '% downloaded');
-        }
-    };
+        case "kawayi":
+            param = {
+                boat: 1,
+                path: '../../assets/models/ship/kawayi ship/',
+                mtlName: 'boat.mtl',
+                objName: 'boat.obj',
+                rotation: 0,
+                scalex: 10,
+                scaley: 10,
+                scalez: 10,
+                initX: 10,
+                initY: -6,
+                initZ: 0
+            };
+            break;
+        case "german":
+            param = {
+                boat: 4,
+                path: '../../assets/models/ship/german ship/',
+                mtlName: 'ZHANJIAN.mtl',
+                objName: 'ZHANJIAN.obj',
+                rotation: -1.54,
+                scalex: 7,
+                scaley: 10,
+                scalez: 6,
+                initX: 10,
+                initY: 0,
+                initZ: 0
+            };
+            break;
+        case "NPC":
+            param = {
+                boat: 2,
+                path: '../../assets/models/ship/NPCboat/',
+                mtlName: 'Model.mtl',
+                objName: 'Model.obj',
+                rotation: 0,
+                scalex: 10,
+                scaley: 10,
+                scalez: 10,
+                initX: 10,
+                initY: 0,
+                initZ: 0
+            };
+            break;
 
-    var onError = function (xhr) {
-    };
+        default:
+            param = {
+                boat: 1,
+                path: '../../assets/models/ship/kawayi ship/',
+                mtlName: 'boat.mtl',
+                objName: 'boat.obj',
+                rotation: 0,
+                scalex: 10,
+                scaley: 10,
+                scalez: 10,
+                initX: 10,
+                initY: -6,
+                initZ: 0
+            };
+            break;
 
-    // model
-
-    var loader = new THREE.OBJLoader(manager);
-
-    loader.load('../../assets/models/pangea3dgalleon.obj', function (object) { //todo
-
-        object.traverse(function (child) {
-
-            if (child instanceof THREE.Mesh) {
-
-                child.material = new THREE.MeshLambertMaterial({color: 0x5C3A21});
-                child.rotation.y = -1.54;
-            }
-
-        });
-        object.scale.set(0.2, 0.2, 0.2);
-        // object.rotation.y = 1.54;
-
-        // object.geometry.computeBoundingSphere();
-
-        BOAT = object;
-    }, onProgress, onError);
+    }
+    createOBJShip(param);
 }
 
 
 //Supplies
 function createRecruit() {
     var manager = new THREE.LoadingManager();
-    manager.onProgress = function (item, loaded, total) {
+    manager.onProgress = function(item, loaded, total) {
 
         console.log(item, loaded, total);
 
@@ -164,19 +186,18 @@ function createRecruit() {
 
     var texture = new THREE.Texture();
 
-    var onProgress = function (xhr) {
+    var onProgress = function(xhr) {
         if (xhr.lengthComputable) {
             var percentComplete = xhr.loaded / xhr.total * 100;
             console.log(Math.round(percentComplete, 2) + '% downloaded');
         }
     };
 
-    var onError = function (xhr) {
-    };
+    var onError = function(xhr) {};
 
 
     var loader = new THREE.ImageLoader(manager);
-    loader.load('../../assets/models/recruit/weapon box/content/58pic_53cf8ab9c2ae0.png', function (image) {
+    loader.load('../../assets/models/recruit/weapon box/content/58pic_53cf8ab9c2ae0.png', function(image) {
 
         texture.image = image;
         texture.needsUpdate = true;
@@ -186,9 +207,9 @@ function createRecruit() {
     // model
 
     var loader = new THREE.OBJLoader(manager);
-    loader.load('../../assets/models/recruit/weapon box/content/58pic_53cf8ab9c2317.obj', function (object) {
+    loader.load('../../assets/models/recruit/weapon box/content/58pic_53cf8ab9c2317.obj', function(object) {
 
-        object.traverse(function (child) {
+        object.traverse(function(child) {
 
             if (child instanceof THREE.Mesh) {
 
@@ -206,7 +227,7 @@ function createRecruit() {
 //The bullet which is normal
 function createBullet() {
     var manager = new THREE.LoadingManager();
-    manager.onProgress = function (item, loaded, total) {
+    manager.onProgress = function(item, loaded, total) {
 
         console.log(item, loaded, total);
 
@@ -214,19 +235,18 @@ function createBullet() {
 
     var texture = new THREE.Texture();
 
-    var onProgress = function (xhr) {
+    var onProgress = function(xhr) {
         if (xhr.lengthComputable) {
             var percentComplete = xhr.loaded / xhr.total * 100;
             console.log(Math.round(percentComplete, 2) + '% downloaded');
         }
     };
 
-    var onError = function (xhr) {
-    };
+    var onError = function(xhr) {};
 
 
     var loader = new THREE.ImageLoader(manager);
-    loader.load('../../assets/models/bullet/9mm_texture.jpg', function (image) {
+    loader.load('../../assets/models/bullet/9mm_texture.jpg', function(image) {
 
         texture.image = image;
         texture.needsUpdate = true;
@@ -237,9 +257,9 @@ function createBullet() {
 
     var loader = new THREE.OBJLoader(manager);
 
-    loader.load('../../assets/models/bullet/file.obj', function (object) {
+    loader.load('../../assets/models/bullet/file.obj', function(object) {
 
-        object.traverse(function (child) {
+        object.traverse(function(child) {
 
             if (child instanceof THREE.Mesh) {
 

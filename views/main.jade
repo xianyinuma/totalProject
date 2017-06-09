@@ -1,0 +1,56 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title Title
+        link(rel="stylesheet", href="/assets/lib/bootstrap/css/bootstrap.min.css")
+        link(rel="stylesheet", href="/css/reset.css")
+        link(rel="stylesheet", href="/css/index.css")
+        link(rel="stylesheet", href="/css/chatroom.css")
+        script(type="text/javascript", src="/assets/lib/js/jquery-3.2.1.js")
+        script(type="text/javascript", src="/assets/lib/js/ArrayList.js")
+        script(type="text/javascript", src="/assets/lib/js/three.js")
+        script(type="text/javascript", src="/js/sea-battle/loading/Bird.js")
+        script(type="text/javascript", src="/js/sea-battle/loading/Boid.js")
+        script(type="text/javascript", src="/js/sea-battle/loading/CanvasRenderer.js")
+        script(type="text/javascript", src="/js/sea-battle/loading/Projector.js")
+        script(type="text/javascript", src="/js/sea-battle/loading/stats.min.js")
+        script(type="text/javascript", src="/js/loading.js")
+        script(type="text/javascript", src="/js/model/WaterShader.js")
+        script(type="text/javascript", src="/js/model/OBJLoader.js")
+        script(type="text/javascript", src="/js/model/MTLLoader.js")
+        script(type="text/javascript", src="/js/model/DDSLoader.js")
+        script(type="text/javascript", src="/js/model/OrbitControls.js")
+        script(type="text/javascript", src="/js/model/CreateModel.js")
+        script(type="text/javascript", src="/assets/lib/js/socket.io.js")
+        script(type="text/javascript", src="/js/sea-battle/chatroom.js")
+        script(type="text/javascript", src="/js/sea-battle/MovableObject.js")
+        script(type="text/javascript", src="/js/sea-battle/StaticObject.js")
+        script(type="text/javascript", src="/js/sea-battle/Box.js")
+        script(type="text/javascript", src="/js/sea-battle/Portal.js")
+        script(type="text/javascript", src="/js/sea-battle/Boat.js")
+        script(type="text/javascript", src="/js/sea-battle/Bullet.js")
+        script(type="text/javascript", src="/js/sea-battle/Map.js")
+        script(type="text/javascript", src="/js/sea-battle/Player.js")
+        script(type="text/javascript", src="/js/sea-battle/NPC.js")
+        script(type="text/javascript", src="/js/sea-battle/UnmovableNPC.js")
+        script(type="text/javascript", src="/js/sea-battle/team.js")
+        script(type="text/javascript", src="/js/sea-battle/GameManager.js")
+        script(type="text/javascript", src="/js/sea-battle.js")
+    body
+        #loading
+            #container
+            p Loading ...
+        #map-output
+        #status-list
+        #ranking-list
+        #tp-info
+            img(src="../assets/images/black_hole.png")
+        #display-info
+        #chatroom-container
+            ul.pages
+                li.chat.page
+                    .chatArea
+                        ul.messages
+                    input.inputMessage(placeholder="Type here...")
+        #debug

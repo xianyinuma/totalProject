@@ -2,8 +2,9 @@
  * Created by Victor on 2017/4/27.
  */
 var MovableObject = require('./MovableObject');
+
 class Boat extends MovableObject {
-    constructor(objectID) {
+    constructor(objectID, boatType) {
         super(objectID);
 
         this.level = 1;
@@ -15,22 +16,44 @@ class Boat extends MovableObject {
         this.maxHealth = 3 * Math.pow(2, this.level - 1);
         this.health = this.maxHealth;
 
-        //for move
-        this.speed = this.horizontalSpeed;
-        this.wFlag = false;
-        this.aFlag = false;
-        this.sFlag = false;
-        this.dFlag = false;
-        this.speedTimeDecreaseFlag = false;
-        this.theta = 0;
-        this.curSpeed = 0;
-        //move info
-        this.time1;
 
+        this.acc = 0.05; //加速度
+
+        //hyz added
+        this.wheelOrientation = 0;
+        this.boatOrientation = 0;
+        this.controlBoat = {
+            moveForward: false,
+            moveBackward: false,
+            moveLeft: false,
+            moveRight: false
+        };
+        this.MAX_SPEED = 100;
+        this.MAX_REVERSE_SPEED = -78;
+
+        this.MAX_WHEEL_ROTATION = 5;
+
+        this.FRONT_ACCELERATION = 12.5;
+        this.BACK_ACCELERATION = 15;
+
+        this.WHEEL_ANGULAR_ACCELERATION = 3.0;
+
+        this.FRONT_DECCELERATION = 7.5;
+        this.WHEEL_ANGULAR_DECCELERATION = 2.0;
+
+        this.STEERING_RADIUS_RATIO = 0.0023;
+
+        this.MAX_TILT_SIDES = 0.05;
+        this.MAX_TILT_FRONTBACK = 0.015;
+        // hyz added
+
+        this.curSpeed = 0;
+
+        this.fireTime = 0;
 
         this.mesh = { position: { x: 0, y: 0, z: 0 }, quaternion: { x: 0, y: 0, z: 0, w: 1 } };
-        // this.mesh = BOAT.clone(); TODO
         this.radius = 20;
+        this.boatType = boatType;
     }
 
     BoatCheck(bulletArray, staticArray) {
@@ -63,13 +86,9 @@ class Boat extends MovableObject {
     }
 
     Fire() {
-        //let bulletID = 123;
         let bullet = new Bullet(this.playerID, this.damage, this.level * 10);
         bullet.mesh.rotation.set(this.mesh.rotation.x, this.mesh.rotation.y, this.mesh.rotation.z);
-        // bullet.mesh.position.x = this.mesh.position.x;
-        // bullet.mesh.position.y = 10;
-        // bullet.mesh.position.z = this.mesh.position.z + this.radius + bullet.radius + 1 ;
-        // bullet.mesh.position.set(0,10,0);
+
         //debug
         bullet.mesh.position.x = this.mesh.position.x;
         bullet.mesh.position.y = 30;
@@ -114,341 +133,108 @@ class Boat extends MovableObject {
         }
     }
 
+    updateBoatModel(delta) {
 
-    //
+        // speed and wheels based on controls
 
-    Move() {
-        if (Date.now() - this.time1 >= 500) {
-            this.speedTimeDecreaseFlag = true;
+        if (this.controlBoat.moveForward) {
+
+            this.curSpeed = THREE.Math.clamp(this.curSpeed + delta * this.FRONT_ACCELERATION, this.MAX_REVERSE_SPEED, this.MAX_SPEED);
+            this.acc = THREE.Math.clamp(this.acc + delta, -1, 1);
+
         }
-        if (this.speedTimeDecreaseFlag) {
+
+        if (this.controlBoat.moveBackward) {
+
+            this.curSpeed = THREE.Math.clamp(this.curSpeed - delta * this.BACK_ACCELERATION, this.MAX_REVERSE_SPEED, this.MAX_SPEED);
+            this.acc = THREE.Math.clamp(this.acc - delta, -1, 1);
+
+        }
+
+        if (this.controlBoat.moveLeft) {
+
+            this.wheelOrientation = THREE.Math.clamp(this.wheelOrientation + delta * this.WHEEL_ANGULAR_ACCELERATION, -this.MAX_WHEEL_ROTATION, this.MAX_WHEEL_ROTATION);
+
+        }
+
+        if (this.controlBoat.moveRight) {
+
+            this.wheelOrientation = THREE.Math.clamp(this.wheelOrientation - delta * this.WHEEL_ANGULAR_ACCELERATION, -this.MAX_WHEEL_ROTATION, this.MAX_WHEEL_ROTATION);
+
+        }
+
+        // speed decay
+
+        if (!(this.controlBoat.moveForward || this.controlBoat.moveBackward)) {
+
             if (this.curSpeed > 0) {
-                if (this.curSpeed - 0.002 >= 0)
-                    this.curSpeed -= 0.002;
-                else {
-                    this.curSpeed = 0;
-                }
+
+                var k = this.exponentialEaseOut(this.curSpeed / this.MAX_SPEED);
+
+                this.curSpeed = THREE.Math.clamp(this.curSpeed - k * delta * this.FRONT_DECCELERATION, 0, this.MAX_SPEED);
+                this.acc = THREE.Math.clamp(this.acc - k * delta, 0, 1);
+
             } else {
-                if (this.curSpeed + 0.002 <= 0)
-                    this.curSpeed += 0.002;
-                else {
-                    this.curSpeed = 0;
-                }
+
+                var k = this.exponentialEaseOut(this.curSpeed / this.MAX_REVERSE_SPEED);
+
+                this.curSpeed = THREE.Math.clamp(this.curSpeed + k * delta * this.BACK_ACCELERATION, this.MAX_REVERSE_SPEED, 0);
+                this.acc = THREE.Math.clamp(this.acc + k * delta, -1, 0);
+
             }
+
+
         }
 
+        // steering decay
 
-        // document.getElementById("debug").innerHTML = this.curSpeed + "\n" + this.mesh.position.x + "\n" + this.mesh.position.z;
-        this.forward(this.curSpeed);
+        if (!(this.controlBoat.moveLeft || this.controlBoat.moveRight)) {
 
-        // document.getElementById("debug").innerHTML = this.mesh.position.x + " " + this.mesh.position.z;
+            if (this.wheelOrientation > 0) {
 
-        // this.mesh.position.x += 1;
+                this.wheelOrientation = THREE.Math.clamp(this.wheelOrientation - delta * this.WHEEL_ANGULAR_DECCELERATION, 0, this.MAX_WHEEL_ROTATION);
 
-    }
-
-
-    control(key, operation) {
-        if (operation == 'keydown') {
-            switch (key) {
-                case 'w':
-                    this.wFlag = true;
-                    break;
-                case 's':
-                    this.sFlag = true;
-                    break;
-                case 'a':
-                    this.aFlag = true;
-                    break;
-                case 'd':
-                    this.dFlag = true;
-                    break;
-            }
-        } else if (operation == 'keyup') {
-            switch (key) {
-                case 'w':
-                    this.wFlag = false;
-                    break;
-                case 's':
-                    this.sFlag = false;
-                    break;
-                case 'a':
-                    this.aFlag = false;
-                    break;
-                case 'd':
-                    this.dFlag = false;
-                    break;
-            }
-        }
-
-
-        if (this.wFlag) this.move('w');
-        if (this.aFlag) this.move('a');
-        if (this.sFlag) this.move('s');
-        if (this.dFlag) this.move('d');
-    }
-
-
-    move(key) {
-        switch (key) {
-            case 'w':
-                this.increaseSpd();
-                this.time1 = Date.now();
-                this.speedTimeDecreaseFlag = false;
-                break;
-            case 's':
-                this.decreaseSpd();
-                this.time1 = Date.now();
-                this.speedTimeDecreaseFlag = false;
-                break;
-            case 'a':
-                this.changeDir(0.5);
-                break;
-            case 'd':
-                this.changeDir(-0.5);
-                break;
-        }
-    }
-
-
-    increaseSpd() {
-        if (this.curSpeed < this.speed) {
-            if (this.curSpeed + 0.002 <= this.speed) {
-                this.curSpeed += 0.002;
             } else {
-                this.curSpeed = this.speed;
-            }
-        } else {
-            this.curSpeed = this.speed;
-        }
-    }
 
-    decreaseSpd() {
-        if (this.curSpeed > -this.speed) {
-            if (this.curSpeed - 0.002 >= -this.speed) {
-                this.curSpeed -= 0.002;
-            } else {
-                this.curSpeed = -this.speed;
-            }
-        } else {
-            this.curSpeed = -this.speed;
-        }
-    }
+                this.wheelOrientation = THREE.Math.clamp(this.wheelOrientation + delta * this.WHEEL_ANGULAR_DECCELERATION, -this.MAX_WHEEL_ROTATION, 0);
 
-    changeDir(dir) {
-        if (this.curSpeed != 0) {
-            this.theta += dir;
-            if (this.theta >= 360) {
-                this.theta -= 360;
             }
 
-            if (this.theta <= -360) {
-                this.theta += 360;
-            }
         }
 
-        var rad = Math.PI / 180;
-        this.mesh.rotation.y = rad * this.theta;
-    }
+        // car update
 
-    forward(dist) {
+        var forwardDelta = this.curSpeed * delta;
 
+        this.boatOrientation += (forwardDelta * this.STEERING_RADIUS_RATIO) * this.wheelOrientation;
 
-        var xDir = this.mesh.position.x;
-        var zDir = this.mesh.position.z;
-        var rad = Math.PI / 180;
+        // displacement
 
-        // var distance = Math.sqrt(xDir * xDir + zDir * zDir);
-        //
-        // distance += dist;
+        this.mesh.position.x += Math.sin(this.boatOrientation) * forwardDelta;
+        this.mesh.position.z += Math.cos(this.boatOrientation) * forwardDelta;
 
-        zDir = zDir + dist * Math.cos(rad * this.theta);
-        xDir = xDir + dist * Math.sin(rad * this.theta);
+        // steering
 
+        this.mesh.rotation.y = this.boatOrientation;
 
-        this.mesh.position.x = xDir;
-        this.mesh.position.z = zDir;
+        // tilt
 
-        // this.mesh.traverse(function (child) {
-        //
-        //     if (child instanceof THREE.Mesh) {
-        //
-        //         child.position.x = xDir;
-        //         child.position.z = zDir;
-        //
-        //     }
-        //
-        // });
-
+        this.mesh.rotation.z = this.MAX_TILT_SIDES * this.wheelOrientation * (this.curSpeed / this.MAX_SPEED);
+        this.mesh.rotation.x = -this.MAX_TILT_FRONTBACK * this.acc;
 
     }
 
+    exponentialEaseOut(k) {
 
-    //     var speedTimeDecreaseFlag = false;
-    //
-    //     var theta = 0;
-    //     var curSpeed = 0;
-    //     //move info
-    //     var time1, time2;
-    //
-    //
-    //
-    //     var wFlag,aFlag,sFlag,dFlag = false;
-    //
-    //    
-    //
-    //     timeExecute(){
-    //         if(Date.now() - time1 >= 500){
-    //             speedTimeDecreaseFlag = true;
-    //         }
-    //         if(speedTimeDecreaseFlag){
-    //             if (curSpeed > 0){
-    //                 if (curSpeed - 0.002 >= 0)
-    //                     curSpeed -= 0.002;
-    //                 else{
-    //                     curSpeed = 0;
-    //                 }
-    //             }else{
-    //                 if (curSpeed + 0.002 <= 0)
-    //                     curSpeed += 0.002;
-    //                 else{
-    //                     curSpeed = 0;
-    //                 }
-    //             }
-    //         }
-    //
-    //
-    //         forward(curSpeed);
-    //
-    //     };
-    //
-    //     control(key,operation){
-    //     if (operation == 'keydown'){
-    //         switch (key){
-    //             case 'w':
-    //                 wFlag = true;
-    //                 break;
-    //             case 's':
-    //                 sFlag = true;
-    //                 break;
-    //             case 'a':
-    //                 aFlag = true;
-    //                 break;
-    //             case 'd':
-    //                 dFlag = true;
-    //                 break;
-    //         }
-    //     }else if(operation == 'keyup'){
-    //         switch (key){
-    //             case 'w':
-    //                 wFlag = false;
-    //                 break;
-    //             case 's':
-    //                 sFlag = false;
-    //                 break;
-    //             case 'a':
-    //                 aFlag = false;
-    //                 break;
-    //             case 'd':
-    //                 dFlag = false;
-    //                 break;
-    //         }
-    //     }
-    //
-    //
-    //     if (wFlag) move('w');
-    //     if (aFlag) move('a');
-    //     if (sFlag) move('s');
-    //     if (dFlag) move('d');
-    // }
-    //
-    //
-    //     var move = function(key){
-    //         switch(key){
-    //             case 'w':
-    //                 increaseSpd();
-    //                 // time1 = Date.now();
-    //                 speedTimeDecreaseFlag = false;
-    //                 break;
-    //             case 's':
-    //                 decreaseSpd();
-    //                 // time1 = Date.now();
-    //                 speedTimeDecreaseFlag = false;
-    //                 break;
-    //             case 'a':
-    //                 changeDir(1);
-    //                 break;
-    //             case 'd':
-    //                 changeDir(-1);
-    //                 break;
-    //         }
-    //     };
-    //
-    //     var increaseSpd = function(){
-    //         if(curSpeed < speed){
-    //             if (curSpeed + 0.002 <= speed){
-    //                 curSpeed += 0.002;
-    //             }else{
-    //                 curSpeed = speed;
-    //             }
-    //         }else{
-    //             curSpeed = speed;
-    //         }
-    //     };
-    //
-    //     var decreaseSpd = function(){
-    //         if (curSpeed > -speed){
-    //             if (curSpeed - 0.002 >= -speed){
-    //                 curSpeed -= 0.002;
-    //             }else{
-    //                 curSpeed = -speed;
-    //             }
-    //         }else{
-    //             curSpeed = -speed;
-    //         }
-    //     };
-    //
-    //     var changeDir = function(dir){
-    //         if (curSpeed != 0){
-    //             theta += dir;
-    //             if (theta >= 360){
-    //                 theta -= 360;
-    //             }
-    //
-    //             if (theta <= -360){
-    //                 theta += 360;
-    //             }
-    //         }
-    //
-    //         var rad = Math.PI / 180;
-    //         body.rotation.y = rad * theta;
-    //     };
-    //
-    //     var forward = function(dist){
-    //
-    //
-    //         var xDir = body.position.x;
-    //         var zDir = body.position.z;
-    //         var rad = Math.PI / 180;
-    //
-    //         // var distance = Math.sqrt(xDir * xDir + zDir * zDir);
-    //         //
-    //         // distance += dist;
-    //
-    //         zDir = zDir + dist * Math.cos(rad * theta);
-    //         xDir = xDir + dist * Math.sin(rad * theta);
-    //
-    //         body.position.z = zDir;
-    //         body.position.x = xDir;
-    //
-    //
-    //     };
+        return k === 1 ? 1 : -Math.pow(2, -10 * k) + 1;
 
-    //第一步：实现船同步
-    //for net update
+    }
+
+    //for net update @author mjt
     getData() {
         return {
             playerID: this.playerID,
+            boatType: this.boatType,
             mesh: {
                 position: this.mesh.position,
                 quaternion: this.mesh.quaternion
@@ -460,14 +246,12 @@ class Boat extends MovableObject {
             giveExp: this.giveExp,
             maxHealth: this.maxHealth,
             health: this.health,
-            speedTimeDecreaseFlag: this.speedTimeDecreaseFlag,
-            curSpeed: this.curSpeed
         };
     }
     update(data) {
-        //问题很大
+
+        this.boatType = data.boatType;
         this.mesh.position.x = data.mesh.position.x;
-        this.mesh.position.y = data.mesh.position.y;
         this.mesh.position.z = data.mesh.position.z;
         this.mesh.quaternion.x = data.mesh.quaternion._x;
         this.mesh.quaternion.y = data.mesh.quaternion._y;
@@ -480,10 +264,7 @@ class Boat extends MovableObject {
         this.giveExp = data.giveExp;
         this.maxHealth = data.maxHealth;
         this.health = data.health;
-        this.speedTimeDecreaseFlag = data.speedTimeDecreaseFlag;
-        this.curSpeed = data.curSpeed;
     }
-
 }
 
 module.exports = Boat;

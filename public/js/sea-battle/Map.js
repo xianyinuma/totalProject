@@ -13,23 +13,40 @@ class Map {
         this.scene = new THREE.Scene();
         this.scene.fog = new THREE.FogExp2(0xaabbbb, 0.0001);
 
+        //光源
+        var spotLight;
+        spotLight = new THREE.SpotLight(0xffffff, 1, 0, Math.PI / 2);
+        spotLight.position.set(0, 1800, 1500);
+        spotLight.target.position.set(0, 0, 0);
+        spotLight.castShadow = true;
+        spotLight.shadow.camera.near = 100;
+        spotLight.shadow.camera.far = camera.far;
+        spotLight.shadow.camera.fov = 50;
+        spotLight.shadow.bias = -0.00125;
+        spotLight.shadow.mapSize.width = 1024;
+        spotLight.shadow.mapSize.height = 1024;
+        this.scene.add(spotLight);
+
         this.water = null;
         this.AddMirrorMesh();
         this.AddSkyBox();
+
     }
 
     UpdateStatus(boatArray, bulletArray, mapWidth, mapHeight) {
         this.mapWidth = mapWidth;
         this.mapHeight = mapHeight;
-        for (let i = 0; i < boatArray.size(); i++) {
-            boatArray.get(i).Move();
-        }
+        // for (let i = 0; i < boatArray.size(); i++) {
+        //     boatArray.get(i).Move();
+        // }
         for (let i = 0; i < bulletArray.size(); i++) {
             bulletArray.get(i).Move();
         }
     }
 
     UpdateOutput(currentBoat, boatArray, bulletArray, staticArray) {
+
+
         //alert(boatArray.size());
         for (let i = 0; i < boatArray.size(); i++) {
             this.scene.add(boatArray.get(i).mesh)
@@ -38,7 +55,8 @@ class Map {
             this.scene.add(bulletArray.get(i).mesh)
         }
         for (let i = 0; i < staticArray.size(); i++) {
-            this.scene.add(staticArray.get(i).mesh)
+            if (staticArray.get(i) !== null)
+                this.scene.add(staticArray.get(i).mesh)
         }
 
         this.water.material.uniforms.time.value += 1.0 / 60.0;
@@ -54,7 +72,8 @@ class Map {
             this.scene.remove(bulletArray.get(i).mesh)
         }
         for (let i = 0; i < staticArray.size(); i++) {
-            this.scene.remove(staticArray.get(i).mesh)
+            if (staticArray.get(i) !== null)
+                this.scene.remove(staticArray.get(i).mesh)
         }
     }
 
@@ -85,14 +104,14 @@ class Map {
             alpha: 1.0,
             sunDirection: light.position.clone().normalize(),
             sunColor: 0xffffff,
-            waterColor: 0x001e0f,
+            waterColor: 0x0acbde,
             distortionScale: 50.0,
             fog: this.scene.fog != undefined
         });
 
 
         let mirrorMesh = new THREE.Mesh(
-            new THREE.PlaneBufferGeometry(parameters.width * 500, parameters.height * 500),
+            new THREE.PlaneBufferGeometry(parameters.width * 500, parameters.height * 500, 500, 500),
             this.water.material
         );
 
@@ -107,9 +126,9 @@ class Map {
         cubeMap.format = THREE.RGBFormat;
 
         var loader = new THREE.ImageLoader();
-        loader.load('../../assets/textures/skyboxsun25degtest.png', function (image) {
+        loader.load('../../assets/textures/skyboxsun25degtest.png', function(image) {
 
-            var getSide = function (x, y) {
+            var getSide = function(x, y) {
 
                 var size = 1024;
 

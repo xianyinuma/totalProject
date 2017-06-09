@@ -21,7 +21,7 @@ $(document).ready(function() {
     animate();
     setTimeout(function() {
         $("#loading").remove();
-    }, 300);
+    }, 5000);
 
     function init() {
 

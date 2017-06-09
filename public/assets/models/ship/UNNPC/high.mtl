@@ -1,0 +1,8 @@
+#Produced by Art of Illusion 2.9, Thu Jan 17 14:17:02 CET 2013
+newmtl ConeTex
+Kd 1 1 1
+map_Kd high1.jpg
+Ks 0.29 0.29 0.29
+Ka 0 0 0
+illum 2
+Ns 103

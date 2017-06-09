@@ -17,9 +17,14 @@ html
     
     script(type="text/javascript" src="/assets/lib/js/three.js")
     script(type="text/javascript" src="/js/model/CreateModel.js")
-    script(type='text/javascript', src='/js/chooseShip.js')
     script(type='text/javascript' src='/js/model/OBJLoader.js')
+    script(type='text/javascript' src='/js/model/DDSLoader.js')
+    script(type='text/javascript' src='/js/model/MTLLoader.js')
     script(type='text/javascript' src='/js/model/OrbitControls.js')
+    script(type='text/javascript' src='/js/model/WaterShader.js')
+    script(type='text/javascript', src='/js/chooseShip.js')
+    
+
     link(rel='stylesheet', href='/stylesheets/info.css')
     style.
 
@@ -65,15 +70,39 @@ html
           div(id='ship')
             div(class="row")
                 div(class="col-md-4")
-                    h5 Ship 1
-                    canvas(id='ship1' class='ships' width="200px" height="400px")
+                    h5 Kawayi
+                    canvas(id='ship1' class='ships' width="200px" height="300px")
                 div(class="col-md-4")
-                    h5 Ship 2
-                    div(id='ship2' class='ships')
+                    h5 GermanShip
+                    canvas(id='ship2' class='ships' width="200px" height="300px")
                 div(class="col-md-4")
-                    h5 Ship 3
-                    div(id='ship3' class='ships')
-      a(href="/index?usrname=23", title="title") Start
+                    h5 BOSS
+                    canvas(id='ship3' class='ships' width="200px" height="300px")
+            div(class='row' id ='shipForm')
+              div(class='col-md-4')
+                input(name='ship1' type='button' value='Start' onclick="window.location.href='/main?username=#{user.name}&shipNo=1'")
+              div(class='col-md-4')
+                input(name='ship2' type='button' value='Start' onclick="window.location.href='/main?username=#{user.name}&shipNo=2'")
+              div(class='col-md-4')
+                input(name='ship3' type='button' value='Start' onclick="window.location.href='/main?username=#{user.name}&shipNo=3'")
+              //- form(action="/index" method='get')
+              //-   input(type='hidden' name ='username' value="#{user.name}")
+              //-   div(class='form-group')
+              //-     div(class="col-md-4")
+              //-       label(class='radio-inline') 
+              //-         h4 Kawayi
+              //-         input(type='radio' name="shipNo" id="inlineRadio1" value="option1" ) 
+              //-     div(class="col-md-4")
+              //-       label(class="radio-inline")
+              //-         h4 GermanShip
+              //-         input(type="radio" name="shipNo" id="inlineRadio1" value="option2") 
+              //-     div(class="col-md-4")
+              //-       label(class="radio-inline")
+              //-         h4 Money
+              //-         input(type="radio" name="shipNo" id="inlineRadio2" value="option3") 
+              //-     <input type="submit" class="btn btn-primary login-button" value="注册" style="width:70px;height:40px;" />
+              //- label(class="radio-inline")
+              //-   input(type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3") 3
     div(id='cssmenu')
       ul(style="display: block;/* width: 50%; */float: right;")
         li

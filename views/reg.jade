@@ -2,7 +2,7 @@ extends welcome
 
 block register
     div(id= 'register')
-        form(method='post')
+        form(method='post' onsubmit='return confirm();')
             button(type="button" class="close" aria-label="Close" onclick="document.getElementById('register').style.display='none'")
                 span(aria-hidden="true") &times
             div(class="form-group")
@@ -20,4 +20,4 @@ block register
             div(class="form-group")
                 label(for='nickname') 昵称：
                 input(type='text' name='nickname' class="form-control" id="nickname" placeholder="昵称" required)
-            <input type="submit" class="btn btn-primary login-button" value="注册" style="width:70px;height:40px;" />
+            input(type="submit" class="btn btn-primary login-button" value="注册" style="width:70px;height:40px;")

@@ -5,31 +5,34 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var THREE = require('three');
-
-// var index = require('./routes/index');
-var users = require('./routes/users');
-var routes = require('./routes/index.js');
-
-var settings = require('./settings');
-
 var flash = require('connect-flash');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 
 var app = express();
 
+var routes = require('./routes/index.js');
+var settings = require('./settings');
+var User = require('./models/user');
+
+//game class added @author mjt
+var Boat = require('./ServerClasses/Boat');
+var NPC = require('./ServerClasses/NPC');
+
 //chat room added @author mjt
 var server = require('http').createServer(app);
 var io = require('socket.io')(server);
 
-//game class added @author mjt
-var MovableObject = require('./ServerClasses/MovableObject');
-var Boat = require('./ServerClasses/Boat');
-
 //global vars @author mjt
 var boatMap = {};
-var bulletMap = {};
 var staticMap = {};
+
+// view engine setup
+app.set('port', process.env.PORT || 2017); //todo
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
+
+
 
 app.use(flash());
 app.use(session({
@@ -46,10 +49,6 @@ app.use(session({
     })
 }));
 
-// view engine setup
-app.set('port', process.env.PORT || 2017);
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -60,19 +59,17 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 //app.use(express.static(path.join(__dirname, 'public')));
 
-
 app.use('/', routes);
-app.use('/users', users);
 
 server.listen(app.get('port'), function() {
     console.log('Express server listening on port ' + app.get('port'));
 });
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-    var err = new Error('Not Found');
-    err.status = 404;
-    next(err);
-});
+// app.use(function(req, res, next) {
+//     var err = new Error('Not Found');
+//     err.status = 404;
+//     next(err);
+// });
 
 // error handler
 app.use(function(err, req, res, next) {
@@ -87,6 +84,7 @@ app.use(function(err, req, res, next) {
 module.exports = app;
 
 //char room added @author mjt
+var allSockets = {};
 var numUsers = 0;
 io.on('connection', function(socket) {
     var addedUser = false;
@@ -147,20 +145,23 @@ io.on('connection', function(socket) {
             //退出时 将船数据记录在数据库中 taishi!!!
             console.log(socket.username + " quit");
             delete boatMap[socket.username];
+            delete allSockets[socket.username];
             io.emit('quit', socket.username);
         }
     });
 
-
     //同步用
-    socket.on('start', function(playerID) {
+    socket.on('start', function(data) {
         //get corresponding boat info 
+        allSockets[data.playerID] = socket;
         //若db中无相应的船，返回一个新船（如下）taishi!!!
 
-        var boat = new Boat(playerID);
+        var boat = new Boat(data.playerID, data.boatType);
         var boatData = boat.getData();
-        boatMap[playerID] = boat;
-        console.log(playerID + ' start');
+        boatData.mesh.position.x = 1500 * Math.random();
+        boatData.mesh.position.z = 1500 * Math.random();
+        boatMap[data.playerID] = boat;
+        console.log(data.playerID + ' start');
         io.emit('get boat', boatData);
 
         //
@@ -182,8 +183,6 @@ io.on('connection', function(socket) {
         var boatMapData = generateData(boatMap);
         io.emit('load', {
             boatMap: boatMapData,
-            bulletMap: bulletMap,
-            staticMap: staticMap
         });
     });
     var generateData = function(map) {
@@ -197,8 +196,12 @@ io.on('connection', function(socket) {
     // operations of bullets
     socket.on('fire', function(bulletData) {
         //将该子弹传给每个client
-        bulletMap[bulletData.playerID] = bulletData;
+        console.log(bulletData.playerID + " fire");
         io.emit('fire', bulletData);
+    });
+    socket.on('killed', function(data) {
+        console.log(data.killerID + ' kill sb.');
+        io.emit('get exp', data);
     });
 
 
@@ -207,30 +210,71 @@ io.on('connection', function(socket) {
         io.emit('delete static', staticID);
     });
 
+    //请求组队
+    socket.on('request team', function(from, to, teammates) {
+        console.log(allSockets);
+        allSockets[to].emit('request team', from, teammates);
+    });
+    //答应组队
+    socket.on('team ok', function(teammates1, teammates2) {
+        for (var id in teammates1) {
+            allSockets[id].emit('team ok', teammates2);
+        }
+        for (var id in teammates2) {
+            allSockets[id].emit('team ok', teammates1);
+        }
+    });
+    //拒绝组队
+    socket.on('team no', function(from, to) {
+        allSockets[to].emit('team no', from);
+    });
+    //离队
+    socket.on('leave team', function(from, teammates) {
+        for (var id in teammates) {
+            if (id != from) {
+                allSockets[id].emit('leave team', from);
+            }
+        }
+    });
 
 
 });
 
-
+//更新staticMap，并同步
 refreshStaticMap(1500, 1500);
 setInterval(function() {
     refreshStaticMap(1500, 1500);
     io.emit("static update", staticMap);
-}, 50000);
+}, 100000);
 
 function refreshStaticMap(length, width) {
     staticMap = {};
     var i, len = Object.getOwnPropertyNames(boatMap).length;
     if (len === 0) len = 1;
 
-    for (i = 0; i < len * 13; i++) {
+    for (i = 0; i < len * 13 + 1; i++) {
         var x = length * Math.random();
         var z = width * Math.random();
         staticMap[i] = { x: x, z: z };
     }
 }
+//更新npc，并同步
+var npc = new NPC('NPCMM');
+boatMap[npc.playerID] = npc;
+setInterval(function() {
+    npc.detectTarget(boatMap);
+    npc.move(0.03, boatMap);
+
+    if (npc.detectFire(boatMap)) {
+        var t = (new Date()).getTime();
+        if (t - npc.fireTime > 1000) {
+            io.emit('fire', npc.Fire().getData());
+            npc.fireTime = t;
+        }
+    }
+}, 30);
 
 
 //船同步 completed
 //子弹同步 completed
-//
+//NPC同步
