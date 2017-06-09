@@ -112,11 +112,24 @@ class GameManager {
         </span>
     </ul>`);
 
+        let gamers = $("#gamers");
+        gamers.html(`
+    <ul class="list-group">
+        <li class="list-group-item" id="gamers-list-title">
+            <span class="glyphicon glyphicon-sort-by-order-alt"></span>
+            Gamers List:
+        </li>
+
+        <span id="gamers-user-list">
+        </span>
+    </ul>`);
+
 
         var statusPlayerID = $("#status-playerID");
         var statusHealth = $("#status-health");
         var statusLevel = $("#status-level");
         var orderedUserList = $("#ordered-user-list");
+        var gamersUserList = $("#gamers-user-list");
 
         var map = new Map(output, renderer, camera);
 
@@ -124,6 +137,7 @@ class GameManager {
 
             adjustWindowSize();
             UpdateStatusPanel();
+            UpdateGamersPanel();
             sinkBullet(bulletArray);
             let feedback = currentBoat.BoatCheck(bulletArray, staticArray, boatArray);
             if (feedback.static !== null) {
@@ -312,6 +326,20 @@ class GameManager {
             let orderedBoatArray = sortBoatArray();
             for (let i = 0; i < orderedBoatArray.size(); i++) {
                 orderedUserList.append(`
+            <li class="list-group-item">
+            <span class="glyphicon glyphicon-user"></span>
+            Username:` + orderedBoatArray.get(i).playerID + `
+            <span class="glyphicon glyphicon-star"></span>
+            Level:` + orderedBoatArray.get(i).level + `
+            </li>`);
+            }
+        }
+
+        function UpdateGamersPanel() {
+            gamersUserList.html("");
+            let orderedBoatArray = sortBoatArray();
+            for (let i = 0; i < orderedBoatArray.size(); i++) {
+                gamersUserList.append(`
             <li class="list-group-item">
             <span class="glyphicon glyphicon-user"></span>
             Username:` + orderedBoatArray.get(i).playerID + `

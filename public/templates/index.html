@@ -8,40 +8,9 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/chatroom.css">
-
     <script type="text/javascript" src="../assets/lib/js/jquery-3.2.1.js"></script>
-    <script type="text/javascript" src="../assets/lib/js/ArrayList.js"></script>
-    <script type="text/javascript" src="../assets/lib/js/three.js"></script>
-
-    <script type="text/javascript" src="../js/sea-battle/loading/Bird.js"></script>
-    <script type="text/javascript" src="../js/sea-battle/loading/Boid.js"></script>
-    <script type="text/javascript" src="../js/sea-battle/loading/CanvasRenderer.js"></script>
-    <script type="text/javascript" src="../js/sea-battle/loading/Projector.js"></script>
-    <script type="text/javascript" src="../js/sea-battle/loading/stats.min.js"></script>
-
-
-
-    <script type="text/javascript" src="../js/loading.js"></script>
-
-    <script type="text/javascript" src="../js/model/WaterShader.js"></script>
-    <script type="text/javascript" src="../js/model/OBJLoader.js"></script>
-    <script type="text/javascript" src="../js/model/OrbitControls.js"></script>
-    <script type="text/javascript" src="../js/model/CreateModel.js"></script>
-
-
-    <script type="text/javascript"  src="../assets/lib/js/socket.io.js"></script>
-    <script type="text/javascript"  src="../js/sea-battle/chatroom.js"></script>
-    <script type="text/javascript" src="../js/sea-battle/MovableObject.js"></script>
-    <script type="text/javascript" src="../js/sea-battle/StaticObject.js"></script>
-    <script type="text/javascript" src="../js/sea-battle/Box.js"></script>
-    <script type="text/javascript" src="../js/sea-battle/Portal.js"></script>
-    <script type="text/javascript" src="../js/sea-battle/Boat.js"></script>
-    <script type="text/javascript" src="../js/sea-battle/Bullet.js"></script>
-    <script type="text/javascript" src="../js/sea-battle/Map.js"></script>
-    <script type="text/javascript" src="../js/sea-battle/Player.js"></script>
-    <script type="text/javascript" src="../js/sea-battle/GameManager.js"></script>
-    <script type="text/javascript" src="../js/sea-battle.js"></script>
-    <!--<script type="text/javascript" src="../wenjin/Map.js"></script>-->
+    <script type="text/javascript" src="../assets/lib/bootstrap/js/bootstrap.js"></script>
+    
 
 </head>
 <body>
@@ -60,7 +29,33 @@
 <div id="ranking-list">
 
 </div>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
+  +
+</button>
 
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">组队</h4>
+      </div>
+      <div class="modal-body">
+        <form method="GET">
+            <label for="queue">请输入你的队友名：</label>
+            <input type="text" name='queue'>
+        </form>
+        <h5>现有玩家：</h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">发送邀请</button>
+      </div>
+    </div>
+  </div>
+</div>
 <div id="chatroom-container">
     <ul class="pages">
         <li class="chat page">

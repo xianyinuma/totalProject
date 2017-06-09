@@ -7,7 +7,9 @@ html(lang="en")
         link(rel="stylesheet", href="/css/reset.css")
         link(rel="stylesheet", href="/css/index.css")
         link(rel="stylesheet", href="/css/chatroom.css")
+        link(rel="stylesheet", href="/css/queue.css")
         script(type="text/javascript", src="/assets/lib/js/jquery-3.2.1.js")
+        script(type="text/javascript" src="../assets/lib/bootstrap/js/bootstrap.js")
         script(type="text/javascript", src="/assets/lib/js/ArrayList.js")
         script(type="text/javascript", src="/assets/lib/js/three.js")
         script(type="text/javascript", src="/js/sea-battle/loading/Bird.js")
@@ -41,12 +43,31 @@ html(lang="en")
         #loading
             #container
             p Loading ...
+        button(type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id='wow') +
+
+        div(class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
+            div(class="modal-dialog" role="document")
+                div(class="modal-content")
+                    div(class="modal-header")
+                        button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                            span(aria-hidden="true") &times
+                        h4(class="modal-title" id="myModalLabel") 组队
+                    div(class="modal-body")
+                        form(method="GET")
+                            label(for="queue") 请输入你的队友名：
+                            input(type="text" name='queue')
+                        h5 现有玩家：
+                        #gamers
+                    div(class="modal-footer")
+                        button(type="button" class="btn btn-default" data-dismiss="modal") Close
+                        button(type="button" class="btn btn-primary") 发送邀请
         #map-output
         #status-list
         #ranking-list
         #tp-info
             img(src="../assets/images/black_hole.png")
         #display-info
+        
         #chatroom-container
             ul.pages
                 li.chat.page
