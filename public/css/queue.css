@@ -3,6 +3,7 @@
     right: 4%;
     top:40%;
     z-index:5;
+    display: none;
 }
 #request{
     position:absolute;
@@ -11,6 +12,7 @@
     left:25%;
     top:35%;
     z-index:5;
+    display: none;
 }
 #teammate-list{
     position:absolute;
@@ -19,4 +21,13 @@
     right:8%;
     top:40%;
     z-index:5;
+}
+#quit{
+    position:absolute;
+    background-color: transparent;
+    border-radius: 15px;
+    right:4%;
+    top:46%;
+    z-index:5;
+    display: none;
 }

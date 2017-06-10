@@ -305,6 +305,7 @@ class GameManager {
         $('#quit').click(function() {
             alert(1);
             socket.emit('leave team', playerID, team.teammates);
+            alert("11");
         });
         // socket.emit('request team', playerID, '你要发送的对象', team.teammates);
         // 发送离队请求
@@ -386,10 +387,11 @@ class GameManager {
                     Username:` + id + `
                     </li>`);
                 }
-                teammateUserList.append(`
-                <li class="list-group-item">
-                <button id="quit"> 退出</button>
-                </li>`);
+                // teammateUserList.append(`
+                // <li class="list-group-item">
+                
+                // </li>`);
+                $("#quit").show();
             } else {
                 teammateUserList.append(`
                 <li class="list-group-item">
