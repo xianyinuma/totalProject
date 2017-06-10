@@ -3,6 +3,7 @@
     right: 4%;
     top:40%;
     z-index:5;
+    display: none;
 }
 #request{
     position:absolute;
