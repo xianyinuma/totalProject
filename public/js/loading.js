@@ -11,7 +11,8 @@ $(document).ready(function() {
     var camera, scene, renderer, birds, bird;
 
     var boid, boids;
-
+    $("#quit").hide();
+    $("#request").hide();
 
     alert(`This is a Multiplayer VR network game, you can control your ship by W,A,S,D and control your 
     perspective by mouse and arrow keys. Every player has health and level, you can gain health by 

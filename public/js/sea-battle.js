@@ -19,6 +19,7 @@ $(document).ready(function() {
     var boatType = $.getUrlParam('shipNo');
     console.log(boatType); //
     LoadModels();
+    $("#quit").hide();
     setTimeout(function() {
         let gameManager = new GameManager(playerID, boatType);
         //start chatroom
