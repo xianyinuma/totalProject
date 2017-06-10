@@ -1,8 +1,8 @@
 #wow{
     position:absolute;
-  left:200px;
-  top:200px;
-  z-index:5;
+    right: 4%;
+    top:40%;
+    z-index:5;
 }
 #request{
     position:absolute;
@@ -10,5 +10,13 @@
     border-radius: 15px;
     left:25%;
     top:35%;
+    z-index:5;
+}
+#teammate-list{
+    position:absolute;
+    background-color: transparent;
+    border-radius: 15px;
+    right:8%;
+    top:40%;
     z-index:5;
 }

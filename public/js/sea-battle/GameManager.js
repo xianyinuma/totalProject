@@ -100,6 +100,18 @@ class GameManager {
         </span>
     </ul>`);
 
+        let teammateList = $("#teammate-list");
+        teammateList.html(`
+    <ul class="list-group">
+        <li class="list-group-item" id="gamers-list-title">
+            <span class="glyphicon glyphicon-home"></span>
+            Team Mates List:
+        </li>
+
+        <span id="teammate-user-list">
+        </span>
+    </ul>`);
+
         let gamers = $("#gamers");
         gamers.html(`
     <ul class="list-group">
@@ -118,6 +130,7 @@ class GameManager {
         var statusLevel = $("#status-level");
         var orderedUserList = $("#ordered-user-list");
         var gamersUserList = $("#gamers-user-list");
+        var teammateUserList = $("#teammate-user-list")
 
         var map = new Map(output, renderer, camera);
 
@@ -126,6 +139,7 @@ class GameManager {
             adjustWindowSize();
             UpdateStatusPanel();
             UpdateGamersPanel();
+            UpdateTeammatePanel();
             sinkBullet(bulletArray);
             let feedback = currentBoat.BoatCheck(bulletArray, staticArray, boatArray);
             if (feedback.static !== null) {
@@ -353,6 +367,28 @@ class GameManager {
             Username:` + orderedBoatArray.get(i).playerID + `
             <span class="glyphicon glyphicon-star"></span>
             Level:` + orderedBoatArray.get(i).level + `
+            </li>`);
+            }
+        }
+
+        function UpdateTeammatePanel() {
+            teammateUserList.html("");
+            if(Object.getOwnPropertyNames(team.teammates).length!=1){
+                teammateUserList.append(`
+            <li class="list-group-item">
+             <button id="quit"> 退出</button>
+            </li>`);
+            }else{
+                teammateUserList.append(`
+            <li class="list-group-item">
+             你现在没有队友！
+            </li>`);
+            }
+            for(var id in team.teammate){
+                teammateUserList.append(`
+            <li class="list-group-item">
+            <span class="glyphicon glyphicon-user"></span>
+            Username:` + id + `
             </li>`);
             }
         }
