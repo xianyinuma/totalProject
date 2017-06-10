@@ -13,13 +13,11 @@
 
 #status-list-title {
     background-color: transparent;
-
     font-size: 1.5em;
 }
 
 .list-group-item {
     border-color: transparent;
-
     background-color: transparent;
 }
 
@@ -57,12 +55,10 @@
     text-align: center;
     left: 33%;
     top: 30%;
-
     font-family: "Adobe Arabic", "Times New Roman";
     font-size: 60px;
     font-weight: bolder;
     color: white;
-
 }
 
 #tp-info {

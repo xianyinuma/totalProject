@@ -144,26 +144,30 @@ class GameManager {
                     currentBoat.ChangeHealth(-feedback.bullet.damage);
                     if (currentBoat.health === 0) {
                         //died
-
-                        let killerId = feedback.bullet.playerID;
-                        deadAnimate(killerId);
-                        //send back the giveExp to do
-                        if (!isNPC(killerId))
-                            socket.emit('killed', {
-                                giveExp: currentBoat.giveExp,
-                                killerID: killerId
-                            });
+                        die(feedback.bullet.playerID);
                     }
                     bulletArray.removeValue(feedback.bullet);
                 }
             }
             if (feedback.boat !== null) {
                 //船与船碰撞
-                // currentBoat.ChangeHealth(-1);
-                // currentBoat.curSpeed = currentBoat.curSpeed === 0 ? -10 : -currentBoat.curSpeed;
+                if (isNPC(feedback.boat.playerID))
+                    die(killerID);
+                else
+                    currentBoat.curSpeed = currentBoat.curSpeed === 0 ? -10 : -currentBoat.curSpeed;
             }
             map.UpdateStatus(boatArray, bulletArray, mapWidth, mapHeight);
             map.UpdateOutput(currentBoat, boatArray, bulletArray, staticArray);
+        }
+
+        function die(killerID) {
+            deadAnimate(killerId);
+            //send back the giveExp to do
+            if (!isNPC(killerId))
+                socket.emit('killed', {
+                    giveExp: currentBoat.giveExp,
+                    killerID: killerId
+                });
         }
 
 
@@ -277,12 +281,10 @@ class GameManager {
         // 发送队伍请求
         $('#team-request-send').click(function() {
             var to = $('#team-request-to').val();
-            alert(to);
             if (team.isTeammate(to))
                 alert('该玩家已是你的队友');
             else {
                 alert('请求已发送');
-
                 socket.emit('request team', playerID, to, team.teammates);
             }
         });
@@ -290,12 +292,19 @@ class GameManager {
         // 发送离队请求
         // socket.emit('leave team', playerID, team.teammates);
 
+        $('#request').hide();
         //申请组队
         socket.on('request team', function(from, teammates) {
-            //todo 弹窗 若答应
-            // socket.emit('team ok', teammates, team.teammates);
-            //若不答应
-            // socket.emit('team no', playerID, from);
+            $('#request-playerID').html(from);
+            $('#request').show();
+            $('#request-accept').click(function() {
+                socket.emit('team ok', teammates, team.teammates);
+                $('#request').hide();
+            });
+            $('#request-reject').click(function() {
+                socket.emit('team no', playerID, from);
+                $('#request').hide();
+            });
         });
         //加入队伍
         socket.on('team ok', function(teammates) {

@@ -146,6 +146,10 @@ io.on('connection', function(socket) {
             console.log(socket.username + " quit");
             delete boatMap[socket.username];
             delete allSockets[socket.username];
+            //离开队伍
+            for (var id in allSockets) {
+                allSockets[id].emit('leave team', socket.username);
+            }
             io.emit('quit', socket.username);
         }
     });
@@ -226,6 +230,7 @@ io.on('connection', function(socket) {
     });
     //拒绝组队
     socket.on('team no', function(from, to) {
+        console.log("request from ", to, " to ", from, "is rejected");
         allSockets[to].emit('team no', from);
     });
     //离队
