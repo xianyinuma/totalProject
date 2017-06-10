@@ -55,12 +55,12 @@ html(lang="en")
                     div(class="modal-body")
                         form(method="GET")
                             label(for="queue") 请输入你的队友名：
-                            input(type="text" name='queue')
+                            input(type="text" name='queue' id="team-request-to")
                         h5 现有玩家：
                         #gamers
                     div(class="modal-footer")
                         button(type="button" class="btn btn-default" data-dismiss="modal") Close
-                        button(type="button" class="btn btn-primary") 发送邀请
+                        button(type="button" id="team-request-send" class="btn btn-primary") 发送邀请
         #map-output
         #status-list
         #ranking-list

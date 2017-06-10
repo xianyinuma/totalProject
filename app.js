@@ -212,8 +212,8 @@ io.on('connection', function(socket) {
 
     //请求组队
     socket.on('request team', function(from, to, teammates) {
-        console.log(allSockets);
-        allSockets[to].emit('request team', from, teammates);
+        if (allSockets.hasOwnProperty(to))
+            allSockets[to].emit('request team', from, teammates);
     });
     //答应组队
     socket.on('team ok', function(teammates1, teammates2) {
@@ -236,7 +236,6 @@ io.on('connection', function(socket) {
             }
         }
     });
-
 
 });
 

@@ -27,20 +27,8 @@ class GameManager {
 
         //
         let tower = null;
-        // let tower = new UnmovableNPC("NPC1");
-        // tower.mesh.position.x = 700;
-        // tower.mesh.position.y = 0;
-        // tower.mesh.position.z = 700;
 
         staticArray.set(0, tower);
-
-        // let npcBoat = new NPC("NPCMMMMM");
-        // npcBoat.mesh.position.x = 0;
-        // npcBoat.mesh.position.y = 0;
-        // npcBoat.mesh.position.z = 0;
-        // //
-
-        // boatArray.add(npcBoat);
 
         //get the boat
         socket.emit('start', {
@@ -287,6 +275,17 @@ class GameManager {
         });
 
         // 发送队伍请求
+        $('#team-request-send').click(function() {
+            var to = $('#team-request-to').val();
+            alert(to);
+            if (team.isTeammate(to))
+                alert('该玩家已是你的队友');
+            else {
+                alert('请求已发送');
+
+                socket.emit('request team', playerID, to, team.teammates);
+            }
+        });
         // socket.emit('request team', playerID, '你要发送的对象', team.teammates);
         // 发送离队请求
         // socket.emit('leave team', playerID, team.teammates);
@@ -527,6 +526,5 @@ class GameManager {
 
         animate();
 
-        //镜头跟踪，用户按下space bar空格键同步，模拟LOL视角控制
     }
 }
