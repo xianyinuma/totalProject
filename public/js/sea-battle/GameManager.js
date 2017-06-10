@@ -166,7 +166,7 @@ class GameManager {
             if (feedback.boat !== null) {
                 //船与船碰撞
                 if (isNPC(feedback.boat.playerID))
-                    die(killerID);
+                    die(feedback.boat.playerID);
                 else
                     currentBoat.curSpeed = currentBoat.curSpeed === 0 ? -10 : -currentBoat.curSpeed;
             }
@@ -175,12 +175,12 @@ class GameManager {
         }
 
         function die(killerID) {
-            deadAnimate(killerId);
+            deadAnimate(killerID);
             //send back the giveExp to do
-            if (!isNPC(killerId))
+            if (!isNPC(killerID))
                 socket.emit('killed', {
                     giveExp: currentBoat.giveExp,
-                    killerID: killerId
+                    killerID: killerID
                 });
         }
 
@@ -302,6 +302,9 @@ class GameManager {
                 socket.emit('request team', playerID, to, team.teammates);
             }
         });
+        $('#quit').click(function() {
+            socket.emit('leave team', playerID, team.teammates);
+        });
         // socket.emit('request team', playerID, '你要发送的对象', team.teammates);
         // 发送离队请求
         // socket.emit('leave team', playerID, team.teammates);
@@ -373,23 +376,24 @@ class GameManager {
 
         function UpdateTeammatePanel() {
             teammateUserList.html("");
-            if(Object.getOwnPropertyNames(team.teammates).length!=1){
+            if (Object.getOwnPropertyNames(team.teammates).length != 1) {
+
+                for (var id in team.teammates) {
+                    teammateUserList.append(`
+                    <li class="list-group-item">
+                    <span class="glyphicon glyphicon-user"></span>
+                    Username:` + id + `
+                    </li>`);
+                }
                 teammateUserList.append(`
-            <li class="list-group-item">
-             <button id="quit"> 退出</button>
-            </li>`);
-            }else{
+                <li class="list-group-item">
+                <button id="quit"> 退出</button>
+                </li>`);
+            } else {
                 teammateUserList.append(`
-            <li class="list-group-item">
-             你现在没有队友！
-            </li>`);
-            }
-            for(var id in team.teammate){
-                teammateUserList.append(`
-            <li class="list-group-item">
-            <span class="glyphicon glyphicon-user"></span>
-            Username:` + id + `
-            </li>`);
+                <li class="list-group-item">
+                你现在没有队友！
+                </li>`);
             }
         }
 
