@@ -21,6 +21,6 @@ class Team {
 
     quitTeam() {
         this.teammates = {};
-        this.teammates[playerID] = true;
+        this.teammates[this.playerID] = true;
     }
 }
