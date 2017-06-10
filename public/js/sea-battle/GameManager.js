@@ -303,6 +303,7 @@ class GameManager {
             }
         });
         $('#quit').click(function() {
+            alert(1);
             socket.emit('leave team', playerID, team.teammates);
         });
         // socket.emit('request team', playerID, '你要发送的对象', team.teammates);
