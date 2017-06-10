@@ -13,5 +13,6 @@ block login
                 input(type='password' name='password' id='password' class="form-control" placeholder="密码" required)
             a(class="forget" href="") Forget Password?
             br
-            br
+            p= error
+            p= success
             <input type="submit" class="btn btn-primary login-button" value="登录" style="width:70px;height:40px;" />

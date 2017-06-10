@@ -5,6 +5,7 @@
     left: 35%;
     padding: 30px 40px;
     background-color: white;
+    border-radius: 15px;
 }
 #register button{
     margin-top: -25px;

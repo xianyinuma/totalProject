@@ -12,6 +12,9 @@ block info
 			div(class='form-group')
 				label(for ="password") 邮箱：
 				p  #{user.email}
+			div(class='form-group')
+				label(for ="record") 最高纪录：
+				p  #{user.record}
 			form(method='post' action="updateMail")
 				div(class="form-group")
 					label(for='email') 更改邮箱：
