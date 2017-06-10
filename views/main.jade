@@ -61,6 +61,16 @@ html(lang="en")
                     div(class="modal-footer")
                         button(type="button" class="btn btn-default" data-dismiss="modal") Close
                         button(type="button" id="team-request-send" class="btn btn-primary") 发送邀请
+        div(id='request' class='modal-dialog' role="document")
+            div(class="modal-header")
+                button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                    span(aria-hidden="true") &times
+                h4(class="modal-title" id="myModalLabel") 组队
+            div(class="modal-body")
+                h4 来自 xxx的邀请
+            div(class="modal-footer")
+                button(type="button" class="btn btn-default" data-dismiss="modal") 接受
+                button(type="button" class="btn btn-primary") 拒绝
         #map-output
         #status-list
         #ranking-list

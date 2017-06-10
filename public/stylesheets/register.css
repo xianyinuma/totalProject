@@ -6,6 +6,7 @@
     padding: 30px 40px;
     background-color: white;
     animation-duration: 2s;
+    border-radius: 15px;
 }
 #register button{
     margin-top: -25px;
