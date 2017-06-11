@@ -5,26 +5,28 @@ var crypto = require('crypto'),
 var path = require('path');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-    res.render('welcome',{
-        title:'Created by Curious',
+router.get('/', function (req, res, next) {
+    res.render('welcome', {
+        title: 'Created by Curious',
         user: req.session.user
     });
 });
 
-router.get('/main',function(req,res,next){
+router.get('/main', function (req, res, next) {
     // res.sendFile(path.join(__dirname, '../public/templates', 'index.html'));
     // res.render('main?username='+req.session.user.username+'&shipNo=1');
-    console.log(req.get("username"));
-    console.log(req.get("shipNo"));
+    // 下面两行没用的
+    // console.log(req.get("username"));
+    // console.log(req.get("shipNo"));
+
     res.render('main');
     // res.redirect('/');
 });
 
 router.get('/reg', function (req, res) {
-    res.render('reg',{
-        title:'注册',
-        user:req.session.user,
+    res.render('reg', {
+        title: '注册',
+        user: req.session.user,
         error: req.flash('error').toString(),
         success: req.flash('success').toString(),
     })
@@ -75,7 +77,7 @@ router.post('/reg', function (req, res) {
 router.get('/log', function (req, res) {
     res.render('log', {
         title: '登录',
-        user:req.session.user,
+        user: req.session.user,
         error: req.flash('error').toString(),
         success: req.flash('success').toString(),
     });
@@ -86,45 +88,45 @@ router.post('/log', function (req, res) {
     var name = req.body.username;
     var md5 = crypto.createHash('md5'),
         password = md5.update(req.body.password).digest('hex');
-    User.get(name,function(err,user){
-        if(!user){
-            req.flash('error',"用户不存在");
+    User.get(name, function (err, user) {
+        if (!user) {
+            req.flash('error', "用户不存在");
             return res.redirect('/log');
         }
-        if(user.password!=password){
-            req.flash('error','密码错误');
+        if (user.password != password) {
+            req.flash('error', '密码错误');
             return res.redirect('/log');
         }
-        req.session.user=user;
-        req.flash('success','登陆成功');
+        req.session.user = user;
+        req.flash('success', '登陆成功');
         return res.redirect('/info');
-    })
+    });
 });
 
-router.get('/info',function(req,res){
-    res.render('info',{
-        title:'Information',
+router.get('/info', function (req, res) {
+    res.render('info', {
+        title: 'Information',
         user: req.session.user,
         error: req.flash('error').toString(),
         success: req.flash('success').toString(),
     })
 });
 
-router.get('/ship',function(req,res){
-    res.render('ship',{
-        title:'Ship',
+router.get('/ship', function (req, res) {
+    res.render('ship', {
+        title: 'Ship',
         user: req.session.user,
         error: req.flash('error').toString(),
         success: req.flash('success').toString(),
     })
 });
 
-router.post('/updateMail',function(req,res){
+router.post('/updateMail', function (req, res) {
     var name = req.session.user.name;
 
     var newemail = req.body.newemail;
 
-    User.updateMail(name, newemail, function(err,user){
+    User.updateMail(name, newemail, function (err, user) {
         req.session.user = user;
         console.log(user.password);
         return res.redirect('/');
@@ -133,12 +135,12 @@ router.post('/updateMail',function(req,res){
     // return res.redirect('/');
 });
 
-router.post('/updateNick',function(req,res){
+router.post('/updateNick', function (req, res) {
     var name = req.session.user.name;
 
     var nickname = req.body.nickname;
 
-    User.updateNick(name, nickname, function(err,user){
+    User.updateNick(name, nickname, function (err, user) {
         req.session.user = user;
         console.log(user.password);
         return res.redirect('/');
@@ -147,10 +149,10 @@ router.post('/updateNick',function(req,res){
     // return res.redirect('/');
 });
 
-router.get('/index',function(req,res,next){
-    res.sendFile(path.join(__dirname, '../public/templates', 'index.html'));
-    // res.redirect('/');
-});
+// router.get('/index', function (req, res, next) {
+//     res.sendFile(path.join(__dirname, '../public/templates', 'index.html'));
+//     // res.redirect('/');
+// });
 
 router.get('/logout', function (req, res) {
     req.session.user = null;
@@ -162,6 +164,12 @@ router.get('/logout', function (req, res) {
 //     req.flash('success',"登出成功!");
 //     res.redirect('/');
 // });
+
+// for ajax
+router.get('/username', function (req, res) {
+    // console.log(req.session.user.name);
+    res.send(req.session.user.name);
+});
 
 
 module.exports = router;

@@ -1,435 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a451ab46-4ffb-4561-a2aa-f21063f55dd3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/bullet/file.mtl" afterPath="$PROJECT_DIR$/public/assets/models/bullet/file.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/bullet/file.obj" afterPath="$PROJECT_DIR$/public/assets/models/bullet/file.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/recruit/cargo box/file.mtl" afterPath="$PROJECT_DIR$/public/assets/models/recruit/cargo box/file.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/recruit/cargo box/file.obj" afterPath="$PROJECT_DIR$/public/assets/models/recruit/cargo box/file.obj" />
+    <list default="true" id="99745714-5d56-4053-aa84-e3572650d05d" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/totalProject_node_modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/templates/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/routes/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/routes/users.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/templates/favicon.ico" afterPath="$PROJECT_DIR$/public/favicon.ico" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ServerClasses/Boat.js" afterPath="$PROJECT_DIR$/ServerClasses/Boat.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/user.js" afterPath="$PROJECT_DIR$/models/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my-first-express-project.iml" afterPath="$PROJECT_DIR$/my-first-express-project.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/lib/bootstrap/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/css/bootstrap-theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/lib/bootstrap/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/css/bootstrap-theme.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/lib/bootstrap/css/bootstrap.css" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/lib/bootstrap/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/lib/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/lib/bootstrap/js/bootstrap.js" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/js/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/lib/bootstrap/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/js/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/lib/bootstrap/js/npm.js" afterPath="$PROJECT_DIR$/public/assets/lib/bootstrap/js/npm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/lib/js/ArrayList.js" afterPath="$PROJECT_DIR$/public/assets/lib/js/ArrayList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/lib/js/jquery-3.2.1.js" afterPath="$PROJECT_DIR$/public/assets/lib/js/jquery-3.2.1.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/lib/js/socket.io.js" afterPath="$PROJECT_DIR$/public/assets/lib/js/socket.io.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/lib/js/three.js" afterPath="$PROJECT_DIR$/public/assets/lib/js/three.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/bullet/æ¸ ¬◊”µØ,◊”µØÕ∑-3dƒ£–Õ-Àÿ≤ƒÀµ√˜.txt" afterPath="$PROJECT_DIR$/public/assets/models/bullet/æ¸ ¬◊”µØ,◊”µØÕ∑-3dƒ£–Õ-Àÿ≤ƒÀµ√˜.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/bullet/∞Æ∏¯Õ¯-3dƒ£–Õ-√‚∑—œ¬‘ÿ.txt" afterPath="$PROJECT_DIR$/public/assets/models/bullet/∞Æ∏¯Õ¯-3dƒ£–Õ-√‚∑—œ¬‘ÿ.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/pangea3dgalleon.obj" afterPath="$PROJECT_DIR$/public/assets/models/pangea3dgalleon.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/pinecone.obj" afterPath="$PROJECT_DIR$/public/assets/models/pinecone.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/recruit/ammo box/Ammo Box 弹药箱-次世代模型/58pic_53cf8b6b0b2ea.obj" afterPath="$PROJECT_DIR$/public/assets/models/recruit/ammo box/Ammo Box 弹药箱-次世代模型/58pic_53cf8b6b0b2ea.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/recruit/treasure box/treasure_chest.mtl" afterPath="$PROJECT_DIR$/public/assets/models/recruit/treasure box/treasure_chest.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/recruit/treasure box/treasure_chest.obj" afterPath="$PROJECT_DIR$/public/assets/models/recruit/treasure box/treasure_chest.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/recruit/weapon box/content/58pic_53cf8ab9c2317.obj" afterPath="$PROJECT_DIR$/public/assets/models/recruit/weapon box/content/58pic_53cf8ab9c2317.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/ship/fan ship/ship_boat.mtl" afterPath="$PROJECT_DIR$/public/assets/models/ship/fan ship/ship_boat.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/ship/fan ship/ship_boat.obj" afterPath="$PROJECT_DIR$/public/assets/models/ship/fan ship/ship_boat.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/models/ship/german ship/ZHANJIAN.mtl" afterPath="$PROJECT_DIR$/public/assets/models/ship/german ship/ZHANJIAN.mtl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/chatroom.css" afterPath="$PROJECT_DIR$/public/css/chatroom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/index.css" afterPath="$PROJECT_DIR$/public/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/login.css" afterPath="$PROJECT_DIR$/public/css/login.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/register.css" afterPath="$PROJECT_DIR$/public/css/register.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/reset.css" afterPath="$PROJECT_DIR$/public/css/reset.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/welcome.css" afterPath="$PROJECT_DIR$/public/css/welcome.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/model/CreateModel.js" afterPath="$PROJECT_DIR$/public/js/model/CreateModel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/model/OBJLoader.js" afterPath="$PROJECT_DIR$/public/js/model/OBJLoader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/model/OrbitControls.js" afterPath="$PROJECT_DIR$/public/js/model/OrbitControls.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/model/WaterShader.js" afterPath="$PROJECT_DIR$/public/js/model/WaterShader.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/sea-battle.js" afterPath="$PROJECT_DIR$/public/js/sea-battle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/sea-battle/Boat.js" afterPath="$PROJECT_DIR$/public/js/sea-battle/Boat.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/sea-battle/GameManager.js" afterPath="$PROJECT_DIR$/public/js/sea-battle/GameManager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/sea-battle/Map.js" afterPath="$PROJECT_DIR$/public/js/sea-battle/Map.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/sea-battle/Portal.js" afterPath="$PROJECT_DIR$/public/js/sea-battle/Portal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/templates/index.html" afterPath="$PROJECT_DIR$/public/templates/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/error.jade" afterPath="$PROJECT_DIR$/views/error.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/info.jade" afterPath="$PROJECT_DIR$/views/info.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.jade" afterPath="$PROJECT_DIR$/views/layout.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/log.jade" afterPath="$PROJECT_DIR$/views/log.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/reg.jade" afterPath="$PROJECT_DIR$/views/reg.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/welcome.jade" afterPath="$PROJECT_DIR$/views/welcome.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/ship.jade" afterPath="$PROJECT_DIR$/views/ship.jade" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="node_modules/after/.npmignore" />
-    <ignored path="node_modules/after/.travis.yml" />
-    <ignored path="node_modules/after/index.js" />
-    <ignored path="node_modules/after/LICENCE" />
-    <ignored path="node_modules/after/package.json" />
-    <ignored path="node_modules/after/README.md" />
-    <ignored path="node_modules/arraybuffer.slice/.npmignore" />
-    <ignored path="node_modules/arraybuffer.slice/index.js" />
-    <ignored path="node_modules/arraybuffer.slice/Makefile" />
-    <ignored path="node_modules/arraybuffer.slice/package.json" />
-    <ignored path="node_modules/arraybuffer.slice/README.md" />
-    <ignored path="node_modules/backo2/.npmignore" />
-    <ignored path="node_modules/backo2/component.json" />
-    <ignored path="node_modules/backo2/History.md" />
-    <ignored path="node_modules/backo2/index.js" />
-    <ignored path="node_modules/backo2/Makefile" />
-    <ignored path="node_modules/backo2/package.json" />
-    <ignored path="node_modules/backo2/Readme.md" />
-    <ignored path="node_modules/base64-arraybuffer/.npmignore" />
-    <ignored path="node_modules/base64-arraybuffer/.travis.yml" />
-    <ignored path="node_modules/base64-arraybuffer/LICENSE-MIT" />
-    <ignored path="node_modules/base64-arraybuffer/package.json" />
-    <ignored path="node_modules/base64-arraybuffer/README.md" />
-    <ignored path="node_modules/base64id/.npmignore" />
-    <ignored path="node_modules/base64id/LICENSE" />
-    <ignored path="node_modules/base64id/package.json" />
-    <ignored path="node_modules/base64id/README.md" />
-    <ignored path="node_modules/better-assert/.npmignore" />
-    <ignored path="node_modules/better-assert/example.js" />
-    <ignored path="node_modules/better-assert/History.md" />
-    <ignored path="node_modules/better-assert/index.js" />
-    <ignored path="node_modules/better-assert/Makefile" />
-    <ignored path="node_modules/better-assert/package.json" />
-    <ignored path="node_modules/better-assert/Readme.md" />
-    <ignored path="node_modules/blob/.npmignore" />
-    <ignored path="node_modules/blob/.zuul.yml" />
-    <ignored path="node_modules/blob/index.js" />
-    <ignored path="node_modules/blob/Makefile" />
-    <ignored path="node_modules/blob/package.json" />
-    <ignored path="node_modules/blob/README.md" />
-    <ignored path="node_modules/callsite/.npmignore" />
-    <ignored path="node_modules/callsite/History.md" />
-    <ignored path="node_modules/callsite/index.js" />
-    <ignored path="node_modules/callsite/Makefile" />
-    <ignored path="node_modules/callsite/package.json" />
-    <ignored path="node_modules/callsite/Readme.md" />
-    <ignored path="node_modules/component-bind/.npmignore" />
-    <ignored path="node_modules/component-bind/component.json" />
-    <ignored path="node_modules/component-bind/History.md" />
-    <ignored path="node_modules/component-bind/index.js" />
-    <ignored path="node_modules/component-bind/Makefile" />
-    <ignored path="node_modules/component-bind/package.json" />
-    <ignored path="node_modules/component-bind/Readme.md" />
-    <ignored path="node_modules/component-emitter/.npmignore" />
-    <ignored path="node_modules/component-emitter/.travis.yml" />
-    <ignored path="node_modules/component-emitter/bower.json" />
-    <ignored path="node_modules/component-emitter/component.json" />
-    <ignored path="node_modules/component-emitter/History.md" />
-    <ignored path="node_modules/component-emitter/index.js" />
-    <ignored path="node_modules/component-emitter/Makefile" />
-    <ignored path="node_modules/component-emitter/package.json" />
-    <ignored path="node_modules/component-emitter/Readme.md" />
-    <ignored path="node_modules/component-inherit/.npmignore" />
-    <ignored path="node_modules/component-inherit/component.json" />
-    <ignored path="node_modules/component-inherit/History.md" />
-    <ignored path="node_modules/component-inherit/index.js" />
-    <ignored path="node_modules/component-inherit/Makefile" />
-    <ignored path="node_modules/component-inherit/package.json" />
-    <ignored path="node_modules/component-inherit/Readme.md" />
-    <ignored path="node_modules/engine.io/History.md" />
-    <ignored path="node_modules/engine.io/index.js" />
-    <ignored path="node_modules/engine.io/LICENSE" />
-    <ignored path="node_modules/engine.io/package.json" />
-    <ignored path="node_modules/engine.io/README.md" />
-    <ignored path="node_modules/engine.io-client/engine.io.js" />
-    <ignored path="node_modules/engine.io-client/History.md" />
-    <ignored path="node_modules/engine.io-client/index.js" />
-    <ignored path="node_modules/engine.io-client/LICENSE" />
-    <ignored path="node_modules/engine.io-client/package.json" />
-    <ignored path="node_modules/engine.io-client/README.md" />
-    <ignored path="node_modules/engine.io-parser/History.md" />
-    <ignored path="node_modules/engine.io-parser/index.js" />
-    <ignored path="node_modules/engine.io-parser/LICENSE" />
-    <ignored path="node_modules/engine.io-parser/package.json" />
-    <ignored path="node_modules/engine.io-parser/Readme.md" />
-    <ignored path="node_modules/has-binary/.npmignore" />
-    <ignored path="node_modules/has-binary/History.md" />
-    <ignored path="node_modules/has-binary/index.js" />
-    <ignored path="node_modules/has-binary/LICENSE" />
-    <ignored path="node_modules/has-binary/Makefile" />
-    <ignored path="node_modules/has-binary/package.json" />
-    <ignored path="node_modules/has-binary/README.md" />
-    <ignored path="node_modules/has-binary/test.js" />
-    <ignored path="node_modules/has-cors/.npmignore" />
-    <ignored path="node_modules/has-cors/component.json" />
-    <ignored path="node_modules/has-cors/History.md" />
-    <ignored path="node_modules/has-cors/index.js" />
-    <ignored path="node_modules/has-cors/Makefile" />
-    <ignored path="node_modules/has-cors/package.json" />
-    <ignored path="node_modules/has-cors/Readme.md" />
-    <ignored path="node_modules/has-cors/test.js" />
-    <ignored path="node_modules/indexof/.npmignore" />
-    <ignored path="node_modules/indexof/component.json" />
-    <ignored path="node_modules/indexof/index.js" />
-    <ignored path="node_modules/indexof/Makefile" />
-    <ignored path="node_modules/indexof/package.json" />
-    <ignored path="node_modules/indexof/Readme.md" />
-    <ignored path="node_modules/json3/LICENSE" />
-    <ignored path="node_modules/json3/package.json" />
-    <ignored path="node_modules/json3/README.md" />
-    <ignored path="node_modules/object-assign/index.js" />
-    <ignored path="node_modules/object-assign/license" />
-    <ignored path="node_modules/object-assign/package.json" />
-    <ignored path="node_modules/object-assign/readme.md" />
-    <ignored path="node_modules/object-component/.npmignore" />
-    <ignored path="node_modules/object-component/component.json" />
-    <ignored path="node_modules/object-component/History.md" />
-    <ignored path="node_modules/object-component/index.js" />
-    <ignored path="node_modules/object-component/Makefile" />
-    <ignored path="node_modules/object-component/package.json" />
-    <ignored path="node_modules/object-component/Readme.md" />
-    <ignored path="node_modules/options/.npmignore" />
-    <ignored path="node_modules/options/Makefile" />
-    <ignored path="node_modules/options/package.json" />
-    <ignored path="node_modules/options/README.md" />
-    <ignored path="node_modules/parsejson/.npmignore" />
-    <ignored path="node_modules/parsejson/index.js" />
-    <ignored path="node_modules/parsejson/LICENSE" />
-    <ignored path="node_modules/parsejson/Makefile" />
-    <ignored path="node_modules/parsejson/package.json" />
-    <ignored path="node_modules/parsejson/README.md" />
-    <ignored path="node_modules/parsejson/test.js" />
-    <ignored path="node_modules/parseqs/.npmignore" />
-    <ignored path="node_modules/parseqs/index.js" />
-    <ignored path="node_modules/parseqs/LICENSE" />
-    <ignored path="node_modules/parseqs/Makefile" />
-    <ignored path="node_modules/parseqs/package.json" />
-    <ignored path="node_modules/parseqs/README.md" />
-    <ignored path="node_modules/parseqs/test.js" />
-    <ignored path="node_modules/parseuri/.npmignore" />
-    <ignored path="node_modules/parseuri/History.md" />
-    <ignored path="node_modules/parseuri/index.js" />
-    <ignored path="node_modules/parseuri/LICENSE" />
-    <ignored path="node_modules/parseuri/Makefile" />
-    <ignored path="node_modules/parseuri/package.json" />
-    <ignored path="node_modules/parseuri/README.md" />
-    <ignored path="node_modules/parseuri/test.js" />
-    <ignored path="node_modules/socket.io-adapter/.npmignore" />
-    <ignored path="node_modules/socket.io-adapter/History.md" />
-    <ignored path="node_modules/socket.io-adapter/index.js" />
-    <ignored path="node_modules/socket.io-adapter/LICENSE" />
-    <ignored path="node_modules/socket.io-adapter/package.json" />
-    <ignored path="node_modules/socket.io-adapter/Readme.md" />
-    <ignored path="node_modules/socket.io-client/History.md" />
-    <ignored path="node_modules/socket.io-client/LICENSE" />
-    <ignored path="node_modules/socket.io-client/package.json" />
-    <ignored path="node_modules/socket.io-client/README.md" />
-    <ignored path="node_modules/socket.io-parser/binary.js" />
-    <ignored path="node_modules/socket.io-parser/History.md" />
-    <ignored path="node_modules/socket.io-parser/index.js" />
-    <ignored path="node_modules/socket.io-parser/is-buffer.js" />
-    <ignored path="node_modules/socket.io-parser/LICENSE" />
-    <ignored path="node_modules/socket.io-parser/package.json" />
-    <ignored path="node_modules/socket.io-parser/Readme.md" />
-    <ignored path="node_modules/socket.io/node_modules/debug/.jshintrc" />
-    <ignored path="node_modules/socket.io/node_modules/debug/.npmignore" />
-    <ignored path="node_modules/socket.io/node_modules/debug/bower.json" />
-    <ignored path="node_modules/socket.io/node_modules/debug/browser.js" />
-    <ignored path="node_modules/socket.io/node_modules/debug/CHANGELOG.md" />
-    <ignored path="node_modules/socket.io/node_modules/debug/component.json" />
-    <ignored path="node_modules/socket.io/node_modules/debug/debug.js" />
-    <ignored path="node_modules/socket.io/node_modules/debug/index.js" />
-    <ignored path="node_modules/socket.io/node_modules/debug/LICENSE" />
-    <ignored path="node_modules/socket.io/node_modules/debug/Makefile" />
-    <ignored path="node_modules/socket.io/node_modules/debug/node.js" />
-    <ignored path="node_modules/socket.io/node_modules/debug/package.json" />
-    <ignored path="node_modules/socket.io/node_modules/debug/Readme.md" />
-    <ignored path="node_modules/to-array/.npmignore" />
-    <ignored path="node_modules/to-array/index.js" />
-    <ignored path="node_modules/to-array/LICENCE" />
-    <ignored path="node_modules/to-array/package.json" />
-    <ignored path="node_modules/to-array/README.md" />
-    <ignored path="node_modules/ultron/.npmignore" />
-    <ignored path="node_modules/ultron/.travis.yml" />
-    <ignored path="node_modules/ultron/index.js" />
-    <ignored path="node_modules/ultron/LICENSE" />
-    <ignored path="node_modules/ultron/package.json" />
-    <ignored path="node_modules/ultron/README.md" />
-    <ignored path="node_modules/ultron/test.js" />
-    <ignored path="node_modules/ws/.npmignore" />
-    <ignored path="node_modules/ws/.travis.yml" />
-    <ignored path="node_modules/ws/index.js" />
-    <ignored path="node_modules/ws/Makefile" />
-    <ignored path="node_modules/ws/package.json" />
-    <ignored path="node_modules/ws/README.md" />
-    <ignored path="node_modules/ws/SECURITY.md" />
-    <ignored path="node_modules/wtf-8/LICENSE-MIT.txt" />
-    <ignored path="node_modules/wtf-8/package.json" />
-    <ignored path="node_modules/wtf-8/README.md" />
-    <ignored path="node_modules/wtf-8/wtf-8.js" />
-    <ignored path="node_modules/xmlhttprequest-ssl/autotest.watchr" />
-    <ignored path="node_modules/xmlhttprequest-ssl/LICENSE" />
-    <ignored path="node_modules/xmlhttprequest-ssl/package.json" />
-    <ignored path="node_modules/xmlhttprequest-ssl/README.md" />
-    <ignored path="node_modules/yeast/index.js" />
-    <ignored path="node_modules/yeast/LICENSE" />
-    <ignored path="node_modules/yeast/package.json" />
-    <ignored path="node_modules/yeast/README.md" />
-    <ignored path="node_modules/after/test/after-test.js" />
-    <ignored path="node_modules/arraybuffer.slice/test/slice-buffer.js" />
-    <ignored path="node_modules/backo2/test/index.js" />
-    <ignored path="node_modules/base64-arraybuffer/lib/base64-arraybuffer.js" />
-    <ignored path="node_modules/base64id/lib/base64id.js" />
-    <ignored path="node_modules/blob/test/index.js" />
-    <ignored path="node_modules/component-inherit/test/inherit.js" />
-    <ignored path="node_modules/engine.io/lib/engine.io.js" />
-    <ignored path="node_modules/engine.io/lib/server.js" />
-    <ignored path="node_modules/engine.io/lib/socket.js" />
-    <ignored path="node_modules/engine.io/lib/transport.js" />
-    <ignored path="node_modules/engine.io/node_modules/debug/.jshintrc" />
-    <ignored path="node_modules/engine.io/node_modules/debug/.npmignore" />
-    <ignored path="node_modules/engine.io/node_modules/debug/bower.json" />
-    <ignored path="node_modules/engine.io/node_modules/debug/browser.js" />
-    <ignored path="node_modules/engine.io/node_modules/debug/CHANGELOG.md" />
-    <ignored path="node_modules/engine.io/node_modules/debug/component.json" />
-    <ignored path="node_modules/engine.io/node_modules/debug/debug.js" />
-    <ignored path="node_modules/engine.io/node_modules/debug/index.js" />
-    <ignored path="node_modules/engine.io/node_modules/debug/LICENSE" />
-    <ignored path="node_modules/engine.io/node_modules/debug/Makefile" />
-    <ignored path="node_modules/engine.io/node_modules/debug/node.js" />
-    <ignored path="node_modules/engine.io/node_modules/debug/package.json" />
-    <ignored path="node_modules/engine.io/node_modules/debug/Readme.md" />
-    <ignored path="node_modules/engine.io-client/lib/index.js" />
-    <ignored path="node_modules/engine.io-client/lib/socket.js" />
-    <ignored path="node_modules/engine.io-client/lib/transport.js" />
-    <ignored path="node_modules/engine.io-client/lib/xmlhttprequest.js" />
-    <ignored path="node_modules/engine.io-parser/lib/browser.js" />
-    <ignored path="node_modules/engine.io-parser/lib/index.js" />
-    <ignored path="node_modules/engine.io-parser/lib/keys.js" />
-    <ignored path="node_modules/has-binary/node_modules/isarray/component.json" />
-    <ignored path="node_modules/has-binary/node_modules/isarray/index.js" />
-    <ignored path="node_modules/has-binary/node_modules/isarray/package.json" />
-    <ignored path="node_modules/has-binary/node_modules/isarray/README.md" />
-    <ignored path="node_modules/json3/lib/json3.js" />
-    <ignored path="node_modules/json3/lib/json3.min.js" />
-    <ignored path="node_modules/object-component/test/object.js" />
-    <ignored path="node_modules/options/lib/options.js" />
-    <ignored path="node_modules/socket.io-adapter/node_modules/debug/.jshintrc" />
-    <ignored path="node_modules/socket.io-adapter/node_modules/debug/.npmignore" />
-    <ignored path="node_modules/socket.io-adapter/node_modules/debug/bower.json" />
-    <ignored path="node_modules/socket.io-adapter/node_modules/debug/browser.js" />
-    <ignored path="node_modules/socket.io-adapter/node_modules/debug/CHANGELOG.md" />
-    <ignored path="node_modules/socket.io-adapter/node_modules/debug/component.json" />
-    <ignored path="node_modules/socket.io-adapter/node_modules/debug/debug.js" />
-    <ignored path="node_modules/socket.io-adapter/node_modules/debug/index.js" />
-    <ignored path="node_modules/socket.io-adapter/node_modules/debug/LICENSE" />
-    <ignored path="node_modules/socket.io-adapter/node_modules/debug/Makefile" />
-    <ignored path="node_modules/socket.io-adapter/node_modules/debug/node.js" />
-    <ignored path="node_modules/socket.io-adapter/node_modules/debug/package.json" />
-    <ignored path="node_modules/socket.io-adapter/node_modules/debug/Readme.md" />
-    <ignored path="node_modules/socket.io-client/dist/socket.io.js" />
-    <ignored path="node_modules/socket.io-client/dist/socket.io.js.map" />
-    <ignored path="node_modules/socket.io-client/dist/socket.io.min.js" />
-    <ignored path="node_modules/socket.io-client/dist/socket.io.slim.js" />
-    <ignored path="node_modules/socket.io-client/dist/socket.io.slim.js.map" />
-    <ignored path="node_modules/socket.io-client/dist/socket.io.slim.min.js" />
-    <ignored path="node_modules/socket.io-client/lib/index.js" />
-    <ignored path="node_modules/socket.io-client/lib/manager.js" />
-    <ignored path="node_modules/socket.io-client/lib/on.js" />
-    <ignored path="node_modules/socket.io-client/lib/socket.js" />
-    <ignored path="node_modules/socket.io-client/lib/url.js" />
-    <ignored path="node_modules/ws/lib/BufferPool.js" />
-    <ignored path="node_modules/ws/lib/BufferUtil.fallback.js" />
-    <ignored path="node_modules/ws/lib/BufferUtil.js" />
-    <ignored path="node_modules/ws/lib/ErrorCodes.js" />
-    <ignored path="node_modules/ws/lib/Extensions.js" />
-    <ignored path="node_modules/ws/lib/PerMessageDeflate.js" />
-    <ignored path="node_modules/ws/lib/Receiver.hixie.js" />
-    <ignored path="node_modules/ws/lib/Receiver.js" />
-    <ignored path="node_modules/ws/lib/Sender.hixie.js" />
-    <ignored path="node_modules/ws/lib/Sender.js" />
-    <ignored path="node_modules/ws/lib/Validation.fallback.js" />
-    <ignored path="node_modules/ws/lib/Validation.js" />
-    <ignored path="node_modules/ws/lib/WebSocket.js" />
-    <ignored path="node_modules/ws/lib/WebSocketServer.js" />
-    <ignored path="node_modules/xmlhttprequest-ssl/example/demo.js" />
-    <ignored path="node_modules/xmlhttprequest-ssl/lib/XMLHttpRequest.js" />
-    <ignored path="node_modules/xmlhttprequest-ssl/tests/test-constants.js" />
-    <ignored path="node_modules/xmlhttprequest-ssl/tests/test-events.js" />
-    <ignored path="node_modules/xmlhttprequest-ssl/tests/test-exceptions.js" />
-    <ignored path="node_modules/xmlhttprequest-ssl/tests/test-headers.js" />
-    <ignored path="node_modules/xmlhttprequest-ssl/tests/test-redirect-302.js" />
-    <ignored path="node_modules/xmlhttprequest-ssl/tests/test-redirect-303.js" />
-    <ignored path="node_modules/xmlhttprequest-ssl/tests/test-redirect-307.js" />
-    <ignored path="node_modules/xmlhttprequest-ssl/tests/test-request-methods.js" />
-    <ignored path="node_modules/xmlhttprequest-ssl/tests/test-request-protocols.js" />
-    <ignored path="node_modules/xmlhttprequest-ssl/tests/testdata.txt" />
-    <ignored path="node_modules/engine.io/lib/transports/index.js" />
-    <ignored path="node_modules/engine.io/lib/transports/polling-jsonp.js" />
-    <ignored path="node_modules/engine.io/lib/transports/polling-xhr.js" />
-    <ignored path="node_modules/engine.io/lib/transports/polling.js" />
-    <ignored path="node_modules/engine.io/lib/transports/websocket.js" />
-    <ignored path="node_modules/engine.io-client/lib/transports/index.js" />
-    <ignored path="node_modules/engine.io-client/lib/transports/polling-jsonp.js" />
-    <ignored path="node_modules/engine.io-client/lib/transports/polling-xhr.js" />
-    <ignored path="node_modules/engine.io-client/lib/transports/polling.js" />
-    <ignored path="node_modules/engine.io-client/lib/transports/websocket.js" />
-    <ignored path="node_modules/engine.io-client/node_modules/component-emitter/History.md" />
-    <ignored path="node_modules/engine.io-client/node_modules/component-emitter/index.js" />
-    <ignored path="node_modules/engine.io-client/node_modules/component-emitter/LICENSE" />
-    <ignored path="node_modules/engine.io-client/node_modules/component-emitter/package.json" />
-    <ignored path="node_modules/engine.io-client/node_modules/component-emitter/Readme.md" />
-    <ignored path="node_modules/engine.io-client/node_modules/debug/.jshintrc" />
-    <ignored path="node_modules/engine.io-client/node_modules/debug/.npmignore" />
-    <ignored path="node_modules/engine.io-client/node_modules/debug/bower.json" />
-    <ignored path="node_modules/engine.io-client/node_modules/debug/browser.js" />
-    <ignored path="node_modules/engine.io-client/node_modules/debug/CHANGELOG.md" />
-    <ignored path="node_modules/engine.io-client/node_modules/debug/component.json" />
-    <ignored path="node_modules/engine.io-client/node_modules/debug/debug.js" />
-    <ignored path="node_modules/engine.io-client/node_modules/debug/index.js" />
-    <ignored path="node_modules/engine.io-client/node_modules/debug/LICENSE" />
-    <ignored path="node_modules/engine.io-client/node_modules/debug/Makefile" />
-    <ignored path="node_modules/engine.io-client/node_modules/debug/node.js" />
-    <ignored path="node_modules/engine.io-client/node_modules/debug/package.json" />
-    <ignored path="node_modules/engine.io-client/node_modules/debug/Readme.md" />
-    <ignored path="node_modules/has-binary/node_modules/isarray/build/build.js" />
-    <ignored path="node_modules/socket.io-client/node_modules/component-emitter/History.md" />
-    <ignored path="node_modules/socket.io-client/node_modules/component-emitter/index.js" />
-    <ignored path="node_modules/socket.io-client/node_modules/component-emitter/LICENSE" />
-    <ignored path="node_modules/socket.io-client/node_modules/component-emitter/package.json" />
-    <ignored path="node_modules/socket.io-client/node_modules/component-emitter/Readme.md" />
-    <ignored path="node_modules/socket.io-client/node_modules/debug/.jshintrc" />
-    <ignored path="node_modules/socket.io-client/node_modules/debug/.npmignore" />
-    <ignored path="node_modules/socket.io-client/node_modules/debug/bower.json" />
-    <ignored path="node_modules/socket.io-client/node_modules/debug/browser.js" />
-    <ignored path="node_modules/socket.io-client/node_modules/debug/CHANGELOG.md" />
-    <ignored path="node_modules/socket.io-client/node_modules/debug/component.json" />
-    <ignored path="node_modules/socket.io-client/node_modules/debug/debug.js" />
-    <ignored path="node_modules/socket.io-client/node_modules/debug/index.js" />
-    <ignored path="node_modules/socket.io-client/node_modules/debug/LICENSE" />
-    <ignored path="node_modules/socket.io-client/node_modules/debug/Makefile" />
-    <ignored path="node_modules/socket.io-client/node_modules/debug/node.js" />
-    <ignored path="node_modules/socket.io-client/node_modules/debug/package.json" />
-    <ignored path="node_modules/socket.io-client/node_modules/debug/Readme.md" />
-    <ignored path="node_modules/socket.io-parser/node_modules/debug/.jshintrc" />
-    <ignored path="node_modules/socket.io-parser/node_modules/debug/.npmignore" />
-    <ignored path="node_modules/socket.io-parser/node_modules/debug/bower.json" />
-    <ignored path="node_modules/socket.io-parser/node_modules/debug/browser.js" />
-    <ignored path="node_modules/socket.io-parser/node_modules/debug/component.json" />
-    <ignored path="node_modules/socket.io-parser/node_modules/debug/debug.js" />
-    <ignored path="node_modules/socket.io-parser/node_modules/debug/History.md" />
-    <ignored path="node_modules/socket.io-parser/node_modules/debug/Makefile" />
-    <ignored path="node_modules/socket.io-parser/node_modules/debug/node.js" />
-    <ignored path="node_modules/socket.io-parser/node_modules/debug/package.json" />
-    <ignored path="node_modules/socket.io-parser/node_modules/debug/Readme.md" />
-    <ignored path="node_modules/socket.io-parser/node_modules/isarray/component.json" />
-    <ignored path="node_modules/socket.io-parser/node_modules/isarray/index.js" />
-    <ignored path="node_modules/socket.io-parser/node_modules/isarray/package.json" />
-    <ignored path="node_modules/socket.io-parser/node_modules/isarray/README.md" />
-    <ignored path="node_modules/socket.io-parser/node_modules/ms/.npmignore" />
-    <ignored path="node_modules/socket.io-parser/node_modules/ms/History.md" />
-    <ignored path="node_modules/socket.io-parser/node_modules/ms/index.js" />
-    <ignored path="node_modules/socket.io-parser/node_modules/ms/LICENSE" />
-    <ignored path="node_modules/socket.io-parser/node_modules/ms/package.json" />
-    <ignored path="node_modules/socket.io-parser/node_modules/ms/README.md" />
-    <ignored path="node_modules/socket.io-parser/node_modules/isarray/build/build.js" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -437,123 +29,39 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
-  <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
-  <component name="FavoritesManager">
-    <favorites_list name="totalProject" />
-  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="ship.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/ship.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="848">
-              <caret line="74" column="2" selection-start-line="74" selection-start-column="2" selection-end-line="74" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7">
-              <caret line="180" column="30" selection-start-line="180" selection-start-column="30" selection-end-line="180" selection-end-column="30" />
+            <state relative-caret-position="1083">
+              <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding>
-                <element signature="n#!!block;n#refreshStaticMap#0" expanded="false" />
+                <element signature="e#2243#7031#0" expanded="false" />
+                <element signature="e#2387#2573#0" expanded="false" />
+                <element signature="e#2689#3151#0" expanded="false" />
+                <element signature="e#3255#3354#0" expanded="false" />
+                <element signature="e#3468#3572#0" expanded="false" />
+                <element signature="e#4480#5024#0" expanded="false" />
+                <element signature="e#5549#5679#0" expanded="false" />
+                <element signature="e#5754#5875#0" expanded="false" />
+                <element signature="e#5917#6008#0" expanded="false" />
+                <element signature="e#6063#6148#0" expanded="false" />
+                <element signature="e#6223#6339#0" expanded="false" />
+                <element signature="e#6411#6624#0" expanded="false" />
+                <element signature="e#6682#6806#0" expanded="false" />
+                <element signature="e#6872#7026#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameManager.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/js/sea-battle/GameManager.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="309" column="47" selection-start-line="309" selection-start-column="47" selection-end-line="309" selection-end-column="47" />
-              <folding>
-                <marker date="1496933804884" expanded="true" signature="1801:2511" placeholder="..." />
-                <marker date="1496933804884" expanded="true" signature="1861:1960" placeholder="..." />
-                <marker date="1496933804884" expanded="true" signature="1998:2140" placeholder="..." />
-                <marker date="1496933804884" expanded="true" signature="2178:2323" placeholder="..." />
-                <marker date="1496933804884" expanded="true" signature="2361:2497" placeholder="..." />
-                <marker date="1496933804884" expanded="true" signature="2615:2853" placeholder="..." />
-                <marker date="1496933804884" expanded="true" signature="2676:2788" placeholder="..." />
-                <marker date="1496933804884" expanded="true" signature="2827:2843" placeholder="..." />
-                <marker date="1496933804884" expanded="true" signature="8512:8766" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="72" column="15" selection-start-line="72" selection-start-column="15" selection-end-line="72" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/main.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="45" column="38" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-621">
-              <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chooseShip.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/chooseShip.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="25" column="15" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="welcome.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/welcome.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11">
-              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreateModel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/model/CreateModel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="668">
-              <caret line="356" column="1" selection-start-line="356" selection-start-column="1" selection-end-line="356" selection-end-column="1" />
+            <state relative-caret-position="757">
+              <caret line="167" column="11" lean-forward="false" selection-start-line="167" selection-start-column="11" selection-end-line="167" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -561,35 +69,18 @@
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CSS File" />
-        <option value="HTML File" />
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>THREE</find>
-      <find>body</find>
-      <find>port</find>
-      <find>server</find>
-      <find>createServer</find>
-      <find>http</find>
-      <find>express</find>
-      <find>emit</find>
-      <find>3000</find>
-      <find>stat</find>
-      <find>focus</find>
-      <find>toArray</find>
-      <find>click</find>
-      <find>$inputMessage</find>
-      <find>connected</find>
-      <find>inputM</find>
-      <find>chatA</find>
-      <find>inputm</find>
+      <find>disconne</find>
+      <find>update'</find>
+      <find>update</find>
+      <find>User.get</find>
+      <find>index</find>
+      <find>main</find>
+      <find>ship</find>
+      <find>req.session.user</find>
+      <find>quit'</find>
+      <find>html</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -603,77 +94,31 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/script/wenjin/Map.js" />
-        <option value="$PROJECT_DIR$/public/stylesheets/reset.css" />
-        <option value="$PROJECT_DIR$/public/script/wenjin/GameManager.js" />
-        <option value="$PROJECT_DIR$/../../web chat room demo/public/index.html" />
-        <option value="$PROJECT_DIR$/public/stylesheets/index.css" />
-        <option value="$PROJECT_DIR$/../../web chat room demo/index.js" />
-        <option value="$PROJECT_DIR$/public/stylesheets/chatroom.css" />
-        <option value="$PROJECT_DIR$/public/script/util/CreateModel.js" />
-        <option value="$PROJECT_DIR$/views/log.jade" />
-        <option value="$PROJECT_DIR$/routes/main.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/index.js" />
-        <option value="$PROJECT_DIR$/public/script/wenjin/chatroom.js" />
-        <option value="$PROJECT_DIR$/public/html.html" />
-        <option value="$PROJECT_DIR$/public/stylesheets/welcome.css" />
-        <option value="$PROJECT_DIR$/views/welcome.jade" />
-        <option value="$PROJECT_DIR$/views/layout.jade" />
-        <option value="$PROJECT_DIR$/public/assets/lib/bootstrap/fonts/glyphicons-halflings-regular.svg" />
-        <option value="$USER_HOME$/Downloads/nginx-1.8.0/conf/nginx.conf" />
-        <option value="$USER_HOME$/Downloads/nginx-1.8.0/test-host/test.conf" />
-        <option value="$PROJECT_DIR$/public/js/sea-battle/loading.js" />
-        <option value="$PROJECT_DIR$/public/assets/lib/js/ArrayList.js" />
-        <option value="$PROJECT_DIR$/public/css/chatroom.css" />
-        <option value="$PROJECT_DIR$/public/js/loading.js" />
-        <option value="$USER_HOME$/Downloads/nginx-1.13.0/conf/nginx.conf" />
-        <option value="$PROJECT_DIR$/public/js/sea-battle/chatroom.js" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/public/js/sea-battle/PortalParticle.js" />
-        <option value="$PROJECT_DIR$/public/templates/index.html" />
-        <option value="$PROJECT_DIR$/public/js/sea-battle/Map.js" />
-        <option value="$PROJECT_DIR$/public/js/sea-battle/Portal.js" />
-        <option value="$PROJECT_DIR$/public/js/sea-battle.js" />
-        <option value="$PROJECT_DIR$/public/js/sea-battle/Boat.js" />
-        <option value="$PROJECT_DIR$/ServerClasses/Boat.js" />
         <option value="$PROJECT_DIR$/models/user.js" />
-        <option value="$PROJECT_DIR$/views/index.jade" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
-        <option value="$PROJECT_DIR$/public/js/model/CreateModel.js" />
         <option value="$PROJECT_DIR$/views/ship.jade" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/views/main.jade" />
-        <option value="$PROJECT_DIR$/public/css/index.css" />
+        <option value="$PROJECT_DIR$/public/js/sea-battle.js" />
         <option value="$PROJECT_DIR$/public/js/sea-battle/GameManager.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" />
-  <component name="JsBuildToolPackageJson" detection-done="true">
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
     <package-json value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
+    <option name="x" value="-1348" />
+    <option name="width" value="1284" />
+    <option name="height" value="1087" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -692,12 +137,6 @@
     <panes>
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="totalProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="totalProject" />
@@ -746,73 +185,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="totalProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="totalProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sea-battle" />
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="SDKs" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build.tools" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../three.js Labrary/three.js-dev" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="last_opened_file_path" value="E:/program/git/bin/git.exe" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\学习\2017年春季\高级web技术\Project\my-first-express-project\public\js" />
-      <recent name="F:\学习\2017年春季\高级web技术\Project\my-first-express-project\public\js\sea-battle" />
-      <recent name="F:\学习\2017年春季\高级web技术\Project\my-first-express-project\public\js\model" />
-      <recent name="F:\学习\2017年春季\高级web技术\Project\my-first-express-project\public\css" />
-      <recent name="F:\学习\2017年春季\高级web技术\Project\my-first-express-project\public\html" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\学习\2017年春季\高级web技术\Project\my-first-express-project\public\js\sea-battle\loading" />
-      <recent name="F:\学习\2017年春季\高级web技术\Project\my-first-express-project\public\js\sea-battle" />
-      <recent name="F:\学习\2017年春季\高级web技术\Project\my-first-express-project\public\stylesheets" />
-      <recent name="F:\学习\2017年春季\高级web技术\Project\my-first-express-project\public\script\wenjin" />
-      <recent name="F:\学习\2017年春季\高级web技术\Project\my-first-express-project\public\script\util" />
+      <recent name="C:\Users\wenjin\Desktop\Programme\Project\totalProject\public" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -828,23 +222,228 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="false" name="start" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run-script" />
-      <scripts>
-        <script value="start" />
-      </scripts>
-      <node-interpreter value="project" />
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
       <method />
     </configuration>
-    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
       <method />
     </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
       <config-file value="" />
       <node-interpreter value="project" />
       <envs />
@@ -853,598 +452,386 @@
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
-      <method />
-    </configuration>
-    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
-      <option name="cucumberJsArguments" value="" />
-      <option name="executablePath" />
-      <option name="filePath" />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="totalProject" />
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run-script" />
+      <command value="run" />
       <scripts />
       <node-interpreter value="project" />
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui>bdd</ui>
-      <extra-mocha-options />
-      <test-kind>DIRECTORY</test-kind>
-      <test-directory />
-      <recursive>false</recursive>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
       <method />
     </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="npm.start" />
-    </list>
-    <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="npm.start" />
-      </list>
-    </recent_temporary>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a451ab46-4ffb-4561-a2aa-f21063f55dd3" name="Default" comment="" />
-      <created>1493795626780</created>
+      <changelist id="99745714-5d56-4053-aa84-e3572650d05d" name="Default" comment="" />
+      <created>1497181756121</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1493795626780</updated>
-      <workItem from="1493795629209" duration="816000" />
-      <workItem from="1493803085995" duration="9160000" />
-      <workItem from="1493823916837" duration="2960000" />
-      <workItem from="1493832493617" duration="391000" />
-      <workItem from="1493874900864" duration="9530000" />
-      <workItem from="1493950176967" duration="4299000" />
-      <workItem from="1493955027878" duration="4000" />
-      <workItem from="1493959931132" duration="329000" />
-      <workItem from="1494140820605" duration="6347000" />
-      <workItem from="1494148135147" duration="260000" />
-      <workItem from="1494148873848" duration="4872000" />
-      <workItem from="1494153914050" duration="302000" />
-      <workItem from="1494154876711" duration="366000" />
-      <workItem from="1494159442064" duration="853000" />
-      <workItem from="1494216922464" duration="757000" />
-      <workItem from="1494227151193" duration="1555000" />
-      <workItem from="1496385273505" duration="605000" />
-      <workItem from="1496628069810" duration="68000" />
-      <workItem from="1496905050146" duration="14890000" />
+      <updated>1497181756121</updated>
+      <workItem from="1497181758977" duration="49000" />
+      <workItem from="1497181824737" duration="3272000" />
+      <workItem from="1497185148824" duration="495000" />
     </task>
-    <task id="LOCAL-00001" summary="adjust the load time, solve the jquery and favicon path problem">
-      <created>1493807957518</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1493807957518</updated>
-    </task>
-    <task id="LOCAL-00002" summary="add status and ranking list and chatroom">
-      <created>1493883831340</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1493883831340</updated>
-    </task>
-    <task id="LOCAL-00003" summary="set the routing and synchronize the link">
-      <created>1493954435279</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1493954435279</updated>
-    </task>
-    <task id="LOCAL-00004" summary="optimum">
-      <created>1494141019082</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1494141019082</updated>
-    </task>
-    <task id="LOCAL-00005" summary="wait focus adjust, then we over">
-      <created>1494153726902</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1494153726902</updated>
-    </task>
-    <task id="LOCAL-00006" summary="order by level">
-      <created>1494154150618</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1494154150618</updated>
-    </task>
-    <task id="LOCAL-00007" summary="adjust readme and note">
-      <created>1494155204093</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1494155204093</updated>
-    </task>
-    <task id="LOCAL-00008" summary="adjust chatroom focus">
-      <created>1494159696943</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1494159696943</updated>
-    </task>
-    <task id="LOCAL-00009" summary="adjust chatroom focus, add box and portal">
-      <created>1494228304732</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1494228304732</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58364000" />
-  </component>
-  <component name="TodoView" selected-index="4">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="3816000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1348" y="0" width="1284" height="1087" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35446382" sideWeight="0.6650124" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.50213677" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32832617" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16057234" sideWeight="0.33498758" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39503387" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.49786323" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2515773" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991803" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USER_GROUPS">
-      <collection />
-    </option>
-    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-      <collection />
-    </option>
-  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="adjust the load time, solve the jquery and favicon path problem" />
-    <MESSAGE value="add status and ranking list and chatroom" />
-    <MESSAGE value="set the routing and synchronize the link" />
-    <MESSAGE value="optimum" />
-    <MESSAGE value="optimum the file structure, then we need to optimum the frontend" />
-    <MESSAGE value="wait focus adjust, then we over" />
-    <MESSAGE value="order by level" />
-    <MESSAGE value="adjust readme and note" />
-    <MESSAGE value="adjust chatroom focus" />
-    <MESSAGE value="adjust chatroom focus, add box and portal" />
-    <option name="LAST_COMMIT_MESSAGE" value="adjust chatroom focus, add box and portal" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/assets/models/bullet/3dƒ£–ÕÀÿ≤ƒ√‚∑—œ¬‘ÿ.url" />
-    <entry file="file://$PROJECT_DIR$/public/assets/models/bullet/9mm_specular.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/models/bullet/9mm_normal.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/welcome.jade">
+    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/reg.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/log.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/info.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/error.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/sea-battle/Player.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/sea-battle/StaticObject.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/script/postprocessing/EffectComposer.js" />
-    <entry file="file://$PROJECT_DIR$/public/script/postprocessing/RenderPass.js" />
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/lib/bootstrap/fonts/glyphicons-halflings-regular.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/nginx-1.8.0/conf/nginx.conf" />
-    <entry file="file://$USER_HOME$/Downloads/nginx-1.8.0/test-host/test.conf" />
-    <entry file="file://$PROJECT_DIR$/public/js/sea-battle/CanvasRenderer.js" />
-    <entry file="file://$PROJECT_DIR$/public/js/sea-battle/loading/CanvasRenderer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/lib/js/ArrayList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="36" column="23" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/temp/index.html" />
-    <entry file="file://$PROJECT_DIR$/public/css/chatroom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="112" column="14" selection-start-line="112" selection-start-column="14" selection-end-line="112" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/loading.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/nginx-1.13.0/conf/nginx.conf" />
-    <entry file="file://$PROJECT_DIR$/public/js/sea-battle/chatroom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="52" column="40" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/sea-battle/Box.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/photo/demo1.jpeg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md" />
-    <entry file="file://$PROJECT_DIR$/public/js/sea-battle/PortalParticle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/sea-battle/Portal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-          <folding />
+        <state relative-caret-position="2147">
+          <caret line="142" column="0" lean-forward="true" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+          <folding>
+            <element signature="e#2243#7031#0" expanded="false" />
+            <element signature="e#2387#2573#0" expanded="false" />
+            <element signature="e#2689#3151#0" expanded="false" />
+            <element signature="e#3255#3354#0" expanded="false" />
+            <element signature="e#3468#3572#0" expanded="false" />
+            <element signature="e#4480#5024#0" expanded="false" />
+            <element signature="e#5549#5679#0" expanded="false" />
+            <element signature="e#5754#5875#0" expanded="false" />
+            <element signature="e#5917#6008#0" expanded="false" />
+            <element signature="e#6063#6148#0" expanded="false" />
+            <element signature="e#6223#6339#0" expanded="false" />
+            <element signature="e#6411#6624#0" expanded="false" />
+            <element signature="e#6682#6806#0" expanded="false" />
+            <element signature="e#6872#7026#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/sea-battle.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="22" column="60" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ServerClasses/Boat.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+        <state relative-caret-position="494">
+          <caret line="26" column="38" lean-forward="false" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/sea-battle/Map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/sea-battle/Boat.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="63" column="38" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/db.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="155" column="11" selection-start-line="155" selection-start-column="11" selection-end-line="155" selection-end-column="11" />
-          <folding>
-            <element signature="e#280#1174#0" expanded="false" />
-            <element signature="e#1243#2155#0" expanded="false" />
-            <element signature="e#2225#3141#0" expanded="false" />
-            <element signature="e#3191#3884#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/register.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/reset.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/welcome.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/model/CreateModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="356" column="1" selection-start-line="356" selection-start-column="1" selection-end-line="356" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/chooseShip.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="25" column="15" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="15" />
+        <state relative-caret-position="1216">
+          <caret line="64" column="24" lean-forward="false" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/ship.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="848">
-          <caret line="74" column="2" selection-start-line="74" selection-start-column="2" selection-end-line="74" selection-end-column="2" />
+        <state relative-caret-position="1634">
+          <caret line="86" column="108" lean-forward="false" selection-start-line="86" selection-start-column="108" selection-end-line="86" selection-end-column="108" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
+    <entry file="file://$PROJECT_DIR$/models/user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-621">
-          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/main.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="45" column="38" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="72" column="15" selection-start-line="72" selection-start-column="15" selection-end-line="72" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7">
-          <caret line="180" column="30" selection-start-line="180" selection-start-column="30" selection-end-line="180" selection-end-column="30" />
+        <state relative-caret-position="532">
+          <caret line="193" column="0" lean-forward="true" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
           <folding>
-            <element signature="n#!!block;n#refreshStaticMap#0" expanded="false" />
+            <element signature="e#280#1174#0" expanded="false" />
+            <element signature="e#1243#2155#0" expanded="false" />
+            <element signature="e#2225#3141#0" expanded="false" />
+            <element signature="e#3191#3884#0" expanded="false" />
+            <element signature="e#3961#5415#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/sea-battle/GameManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="309" column="47" selection-start-line="309" selection-start-column="47" selection-end-line="309" selection-end-column="47" />
+        <state relative-caret-position="5206">
+          <caret line="329" column="13" lean-forward="true" selection-start-line="329" selection-start-column="13" selection-end-line="329" selection-end-column="13" />
           <folding>
-            <marker date="1496933804884" expanded="true" signature="1801:2511" placeholder="..." />
-            <marker date="1496933804884" expanded="true" signature="1861:1960" placeholder="..." />
-            <marker date="1496933804884" expanded="true" signature="1998:2140" placeholder="..." />
-            <marker date="1496933804884" expanded="true" signature="2178:2323" placeholder="..." />
-            <marker date="1496933804884" expanded="true" signature="2361:2497" placeholder="..." />
-            <marker date="1496933804884" expanded="true" signature="2615:2853" placeholder="..." />
-            <marker date="1496933804884" expanded="true" signature="2676:2788" placeholder="..." />
-            <marker date="1496933804884" expanded="true" signature="2827:2843" placeholder="..." />
-            <marker date="1496933804884" expanded="true" signature="8512:8766" placeholder="..." />
+            <element signature="e#7116#7751#0" expanded="false" />
+            <element signature="e#8117#9019#0" expanded="false" />
+            <element signature="e#9076#9343#0" expanded="false" />
+            <element signature="e#9944#10218#0" expanded="false" />
+            <marker date="1497184887780" expanded="true" signature="2000:2726" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="2060:2159" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="2197:2318" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="2197:2355" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="2393:2538" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="2576:2712" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="2830:3068" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="2891:3003" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="3042:3058" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="3176:3404" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="3236:3338" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="3378:3394" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="3493:3728" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="3553:3664" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="3702:3718" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="12013:12267" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="12568:12822" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="13149:13282" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="13568:13615" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/info.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/sea-battle/GameManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="329" column="13" lean-forward="false" selection-start-line="329" selection-start-column="13" selection-end-line="329" selection-end-column="13" />
+          <folding>
+            <element signature="e#7116#7751#0" expanded="false" />
+            <element signature="e#8117#9019#0" expanded="false" />
+            <element signature="e#9076#9343#0" expanded="false" />
+            <element signature="e#9944#10218#0" expanded="false" />
+            <marker date="1497184887780" expanded="true" signature="2000:2726" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="2060:2159" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="2197:2318" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="2197:2355" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="2393:2538" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="2576:2712" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="2830:3068" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="2891:3003" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="3042:3058" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="3176:3404" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="3236:3338" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="3378:3394" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="3493:3728" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="3553:3664" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="3702:3718" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="12013:12267" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="12568:12822" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="13149:13282" ph="..." />
+            <marker date="1497184887780" expanded="true" signature="13568:13615" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/sea-battle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="38" lean-forward="false" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/favicon.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/sea-battle/Map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="881">
+          <caret line="64" column="24" lean-forward="false" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/ship.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="86" column="108" lean-forward="false" selection-start-line="86" selection-start-column="108" selection-end-line="86" selection-end-column="108" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="193" column="0" lean-forward="false" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
+          <folding>
+            <element signature="e#280#1174#0" expanded="false" />
+            <element signature="e#1243#2155#0" expanded="false" />
+            <element signature="e#2225#3141#0" expanded="false" />
+            <element signature="e#3191#3884#0" expanded="false" />
+            <element signature="e#3961#5415#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1083">
+          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding>
+            <element signature="e#2243#7031#0" expanded="false" />
+            <element signature="e#2387#2573#0" expanded="false" />
+            <element signature="e#2689#3151#0" expanded="false" />
+            <element signature="e#3255#3354#0" expanded="false" />
+            <element signature="e#3468#3572#0" expanded="false" />
+            <element signature="e#4480#5024#0" expanded="false" />
+            <element signature="e#5549#5679#0" expanded="false" />
+            <element signature="e#5754#5875#0" expanded="false" />
+            <element signature="e#5917#6008#0" expanded="false" />
+            <element signature="e#6063#6148#0" expanded="false" />
+            <element signature="e#6223#6339#0" expanded="false" />
+            <element signature="e#6411#6624#0" expanded="false" />
+            <element signature="e#6682#6806#0" expanded="false" />
+            <element signature="e#6872#7026#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="757">
+          <caret line="167" column="11" lean-forward="false" selection-start-line="167" selection-start-column="11" selection-end-line="167" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
