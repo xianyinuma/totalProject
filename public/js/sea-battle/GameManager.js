@@ -73,7 +73,7 @@ class GameManager {
         <li class="list-group-item">
             <span class="glyphicon glyphicon-user"></span>
             Username:
-            <span id="status-playerID"></span>
+            <span id="status-playerID">` + playerID + `</span>
         </li>
 
         <li class="list-group-item">

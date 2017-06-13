@@ -15,18 +15,22 @@ $(document).ready(function() {
             return null;
         }
     })(jQuery);
-    var playerID = $.getUrlParam('username');
-    var boatType = $.getUrlParam('shipNo');
-    console.log(boatType); //
-    LoadModels();
-    $("#quit").hide();
-    setTimeout(function() {
-        let gameManager = new GameManager(playerID, boatType);
-        //start chatroom
-        startChatRoom(playerID);
+    var boatType = $.getUrlParam('boatType');
 
-    }, 5000);
+    // get from ajax
+    var playerID;
+    $.get('/username', function (username) {
+        playerID = username;
+        LoadModels();
+        $("#quit").hide();
+        setTimeout(function() {
+            let gameManager = new GameManager(playerID, boatType);
+            //start chatroom
+            startChatRoom(playerID);
+        }, 5000);
+    });
 
+    // console.log(boatType); //
     function LoadModels() {
         createShip("kawayi2");
         createShip("kawayi");

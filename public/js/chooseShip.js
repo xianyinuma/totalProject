@@ -63,21 +63,24 @@ $(document).ready(function() {
         pointLight3.distance = 100;
         pointLight3.intensity = 1;
         scene1.add(pointLight);
+        pointLight.position.set(0,0,5);
         scene2.add(pointLight2);
+        pointLight2.position.set(0,0,5);
         scene3.add(pointLight3);
+        pointLight3.position.set(0,0,5);
 
         var first = BOAT1.clone();
         first.scale.set(0.5, 0.5, 1);
         scene1.add(first);
         first.position.set(0, -1, -1);
         var second = BOAT2.clone();
-        second.scale.set(0.6, 0.6, 1);
+        second.scale.set(1, 0.6, 1);
         scene2.add(second);
-        second.position.set(-0.8, -0.5, -1);
+        second.position.set(0, -0.5, -1);
         var third = BOAT3.clone();
         third.scale.set(0.02, 0.02, 0.05);
         scene3.add(third);
-        third.position.set(0, -0.5, -1);
+        third.position.set(0, -0.9, -1);
 
         render();
 
