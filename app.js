@@ -249,7 +249,7 @@ refreshStaticMap(1500, 1500);
 setInterval(function() {
     refreshStaticMap(1500, 1500);
     io.emit("static update", staticMap);
-}, 100000);
+}, 180000);
 
 function refreshStaticMap(length, width) {
     staticMap = {};

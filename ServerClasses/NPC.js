@@ -52,7 +52,7 @@ class NPC extends MovableObject {
 
         //用正方体在服务器模拟船体的移动
         this.mesh = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1), new THREE.MeshBasicMaterial());
-        this.mesh.position.set(500, 0, 500);
+        this.mesh.position.set(1500, 0, 1500);
         this.boatType = "4";
 
         this.radius = 20;
