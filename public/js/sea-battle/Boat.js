@@ -44,7 +44,8 @@ class Boat extends MovableObject {
 
         this.curSpeed = 0;
 
-        this.fireTime = 0;
+        this.chargeTime = 0;
+        this.fireDownFlag = false;
 
         this.mesh = null;
 
@@ -104,8 +105,8 @@ class Boat extends MovableObject {
         return false;
     }
 
-    Fire() {
-        let bullet = new Bullet(this.playerID, this.damage, 10);
+    Fire(speed) {
+        let bullet = new Bullet(this.playerID, this.damage, speed);
         bullet.mesh.rotation.set(this.mesh.rotation.x, this.mesh.rotation.y, this.mesh.rotation.z);
 
         //debug

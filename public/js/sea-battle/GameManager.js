@@ -446,6 +446,9 @@ class GameManager {
                 case 'd':
                     currentBoat.controlBoat.moveRight = false;
                     break;
+                case ' ':
+                    curBoatFire();
+                    break;
             }
         }
 
@@ -464,8 +467,8 @@ class GameManager {
                 case 'd':
                     currentBoat.controlBoat.moveRight = true;
                     break;
-                case 'f':
-                    curBoatFire();
+                case ' ':
+                    curBoatCharge();
                     break;
             }
         }
@@ -526,13 +529,28 @@ class GameManager {
             boat.RefreshInfo();
         }
 
+        //蓄力射弹
+        function curBoatCharge() {
+            if (!currentBoat.fireDownFlag) {
+                currentBoat.fireDownFlag = true;
+                let date = new Date();
+                let t = date.getTime();
+                currentBoat.chargeTime = t;
+            }
+        }
+
         //冷却射弹
         function curBoatFire() {
-            let date = new Date();
-            let t = date.getTime();
-            if (t - currentBoat.fireTime > 1000) {
-                socket.emit('fire', currentBoat.Fire().getData());
-                currentBoat.fireTime = t;
+            if (currentBoat.fireDownFlag) {
+
+                let date = new Date();
+                let t = date.getTime();
+
+                let speed = (t - currentBoat.chargeTime) / 100 + 5;
+                if (speed > 20) speed = 20;
+                socket.emit('fire', currentBoat.Fire(speed).getData());
+
+                currentBoat.fireDownFlag = false;
             }
         }
 

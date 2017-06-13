@@ -126,7 +126,7 @@ io.on('connection', function(socket) {
                 numUsers: numUsers
             });
 
-            User.updateRecord(socket.username, boatMap[socket.username].level, function () {});
+            User.updateRecord(socket.username, boatMap[socket.username].level, function() {});
             //退出用 @author mjt
             //退出时 将船数据记录在数据库中 taishi!!!
             console.log(socket.username + " quit");
@@ -208,10 +208,12 @@ io.on('connection', function(socket) {
     //答应组队
     socket.on('team ok', function(teammates1, teammates2) {
         for (var id in teammates1) {
-            allSockets[id].emit('team ok', teammates2);
+            if (allSockets.hasOwnProperty(id))
+                allSockets[id].emit('team ok', teammates2);
         }
         for (var id in teammates2) {
-            allSockets[id].emit('team ok', teammates1);
+            if (allSockets.hasOwnProperty(id))
+                allSockets[id].emit('team ok', teammates1);
         }
     });
     //拒绝组队

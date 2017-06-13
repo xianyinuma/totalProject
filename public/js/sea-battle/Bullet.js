@@ -5,11 +5,11 @@
 class Bullet extends MovableObject {
     constructor(playerID, damage, speed) {
         super(playerID);
-        //this.boat = boat;//to do
+        //this.boat = boat;
         this.damage = damage;
-        this.horizontalSpeed = speed; //to do
+        this.horizontalSpeed = speed;
         this.verticalSpeed = speed * 0.1;
-        this.gravity = -0.05; //to do
+        this.gravity = -0.05;
 
         this.id = generateBulletId(playerID);
 
