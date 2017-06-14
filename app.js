@@ -148,8 +148,8 @@ io.on('connection', function(socket) {
 
         var boat = new Boat(data.playerID, data.boatType);
         var boatData = boat.getData();
-        boatData.mesh.position.x = 1500 * Math.random();
-        boatData.mesh.position.z = 1500 * Math.random();
+        boatData.mesh.position.x = 5000 * Math.random();
+        boatData.mesh.position.z = 5000 * Math.random();
         boatMap[data.playerID] = boat;
         console.log(data.playerID + ' start');
         io.emit('get boat', boatData);
@@ -233,9 +233,9 @@ io.on('connection', function(socket) {
 });
 
 //更新staticMap，并同步
-refreshStaticMap(1500, 1500);
+refreshStaticMap(5000, 5000);
 setInterval(function() {
-    refreshStaticMap(1500, 1500);
+    refreshStaticMap(5000, 5000);
     io.emit("static update", staticMap);
 }, 180000);
 

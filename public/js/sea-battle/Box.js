@@ -16,6 +16,7 @@ class Box extends StaticObject {
         // this.mesh.position.y = 0;
         this.mesh = RECRUIT.clone();
         this.mesh.position.set(x, 0, z);
+        this.mesh.rotation.set(0, Math.random() * Math.PI, 0);
 
         this.radius = 10;
 
