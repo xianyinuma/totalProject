@@ -160,35 +160,22 @@ NPC的移动
     - **NPC**的同步：完全由server控制，NPC在server中移动开火，**定时**将NPC的信息发送给所有的client，同步间隔为30ms。
     - **组队**的同步：由一client向另一特定的client发送请求信息，答应则，向所有的相关队友client发送新增队友信息，进行消息同步。
 
+后端
     
+- MVC框架：Express
     
-
+- **Model**：models文件夹下存放服务器端实体，并且提供访问数据库的接口User提供save、updateMail、updateNick、get、updateRecord接口，分别对应对数据库中的增删改查等操作。
     
-
-
-- 后端
-    
-    MVC框架：Express
-    
-    **Model**：models文件夹下存放服务器端实体，并且提供访问数据库的接口
-    User提供save、updateMail、updateNick、get、updateRecord接口，分别对应对数据库中的增删改查等操作。
-    
-    **View**：视图层采用jade模板生成HTML代码
+- **View**：视图层采用jade模板生成HTML代码
     主要包括以下jade模板文件：error, index, info, layout, log, main, reg, ship, welcome；
     分别对应不同功能的页面
     
-    **Controller**：根据不同的http请求（get，post）设置对应路由
+- **Controller**：根据不同的http请求（get，post）设置对应路由
     /main 游戏主页面; /reg 注册页面; /log 登录页面; /info 玩家信息页面;
      /ship 选择船模型页面; /welcome 默认首页
 
-    项目完成的比较仓促，但是我们尽量保持代码的整洁和可维护性，一些编码方式也借
-    鉴当前流行的最佳实践。但理想是美好的，现实总是不会做到那么完美，需要不断的
-    完善。目前存在的问题是后端代码结构不够清晰、整体代码中无用代码还没有来得及
-    移除。
+- 项目完成的比较仓促，但是我们尽量保持代码的整洁和可维护性，一些编码方式也借鉴当前流行的最佳实践。但理想是美好的，现实总是不会做到那么完美，需要不断的完善。目前存在的问题是后端代码结构不够清晰、整体代码中无用代码还没有来得及移除。
 
-    **同步机制**：前端socket.io emit特定接口的事件，后端socket.io on接收对应接口事件。
+- **同步机制**：前端socket.io emit特定接口的事件，后端socket.io on接收对应接口事件。（详细同步在上面有说明）
 
-    **生产环境发布**：pm2进程管理器 + MLab云MongoDB数据库
-
-
-
+- **生产环境发布**：pm2进程管理器 + MLab云MongoDB数据库
