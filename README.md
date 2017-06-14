@@ -26,7 +26,7 @@ Uncharted Waters 是一个Web多人VR社交游戏，玩家在注册后可以加�
 
 当然，由于我们的游戏的主要部分还是在玩家和玩家之间的对战，所以对于NPC的攻击玩家以躲避为主。
 
-<img src="https://github.com/xianyinuma/totalProject/blob/master/photo/demo1.jpeg">
+<img src="https://github.com/xianyinuma/totalProject/blob/master/photo/photo1.png">
 
 ## Programe Architecture
 
