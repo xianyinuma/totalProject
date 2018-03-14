@@ -1,8 +1,8 @@
-# Unchated Waters: Web多人VR环境
+# Uncharted Waters: Web多人VR环境
 
 Uncharted Waters 是一个web多人VR游戏，使用了express、vue、three.js、socket.io等技术。
 
-Demo: <a>webpj.ruchenshanghai.cn</a>
+Demo: ~~webpj.ruchenshanghai.cn~~
 
 ## Communications
 
